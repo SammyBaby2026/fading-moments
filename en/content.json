@@ -1,0 +1,119 @@
+{
+  "site": {
+    "lang": "en",
+    "title": "Fading Moments",
+    "baseUrl": "https://fading-moments.com"
+  },
+  "essays": [
+    {
+      "type": "essay",
+      "slug": "winter-light-on-the-river",
+      "title": "Winter Light on the River",
+      "date": "2026-03-05",
+      "tags": ["winter", "city", "memory"],
+      "relationship": "translation",
+      "available_languages": ["en", "de", "zh"],
+      "summary": "A small walk by the river—where cold light turns into a quiet promise.",
+      "cover_image": "/assets/img/covers/winter-light.jpg",
+      "url": "/en/essays/winter-light-on-the-river/"
+    },
+    {
+      "type": "essay",
+      "slug": "the-chair-by-the-window",
+      "title": "The Chair by the Window",
+      "date": "2026-03-01",
+      "tags": ["home", "silence"],
+      "relationship": "variant",
+      "available_languages": ["en", "de"],
+      "summary": "The same room, the same chair—yet every day feels slightly different.",
+      "cover_image": "/assets/img/covers/chair-window.jpg",
+      "url": "/en/essays/the-chair-by-the-window/"
+    }
+  ],
+  "photos": [
+    {
+      "type": "photo",
+      "slug": "exhibition-faded-family-album",
+      "title": "Exhibition: A Faded Family Album",
+      "date": "2026-02-20",
+      "tags": ["family", "archive"],
+      "relationship": "translation",
+      "available_languages": ["en", "de", "zh"],
+      "summary": "A small curated set from an old album—faces, edges, and what remains unsaid.",
+      "cover_image": "/assets/img/covers/family-album.jpg",
+      "url": "/en/photos/exhibition-faded-family-album/"
+    },
+    {
+      "type": "photo",
+      "slug": "exhibition-winter-streets",
+      "title": "Exhibition: Winter Streets",
+      "date": "2026-02-10",
+      "tags": ["city", "winter"],
+      "relationship": "exclusive",
+      "available_languages": ["en"],
+      "summary": "A quiet walk through winter streets—shadows, reflections, and distant sounds.",
+      "cover_image": "/assets/img/covers/winter-streets.jpg",
+      "url": "/en/photos/exhibition-winter-streets/"
+    }
+  ],
+  "stories": [
+    {
+      "type": "story",
+      "slug": "rivals-in-power",
+      "series_slug": "rivals-in-power",
+      "title": "Rivals in Power",
+      "date": "2026-02-01",
+      "tags": ["romance", "suspense"],
+      "relationship": "variant",
+      "available_languages": ["en", "zh"],
+      "summary": "A power game wrapped in desire—trust is tested where secrets live.",
+      "cover_image": "/assets/img/covers/rivals-in-power.jpg",
+      "url": "/en/stories/rivals-in-power/"
+    },
+    {
+      "type": "story",
+      "slug": "fading-moments-short-fiction",
+      "series_slug": "fading-moments-short-fiction",
+      "title": "Fading Moments: Short Fiction",
+      "date": "2026-03-02",
+      "tags": ["literary", "short"],
+      "relationship": "exclusive",
+      "available_languages": ["en"],
+      "summary": "Short fiction set in everyday stillness—where small choices echo.",
+      "cover_image": "/assets/img/covers/short-fiction.jpg",
+      "url": "/en/stories/fading-moments-short-fiction/"
+    }
+  ],
+  "videos": [
+    {
+      "type": "video",
+      "slug": "essay-reading-winter-light",
+      "title": "Essay Reading: Winter Light on the River",
+      "date": "2026-03-03",
+      "tags": ["reading", "essay"],
+      "relationship": "translation",
+      "available_languages": ["en", "de"],
+      "summary": "A calm reading with subtitles—an essay about winter light and memory.",
+      "cover_image": "/assets/img/covers/video-reading.jpg",
+      "category": "Essays Readings",
+      "youtube_url": "https://www.youtube.com/watch?v=REPLACE_ME",
+      "related_internal_url": "/en/essays/winter-light-on-the-river/",
+      "url": "/en/videos/"
+    },
+    {
+      "type": "video",
+      "slug": "photo-story-family-album",
+      "title": "Photo Story: A Faded Family Album",
+      "date": "2026-02-22",
+      "tags": ["photo", "archive"],
+      "relationship": "translation",
+      "available_languages": ["en", "de", "zh"],
+      "summary": "A visual journey through an old family album.",
+      "cover_image": "/assets/img/covers/video-photo.jpg",
+      "category": "Photo Stories",
+      "youtube_url": "https://www.youtube.com/watch?v=REPLACE_ME_2",
+      "related_internal_url": "/en/photos/exhibition-faded-family-album/",
+      "url": "/en/videos/"
+    }
+  ]
+}

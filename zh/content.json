@@ -1,0 +1,91 @@
+{
+  "site": {
+    "lang": "zh",
+    "title": "时光档案馆",
+    "baseUrl": "https://fading-moments.com"
+  },
+  "essays": [
+    {
+      "type": "essay",
+      "slug": "hebian-dongri-yangguang",
+      "title": "河边的冬日阳光",
+      "date": "2026-03-05",
+      "tags": ["冬天", "城市", "记忆"],
+      "relationship": "translation",
+      "available_languages": ["en", "de", "zh"],
+      "summary": "河边的一次漫步——寒冷的光线化作安静的承诺。",
+      "cover_image": "/assets/img/covers/winter-light.jpg",
+      "url": "/zh/essays/hebian-dongri-yangguang/"
+    },
+    {
+      "type": "essay",
+      "slug": "chuangbian-de-yizi",
+      "title": "窗边的椅子",
+      "date": "2026-03-01",
+      "tags": ["家", "寂静"],
+      "relationship": "variant",
+      "available_languages": ["zh"],
+      "summary": "同一个房间，同一把椅子——但每一天的感觉都略有不同。",
+      "cover_image": "/assets/img/covers/chair-window.jpg",
+      "url": "/zh/essays/chuangbian-de-yizi/"
+    }
+  ],
+  "photos": [
+    {
+      "type": "photo",
+      "slug": "zhanlan-tuise-de-jiating-xiangce",
+      "title": "展览：褪色的家庭相册",
+      "date": "2026-02-20",
+      "tags": ["家庭", "档案"],
+      "relationship": "translation",
+      "available_languages": ["en", "de", "zh"],
+      "summary": "从一本旧相册中精选的一组照片——面孔、边缘和那些未曾言说的一切。",
+      "cover_image": "/assets/img/covers/family-album.jpg",
+      "url": "/zh/photos/zhanlan-tuise-de-jiating-xiangce/"
+    },
+    {
+      "type": "photo",
+      "slug": "zhanlan-dongri-jietou",
+      "title": "展览：冬日街头",
+      "date": "2026-02-10",
+      "tags": ["城市", "冬天"],
+      "relationship": "exclusive",
+      "available_languages": ["zh"],
+      "summary": "冬日街头的安静漫步——影子、倒影和远处的声音。",
+      "cover_image": "/assets/img/covers/winter-streets.jpg",
+      "url": "/zh/photos/zhanlan-dongri-jietou/"
+    }
+  ],
+  "stories": [
+    {
+      "type": "story",
+      "slug": "quanli-de-duishou",
+      "series_slug": "quanli-de-duishou",
+      "title": "权力的对手",
+      "date": "2026-02-01",
+      "tags": ["爱情", "悬疑"],
+      "relationship": "variant",
+      "available_languages": ["en", "zh"],
+      "summary": "一场包裹在欲望中的权力游戏——在秘密栖居之处，信任受到考验。",
+      "cover_image": "/assets/img/covers/rivals-in-power.jpg",
+      "url": "/zh/stories/quanli-de-duishou/"
+    }
+  ],
+  "videos": [
+    {
+      "type": "video",
+      "slug": "shipin-gushi-jiating-xiangce",
+      "title": "视频故事：褪色的家庭相册",
+      "date": "2026-02-22",
+      "tags": ["照片", "档案"],
+      "relationship": "exclusive",
+      "available_languages": ["zh"],
+      "summary": "一本中文独有的家庭相册视频故事——链接到YouTube和相关展览。",
+      "cover_image": "/assets/img/covers/video-photo.jpg",
+      "category": "Photo Stories",
+      "youtube_url": "https://www.youtube.com/watch?v=REPLACE_ME_ZH",
+      "related_internal_url": "/zh/photos/zhanlan-tuise-de-jiating-xiangce/",
+      "url": "/zh/videos/"
+    }
+  ]
+}

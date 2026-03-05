@@ -1,0 +1,79 @@
+{
+  "site": {
+    "lang": "de",
+    "title": "Fading Moments",
+    "baseUrl": "https://fading-moments.com"
+  },
+  "essays": [
+    {
+      "type": "essay",
+      "slug": "winterlicht-am-fluss",
+      "title": "Winterlicht am Fluss",
+      "date": "2026-03-05",
+      "tags": ["winter", "stadt", "erinnerung"],
+      "relationship": "translation",
+      "available_languages": ["en", "de", "zh"],
+      "summary": "Ein kleiner Spaziergang am Fluss—wo kaltes Licht zu einem stillen Versprechen wird.",
+      "cover_image": "/assets/img/covers/winter-light.jpg",
+      "url": "/de/essays/winterlicht-am-fluss/"
+    },
+    {
+      "type": "essay",
+      "slug": "der-stuhl-am-fenster",
+      "title": "Der Stuhl am Fenster",
+      "date": "2026-03-01",
+      "tags": ["zuhause", "stille"],
+      "relationship": "variant",
+      "available_languages": ["en", "de"],
+      "summary": "Derselbe Raum, derselbe Stuhl—und doch fühlt sich jeder Tag leicht anders an.",
+      "cover_image": "/assets/img/covers/chair-window.jpg",
+      "url": "/de/essays/der-stuhl-am-fenster/"
+    }
+  ],
+  "photos": [
+    {
+      "type": "photo",
+      "slug": "ausstellung-verblasstes-familienalbum",
+      "title": "Ausstellung: Ein verblasstes Familienalbum",
+      "date": "2026-02-20",
+      "tags": ["familie", "archiv"],
+      "relationship": "translation",
+      "available_languages": ["en", "de", "zh"],
+      "summary": "Eine kleine kuratierte Auswahl aus einem alten Album—Gesichter, Ränder und was ungesagt bleibt.",
+      "cover_image": "/assets/img/covers/family-album.jpg",
+      "url": "/de/photos/ausstellung-verblasstes-familienalbum/"
+    }
+  ],
+  "stories": [
+    {
+      "type": "story",
+      "slug": "rivalen-der-macht",
+      "series_slug": "rivalen-der-macht",
+      "title": "Rivalen der Macht",
+      "date": "2026-02-01",
+      "tags": ["romanze", "spannung"],
+      "relationship": "variant",
+      "available_languages": ["de"],
+      "summary": "Ein Machtspiel eingewickelt in Verlangen—Vertrauen wird geprüft, wo Geheimnisse leben.",
+      "cover_image": "/assets/img/covers/rivalen.jpg",
+      "url": "/de/stories/rivalen-der-macht/"
+    }
+  ],
+  "videos": [
+    {
+      "type": "video",
+      "slug": "lesung-winterlicht",
+      "title": "Lesung: Winterlicht am Fluss",
+      "date": "2026-03-03",
+      "tags": ["lesung", "essay"],
+      "relationship": "translation",
+      "available_languages": ["en", "de"],
+      "summary": "Eine ruhige Lesung mit Untertiteln—ein Essay über Winterlicht und Erinnerung.",
+      "cover_image": "/assets/img/covers/video-reading.jpg",
+      "category": "Essays Readings",
+      "youtube_url": "https://www.youtube.com/watch?v=REPLACE_ME_DE",
+      "related_internal_url": "/de/essays/winterlicht-am-fluss/",
+      "url": "/de/videos/"
+    }
+  ]
+}
