@@ -9,6 +9,7 @@
   <style>
     body { display: flex; flex-direction: column; min-height: 100vh; }
     main { flex: 1; }
+    .site-footer { margin-top: auto; }
     .notes-hero { position: relative; padding: 100px 24px 60px; background-image: url('/images/notes-hero.png?w=1600&q=80'); background-size: cover; background-position: center 35%; text-align: center; }
     .notes-hero::before { content: ""; position: absolute; inset: 0; background: rgba(55, 72, 65, 0.45); }
     .notes-hero .hero-content { position: relative; z-index: 1; }
@@ -22,11 +23,10 @@
     .note-item .meta { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; }
     .note-item h3 { font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--text-dark); margin-bottom: 0.5rem; }
     .note-item p { font-family: var(--font-body); font-size: 15px; line-height: 1.6; color: var(--text-muted); margin: 0; }
-    .page-nav { padding: 20px 0 60px; }
-    .page-nav-buttons { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; max-width: 900px; margin: 0 auto; }
-    .page-nav-btn { display: block; font-family: var(--font-ui); font-size: 14px; padding: 14px 20px; background: #3a4a42; color: var(--text-light); text-decoration: none; border: 1px solid #3a4a42; transition: all 0.3s ease; text-align: center; }
-    .page-nav-btn:hover { background: #2f3d36; }
-    @media (max-width: 768px) { .page-nav-buttons { grid-template-columns: 1fr 1fr; } }
+    .page-nav { padding: 40px 0; border-top: 1px solid var(--border-color); margin-top: 40px; }
+    .page-nav-content { max-width: 900px; margin: 0 auto; text-align: center; }
+    .page-nav a { color: var(--text-muted); text-decoration: none; margin: 0 20px; }
+    @media (max-width: 768px) { .page-nav a { display: inline-block; margin: 5px 10px; } }
   </style>
 </head>
 <body>
@@ -57,25 +57,21 @@
           <h3>Morning Coffee</h3>
           <p>The first sip is always the best—before the day begins, before the noise starts. Just the warmth of the cup and the quiet promise of a new day.</p>
         </a>
-
         <a href="/en/writing/notes/rain-on-sunday/" class="note-item">
           <div class="meta">March 4, 2026 · Rain</div>
           <h3>Rain on Sunday</h3>
           <p>There is a particular quality to Sunday rain. It falls without urgency, knowing the world has slowed down to meet it.</p>
         </a>
-
         <a href="/en/writing/notes/bookmark/" class="note-item">
           <div class="meta">March 2, 2026 · Reading</div>
           <h3>The Bookmark</h3>
           <p>Found an old receipt in a used book. Someone bought groceries on March 15, 2019. Now it marks my place in a story they never finished.</p>
         </a>
-
         <a href="/en/writing/notes/station-announcement/" class="note-item">
           <div class="meta">February 28, 2026 · Travel</div>
-          <h3>Station Announcement</div>
+          <h3>Station Announcement</h3>
           <p>The voice on the PA system is tired. We all are. But somewhere in the static, there is something like comfort—the sound of going somewhere, even if it's just home.</p>
         </a>
-
         <a href="/en/writing/notes/winter-coat/" class="note-item">
           <div class="meta">February 25, 2026 · Winter</div>
           <h3>Winter Coat</h3>
@@ -84,11 +80,11 @@
       </div>
 
       <section class="page-nav">
-        <div class="page-nav-buttons">
-          <a href="/en/writing/" class="page-nav-btn">Writing →</a>
-          <a href="/en/writing/essays/" class="page-nav-btn">Essays →</a>
-          <a href="/en/writing/novels/" class="page-nav-btn">Novels →</a>
-          <a href="/en/" class="page-nav-btn">← Home</a>
+        <div class="page-nav-content">
+          <a href="/en/writing/">Writing →</a>
+          <a href="/en/writing/essays/">Essays →</a>
+          <a href="/en/writing/novels/">Novels →</a>
+          <a href="/en/">← Home</a>
         </div>
       </section>
     </div>
