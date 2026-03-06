@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>车站之夜 — Fading Moments</title>
+  <meta name="description" content="一个关于记忆与距离的短篇小说。一个男人冬日里在一座小车站等待，回忆着如晨雾般消散的生命片段。">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    .novel-hero {
+      position: relative;
+      height: 450px;
+      background-image: url('/images/novel-station-hero.png');
+      background-size: cover;
+      background-position: center 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .novel-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(47, 61, 54, 0.5);
+    }
+    .novel-hero .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .novel-hero .label {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: rgba(237, 231, 223, 0.6);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .novel-hero h1 {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 400;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+    .novel-hero .subtitle {
+      font-family: var(--font-body);
+      font-size: 18px;
+      color: rgba(237, 231, 223, 0.9);
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+    .novel-hero .meta {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      color: rgba(237, 231, 223, 0.5);
+    }
+    .novel-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    .synopsis {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 40px;
+      margin-bottom: 60px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    .synopsis h2 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+    .synopsis p {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+    .chapter-list h2 {
+      font-family: var(--font-display);
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .chapters {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .chapter-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+    .chapter-item:hover {
+      transform: translateX(4px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+    .chapter-item .num {
+      font-family: var(--font-ui);
+      font-size: 12px;
+      color: var(--text-muted);
+      width: 40px;
+    }
+    .chapter-item .title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--text-dark);
+      flex: 1;
+    }
+    .chapter-item .status {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+    }
+    .chapter-item .status.published {
+      background: #4f5f55;
+      color: var(--text-light);
+      border-color: #4f5f55;
+    }
+    .start-reading {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 3rem;
+    }
+    .start-btn, .back-btn {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 14px;
+      padding: 14px 32px;
+      background: #4f5f55;
+      color: var(--text-light);
+      text-decoration: none;
+      border: 1px solid #4f5f55;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+    .start-btn:hover, .back-btn:hover {
+      background: #566b5f;
+    }
+    @media (max-width: 768px) {
+      .novel-hero h1 { font-size: 36px; }
+      .novel-container { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/zh/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/">EN</a><a href="/de/writing/">DE</a><a href="/zh/writing/" class="active">中文</a></nav>
+    </div>
+    <nav class="main-nav">
+      <ul><li><a href="/zh/">首页</a></li><li><a href="/zh/writing/" class="active">原创小说与随笔</a></li><li><a href="/zh/visual-archive/">旧照片</a></li><li><a href="/zh/films-music/">影像与音乐</a></li><li><a href="/zh/studio/">工坊</a></li><li><a href="/zh/digital-lab/">数字实验室</a></li><li><a href="/zh/about/">关于</a></li></ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="novel-hero">
+      <div class="hero-content">
+        <div class="label">小说</div>
+        <h1>车站之夜</h1>
+        <div class="subtitle">一个关于记忆与距离的短篇小说</div>
+        <div class="meta">2024年12月 · 5 章 · 已完结</div>
+      </div>
+    </section>
+
+    <div class="novel-container">
+      <section class="synopsis">
+        <h2>简介</h2>
+        <p>一个男人冬日里在一座小车站等待，回忆着如晨雾般消散的生命片段。透过他的记忆，我们拼凑出一个关于爱、失去与定义我们的时刻的故事。</p>
+      </section>
+
+      <section class="chapter-list">
+        <h2>目录</h2>
+        <div class="chapters">
+          <a href="/zh/writing/night-at-station/chapter-1/" class="chapter-item">
+            <span class="num">01</span>
+            <span class="title">晚点</span>
+            <span class="status published">阅读</span>
+          </a>
+          <a href="/zh/writing/night-at-station/chapter-2/" class="chapter-item">
+            <span class="num">02</span>
+            <span class="title">那封信</span>
+            <span class="status published">阅读</span>
+          </a>
+          <a href="/zh/writing/night-at-station/chapter-3/" class="chapter-item">
+            <span class="num">03</span>
+            <span class="title">站长</span>
+            <span class="status published">阅读</span>
+          </a>
+          <a href="/zh/writing/night-at-station/chapter-4/" class="chapter-item">
+            <span class="num">04</span>
+            <span class="title">雾</span>
+            <span class="status published">阅读</span>
+          </a>
+          <a href="/zh/writing/night-at-station/chapter-5/" class="chapter-item">
+            <span class="num">05</span>
+            <span class="title">下一班列车</span>
+            <span class="status published">阅读</span>
+          </a>
+        </div>
+        <div class="start-reading">
+          <a href="/zh/writing/night-at-station/chapter-1/" class="start-btn">开始阅读 →</a>
+          <a href="/zh/writing/novels/" class="back-btn">← 小说列表</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">一处安静的文学档案</div>
+      <div class="footer-copyright">© 2026 Fading Moments. 原创散文，版权所有。</div>
+      <div class="footer-links"><a href="/zh/about/">关于</a><a href="/zh/about/#contact">联系</a></div>
+    </div>
+  </footer>
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

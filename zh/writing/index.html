@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>原创小说与随笔 — Fading Moments</title>
+  <meta name="description" content="散文、小说与叙事写作，记录记忆、地点与心灵的回响。">
+  
+  <link rel="alternate" hreflang="en" href="https://fading-moments.com/en/writing/">
+  <link rel="alternate" hreflang="de" href="https://fading-moments.com/de/writing/">
+  <link rel="alternate" hreflang="zh" href="https://fading-moments.com/zh/writing/">
+  
+  <link rel="stylesheet" href="/assets/css/style.css?v=6">
+  <style>
+    /* Writing Page Specific Styles */
+    .writing-hero {
+      position: relative;
+      text-align: center;
+      padding: 100px 24px 80px;
+      background-image: url('https://images.unsplash.com/photo-1517842645767-c639042777db?w=1600&q=80');
+      background-size: cover;
+      background-position: center 35%;
+    }
+    
+    .writing-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(55, 72, 65, 0.38);
+    }
+    
+    .writing-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .writing-hero h1 {
+      font-family: var(--font-display);
+      font-size: 42px;
+      font-weight: 400;
+      color: var(--text-light);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+    
+    .writing-hero p {
+      font-family: var(--font-body);
+      font-size: 18px;
+      color: rgba(237, 231, 223, 0.9);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    
+    .writing-hero::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 1px;
+      background: rgba(237, 231, 223, 0.3);
+      margin: 30px auto 0;
+    }
+    
+    /* Featured Section */
+    .featured-writing {
+      padding: 60px 0;
+    }
+    
+    .featured-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 28px;
+      margin-bottom: 30px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    
+    .featured-image {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+    }
+    
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.85) contrast(1.05);
+    }
+    
+    .featured-content h2 {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .featured-content p {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    
+    .featured-label {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    
+    .read-link {
+      display: inline-block;
+      font-family: var(--font-ui);
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      padding: 10px 20px;
+      background: #4f5f55;
+      color: var(--text-light);
+      text-decoration: none;
+      border: 1px solid #4f5f55;
+      transition: all 0.2s ease;
+    }
+    
+    .read-link:hover {
+      background: #566b5f;
+    }
+    
+    /* Categories */
+    .writing-categories {
+      padding: 60px 0;
+      border-top: 1px solid rgba(201, 193, 180, 0.3);
+      border-bottom: 1px solid rgba(201, 193, 180, 0.3);
+    }
+    
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    
+    .category-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 28px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+    }
+    
+    .category-card .icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+      opacity: 0.65;
+    }
+    
+    .category-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+    
+    .category-card p {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    
+    /* Latest Works */
+    .latest-works {
+      padding: 60px 0;
+    }
+    
+    .works-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .work-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+      transition: all 0.3s ease;
+    }
+    
+    .work-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+    }
+    
+    .work-info h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+    
+    .work-info h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .work-info p {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    
+    .work-meta {
+      font-family: var(--font-ui);
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+    
+    /* Archive */
+    .writing-archive {
+      padding: 60px 0;
+    }
+    
+    .archive-note {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    
+    .archive-list {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .archive-item {
+      font-family: var(--font-ui);
+      font-size: 18px;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 16px 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+      transition: all 0.3s ease;
+      min-width: 100px;
+      text-align: center;
+    }
+    
+    .archive-item:hover {
+      background: var(--bg-primary);
+      color: var(--text-light);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+    }
+    
+    @media (max-width: 768px) {
+      .writing-hero h1 { font-size: 36px; }
+      .featured-item { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: 1fr; }
+      .work-item { grid-template-columns: 1fr; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Botanical Decoration -->
+  <div class="botanical"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/zh/" class="site-logo">
+        <span class="logo-mark">Fm</span>
+        <span class="site-title">Fading Moments</span>
+      </a>
+      <nav class="lang-switch" aria-label="语言">
+        <a href="/en/writing/">EN</a>
+        <a href="/de/writing/">DE</a>
+        <a href="/zh/writing/" class="active" aria-current="page">中文</a>
+      </nav>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/writing/" class="active">原创小说与随笔</a></li>
+        <li><a href="/zh/visual-archive/">旧照片</a></li>
+        <li><a href="/zh/films-music/">影像与音乐</a></li>
+        <li><a href="/zh/studio/">工坊</a></li>
+        <li><a href="/zh/digital-lab/">数字实验室</a></li>
+        <li><a href="/zh/about/">关于</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="writing-hero">
+      <div class="container">
+        <h1>原创小说与随笔</h1>
+        <p>散文、小说与叙事写作，<br>记录记忆、地点与心灵的回响。</p>
+      </div>
+    </section>
+
+    <!-- Featured Writing -->
+    <section class="featured-writing container">
+      <div class="section-title"><span>精选推荐</span></div>
+      
+      <article class="featured-item">
+        <div class="featured-image">
+          <img src="/images/hero-writing-desk.png" alt="车站之夜">
+        </div>
+        <div class="featured-content">
+          <div class="featured-label">精选故事</div>
+          <div class="card-meta">小说 · 2024年12月</div>
+          <h2>车站之夜</h2>
+          <p>一个关于记忆与距离的短篇小说。一个男人冬日里在一座小车站等待，回忆着如晨雾般消散的生命片段。</p>
+          <a href="/zh/writing/night-at-station/" class="read-link">阅读 →</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Categories -->
+    <section class="writing-categories container">
+      <div class="section-title"><span>分类</span></div>
+      
+      <div class="category-grid">
+        <a href="/zh/writing/essays/" class="category-card">
+          <div class="icon">✍️</div>
+          <h3>随笔</h3>
+          <p>关于记忆、地点与静默观察的个人随笔。</p>
+        </a>
+        
+        <a href="/zh/writing/novels/" class="category-card">
+          <div class="icon">📖</div>
+          <h3>小说</h3>
+          <p>探索叙事与人物的较长篇作品。</p>
+        </a>
+        
+        <a href="/zh/writing/notes/" class="category-card">
+          <div class="icon">📝</div>
+          <h3>随记</h3>
+          <p>短小的感悟、片段与转瞬即逝的思绪。</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Recently Completed -->
+    <section class="latest-works container">
+      <div class="section-title"><span>最新完结</span></div>
+      
+      <div class="works-list">
+        <article class="work-item">
+          <div class="work-info">
+            <h3><a href="/zh/writing/smell-of-old-paper/">旧书的气味</a></h3>
+            <p>一篇关于被遗忘的图书馆与它们所承载记忆的小随笔。</p>
+            <span class="work-meta">2026年1月 · 随笔</span>
+          </div>
+          <a href="/zh/writing/smell-of-old-paper/" class="read-link">阅读 →</a>
+        </article>
+        
+        <article class="work-item">
+          <div class="work-info">
+            <h3><a href="/zh/writing/winter-light-on-the-river/">河上的冬光</a></h3>
+            <p>一次河畔漫步，冬日的光线渐变成金色。</p>
+            <span class="work-meta">2024年3月 · 随笔</span>
+          </div>
+          <a href="/zh/writing/winter-light-on-the-river/" class="read-link">阅读 →</a>
+        </article>
+      </div>
+      
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="/zh/" class="read-link" style="display: inline-block;">← 首页</a>
+      </div>
+    </section>
+
+    <!-- Archive -->
+    <section class="writing-archive container">
+      <div class="section-title"><span>归档</span></div>
+      <p class="archive-note">按年份浏览</p>
+      
+      <div class="archive-list">
+        <a href="/zh/writing/archive/2026/" class="archive-item">2026</a>
+        <a href="/zh/writing/archive/2025/" class="archive-item">2025</a>
+        <a href="/zh/writing/archive/2024/" class="archive-item">2024</a>
+        <a href="/zh/writing/archive/2023/" class="archive-item">2023</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">一处安静的文学档案</div>
+      <div class="footer-copyright">© 2026 Fading Moments. 版权所有，转载请联系授权。</div>
+      <div class="footer-copyright">原创散文，版权所有，未经作者同意，严禁转载。非法转载将追究法律责任。</div>
+      <div class="footer-links">
+        <a href="/zh/about/">关于</a>
+        <a href="/zh/about/#contact">联系</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

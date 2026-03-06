@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第一章：晚点 — 车站之夜 — Fading Moments</title>
+  <meta name="description" content="火车晚点了。对于山里的冬夜来说并不罕见，但足以让他等待比预期更长的时间。">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .chapter-hero { position: relative; height: 380px; background-image: url('/images/novel-station-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.55); }
+    .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .chapter-hero .novel-title { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 0.5rem; }
+    .chapter-hero h1 { font-family: var(--font-display); font-size: 36px; font-weight: 400; color: var(--text-light); margin-bottom: 0.5rem; }
+    .chapter-hero .chapter-num { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); letter-spacing: 0.1em; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.8; color: var(--text-dark); background: var(--bg-card); border: 1px solid var(--border-color); padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); }
+    .chapter-content p { margin-bottom: 1.5rem; text-indent: 2em; }
+    .chapter-content p:first-of-type { text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border-color); }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 12px 20px; border: 1px solid #4f5f55; background: #4f5f55; transition: all 0.3s ease; font-size: 13px; }
+    .chapter-nav a:hover { background: #566b5f; border-color: #566b5f; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 14px; color: var(--text-light); }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: 1 / -1; text-align: center; background: #4f5f55; border-color: #4f5f55; font-size: 12px; }
+    .chapter-nav .toc:hover { background: #566b5f; border-color: #566b5f; }
+    .chapter-nav .novels { grid-column: 1 / -1; text-align: center; background: #4f5f55; border-color: #4f5f55; font-size: 13px; padding: 14px 24px; }
+    .chapter-nav .novels:hover { background: #566b5f; }
+    @media (max-width: 768px) { .chapter-hero h1 { font-size: 28px; } .chapter-container { padding: 40px 20px; } .chapter-content { font-size: 16px; padding: 40px 24px; } .chapter-nav .next { text-align: left; } }
+  </style>
+</head>
+<body>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/zh/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/">EN</a><a href="/de/writing/">DE</a><a href="/zh/writing/" class="active">中文</a></nav>
+    </div>
+    <nav class="main-nav"><ul><li><a href="/zh/">首页</a></li><li><a href="/zh/writing/" class="active">原创小说与随笔</a></li><li><a href="/zh/visual-archive/">旧照片</a></li><li><a href="/zh/films-music/">影像与音乐</a></li><li><a href="/zh/studio/">工坊</a></li><li><a href="/zh/digital-lab/">数字实验室</a></li><li><a href="/zh/about/">关于</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero">
+      <div class="chapter-hero-content">
+        <div class="novel-title"><a href="/zh/writing/night-at-station/">车站之夜</a></div>
+        <div class="chapter-num">第1章</div>
+        <h1>晚点</h1>
+      </div>
+    </section>
+
+    <article class="chapter-container">
+      <div class="chapter-content">
+        <p>火车晚点了。对于山里的冬夜来说并不罕见，但足以让他等待比预期更长的时间。他站在站台上，看着呼吸在冷空气中变成雾气，思考着有些等待为何比其他等待感觉更长。</p><p>车站很小——一个站台、一个油漆剥落的木头候车棚，还有一只滴答作响而非咔嗒作响的钟。远处某处，一只狗在吠叫。更近的地方，风从屋顶的缝隙中呼啸而过。</p><p>他想起了口袋里的那封信。那封他没有寄出的信。那封他在脑海中不断重写、每一版都比上一版更诚实、每一版都更不可能交付的信。</p><p>站长短暂出现，将自己的表与坏掉的钟对照，然后又消失在温暖的办公室里。站台上的男人羡慕那份温暖——那种目的的确定性，那个一切都有其位置的小天地。</p><p>他记得她曾说过，火车站是阈限空间——既非此处也非彼处，悬浮在出发与到达之间的时刻。他当时不明白。他想他现在明白了。</p><p>雾开始降临，软化了世界的边缘。很快，他知道，群山将完全消失，车站将变成灰色海洋中的一座孤岛。他从中找到了某种安慰——一个小小的、被点亮的所在，被虚无环绕，在虚空中坚守阵地。</p><p>当火车终于驶入，它的前灯像承诺一样穿透迷雾时，他意识到自己还没有准备好上车。有些旅程需要推迟。有些告别需要保持未说。</p>
+      </div>
+    </article>
+
+    <nav class="chapter-nav">
+      
+      <a href="/zh/writing/night-at-station/chapter-2/" class="next"><div class="label">下一章 →</div><div class="title">第二章：那封信</div></a>
+      <a href="/zh/writing/night-at-station/" class="toc">返回目录</a>
+      
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">一处安静的文学档案</div>
+      <div class="footer-copyright">© 2026 Fading Moments. 原创散文，版权所有。</div>
+      <div class="footer-links"><a href="/zh/about/">关于</a><a href="/zh/about/#contact">联系</a></div>
+    </div>
+  </footer>
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

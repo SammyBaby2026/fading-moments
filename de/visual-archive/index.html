@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Archive — Fading Moments</title>
+  <meta name="description" content="Eine kuratierte Sammlung von Fotografien, die Erinnerung, Ort und stille Momente erforschen.">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    .archive-hero { position: relative; padding: 100px 24px 60px; background-image: url('https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=1600&q=80'); background-size: cover; background-position: center 35%; text-align: center; }
+    .archive-hero::before { content: ""; position: absolute; inset: 0; background: rgba(55, 72, 65, 0.45); }
+    .archive-hero .hero-content { position: relative; z-index: 1; }
+    .archive-hero .label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 1rem; }
+    .archive-hero h1 { font-family: var(--font-display); font-size: 48px; font-weight: 400; color: var(--text-light); margin-bottom: 1rem; }
+    .archive-hero .subtitle { font-family: var(--font-body); font-size: 18px; color: rgba(237, 231, 223, 0.9); font-style: italic; }
+    .archive-categories { padding: 60px 24px; }
+    .category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .category-card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 28px; text-align: center; transition: all 0.3s ease; box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18); text-decoration: none; color: inherit; }
+    .category-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22); }
+    .category-card .icon { font-size: 1.75rem; margin-bottom: 0.75rem; opacity: 0.65; }
+    .category-card h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 400; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .category-card p { font-family: var(--font-body); font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; }
+    .archive-gallery { padding: 60px 24px; border-top: 1px solid rgba(201, 193, 180, 0.3); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .gallery-item { aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid var(--border-light); background: var(--bg-card); box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12); transition: all 0.3s ease; }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9) contrast(1.05); transition: all 0.3s ease; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .page-nav { padding: 40px 24px 60px; border-top: 1px solid rgba(201, 193, 180, 0.3); }
+    .page-nav-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 600px; margin: 0 auto; }
+    .page-nav-btn { display: block; font-family: var(--font-ui); font-size: 14px; padding: 16px 32px; background: #3a4a42; color: var(--text-light); text-decoration: none; border: 1px solid #3a4a42; transition: all 0.3s ease; text-align: center; }
+    .page-nav-btn:hover { background: #2f3d36; border-color: #2f3d36; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); }
+    @media (max-width: 768px) { .archive-hero h1 { font-size: 36px; } .category-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: 1fr; } .page-nav-buttons { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/de/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/visual-archive/">EN</a><a href="/de/visual-archive/" class="active">DE</a><a href="/zh/visual-archive/">中文</a></nav>
+    </div>
+    <nav class="main-nav">
+      <ul><li><a href="/de/">Home</a></li><li><a href="/de/writing/">Writing</a></li><li><a href="/de/visual-archive/" class="active">Visual Archive</a></li><li><a href="/de/films-music/">Films & Music</a></li><li><a href="/de/studio/">Studio</a></li><li><a href="/de/digital-lab/">Digital Lab</a></li><li><a href="/de/about/">About</a></li></ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="archive-hero">
+      <div class="hero-content">
+        <div class="label">Visual</div>
+        <h1>Visual Archive</h1>
+        <div class="subtitle">Eine kuratierte Sammlung von Fotografien,<br>die Erinnerung, Ort und stille Momente erforschen.</div>
+      </div>
+    </section>
+
+    <section class="archive-categories container">
+      <div class="section-title"><span>Sammlungen</span></div>
+      <div class="category-grid">
+        <a href="/de/visual-archive/family-album/" class="category-card">
+          <div class="icon">📷</div>
+          <h3>Familienalbum</h3>
+          <p>Verblasste Fotografien und vergessene Erinnerungen aus Familienarchiven.</p>
+        </a>
+        <a href="/de/visual-archive/street-scenes/" class="category-card">
+          <div class="icon">🌆</div>
+          <h3>Straßenszenen</h3>
+          <p>Städtische Landschaften und ungestellte Momente aus Städten auf der ganzen Welt.</p>
+        </a>
+        <a href="/de/visual-archive/nature-moments/" class="category-card">
+          <div class="icon">🌿</div>
+          <h3>Naturmomente</h3>
+          <p>Die stille Schönheit von Jahreszeiten, Landschaften und natürlichem Licht.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="archive-gallery">
+      <div class="section-title"><span>Ausgewählte Bilder</span></div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80" alt="Kamera"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=600&q=80" alt="Straße"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Portrait"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80" alt="Schallplatte"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=600&q=80" alt="Meer"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=600&q=80" alt="Café"></div>
+      </div>
+    </section>
+
+    <section class="page-nav">
+      <div class="page-nav-buttons">
+        <a href="/de/writing/" class="page-nav-btn">Writing →</a>
+        <a href="/de/films-music/" class="page-nav-btn">Films & Music →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">Ein stilles literarisches Archiv</div>
+      <div class="footer-copyright">© 2026 Fading Moments. Alle Werke sind urheberrechtlich geschützt.</div>
+    </div>
+  </footer>
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>
