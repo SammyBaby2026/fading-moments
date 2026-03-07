@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第三章：上锁的房间 — 疑云暗影 — Fading Moments</title>
+  <meta name="description" content="疗养院闻起来是消毒水和悔恨的味道，那种化学甜味掩盖不了底下腐朽的气息...">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    main { flex: 1; position: relative; }
+    .site-footer { margin-top: auto; }
+    .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
+    .watermark::before { content: "SHADOWS OF DOUBT © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
+    .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .chapter-hero .novel-title { font-family: var(--font-display); font-size: 48px; font-weight: 400; color: var(--text-light); margin-bottom: 0.75rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-name { font-family: var(--font-body); font-size: 22px; font-style: italic; color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    .chapter-meta { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #d9d4cc; }
+    .chapter-meta .date { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .chapter-meta .word-count { font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content p:first-of-type { text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: span 2; }
+    .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
+    .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
+    .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .copyright-box p:last-child { margin-bottom: 0; }
+    .copyright-box strong { color: var(--text-dark); }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .chapter-nav .prev, .chapter-nav .next { text-align: center; } .chapter-nav .toc { grid-column: span 1; } .watermark::before { font-size: 60px; } }
+  </style>
+</head>
+<body>
+  <div class="watermark"></div>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/zh/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-3/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-3/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-3/" class="active">中文</a></nav>
+    </div>
+    <nav class="main-nav"><ul><li><a href="/zh/">首页</a></li><li><a href="/zh/writing/" class="active">原创小说与随笔</a></li><li><a href="/zh/visual-archive/">旧照片</a></li><li><a href="/zh/videos/">视频</a></li><li><a href="/zh/films-music/">影像与音乐</a></li><li><a href="/zh/about/">关于</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero">
+      <div class="chapter-hero-content">
+        <div class="novel-title"><a href="/zh/writing/novels/shanyu-youlai/">疑云暗影</a></div>
+        <div class="chapter-name">第三章：上锁的房间</div>
+      </div>
+    </section>
+
+    <article class="chapter-container">
+      <div class="chapter-meta">
+        <div class="date">2026年3月9日</div>
+        <div class="word-count">3,500字 · 第三章，共20章</div>
+      </div>
+
+      <div class="chapter-content">
+        <p>疗养院闻起来是消毒水和悔恨的味道，那种化学甜味掩盖不了底下腐朽的气息。Jack Morrison站在Ashford Senior Care Center的大厅里，看着一位坐轮椅的老人望着窗外——那里只有一个停车场，从来没有任何有趣的事情发生。</p>
+
+        <p>Richard Holloway曾经是一头雄狮。九十年代，他接手了与Harrison Steel法律团队的对抗，明知会输，却还是奋力一战——因为总得有人站出来，因为二十三个家庭值得比封口费和不披露协议更好的结局。现在他七十三岁了，记忆像糖一样在雨中溶解，那些可能藏着答案的案卷也早已散落四方。</p>
+
+        <p>至少，所有人都这么认为。</p>
+
+        <p>"您是Morrison探员？"向他走来的女人四十出头，有着Holloway家族标志性的高颧骨和疲惫的眼睛。"我是Elizabeth Holloway-Morris。我父亲...我是说他唯一的女儿。"</p>
+
+        <p>"谢谢您愿意见我，Holloway-Morris女士。"</p>
+
+        <p>"是为了钢铁厂的案子，对吗？"她不需要确认。"所有人都以为那个案子随着我父亲的大脑一起死去了。但他有偏执症，探员——那种好的偏执，让你把所有东西都备份的偏执。"</p>
+
+        <p>Jack感到一丝希望，危险得像煤气泄漏中的火柴。"您有那些文件？"</p>
+
+        <p>"不在疗养院。"她瞥了一眼前台护士，压低声音。"我父亲知道总有一天会有人来寻找真相。他要我保证那些文件的安全。跟我来。"</p>
+
+        <p>Holloway & Associates律师事务所位于Main Street一栋维多利亚建筑的二楼，夹在一家破产律师事务所和一家发薪日贷款店之间。Jack不禁注意到这种讽刺——正义与绝望，共用一个街区。</p>
+
+        <p>Elizabeth在父亲老办公室的书架后面打开了一个隐藏保险箱。"他五年前就不再执业了，那时阿尔茨海默症开始恶化。但他向我保证——如果有人来询问Harrison的案子，我就要把备份文件交给他。"</p>
+
+        <p>"为什么是我？为什么是现在？"</p>
+
+        <p>"因为三个月内，与那次爆炸有关的三个'人'已经死了，探员。我读新闻。"她拿出一个金属文件盒，老旧但保养良好。"而且两天前，有人闯进了这间办公室。他们没拿走任何东西——他们在找某样特定的东西。"</p>
+
+        <p>Jack的脉搏加快了。"他们在找什么？"</p>
+
+        <p>"这个。"她打开盒子，里面是按年份、案件、客户分类的文件夹。"完整的Harrison Steel wrongful death案卷，包括我父亲从未提交的那些。"</p>
+
+        <p>她递给他一个标着"CONFIDENTIAL—DO NOT FILE"的文件夹，那是她父亲熟悉的笔迹。里面是从未呈堂的证人陈述、从未作为证据提交的照片，以及一盘录音带，标签写着"V. Kowalski—Deathbed Statement, March 2019"。</p>
+
+        <p>Vincent Kowalski。Patricia的丈夫。那个上了十五年夜班、死前声称掌握证据证明爆炸并非意外的人。</p>
+
+        <p>"抽屉里有播放器，"Elizabeth轻声说。"我觉得您需要听听这个。"</p>
+
+        <blockquote>"我是Vincent Kowalski。2009年11月14日晚上我在值班。锅炉爆炸时我就在现场。而我知道真相。Harrison Sr.知道甲烷积聚的事。我们都知道。探测器已经坏了几个星期，但维修被'推迟'到季度检查之后。我们被告知要么继续工作，要么丢掉饭碗。"</blockquote>
+
+        <p>磁带发出嘶嘶声，然后Vincent的声音再次响起，更虚弱了："我有证据。贿赂账本的复印件、爆炸前故障设备的照片，还有检查员2015年'自然死亡'前的陈述。我要把所有东西交给Harrison医生。他知道怎么把东西藏到公司找不到的地方。"</p>
+
+        <p>磁带以一声咔嗒结束，在安静的办公室里回荡。</p>
+
+        <p>Elizabeth在默默流泪。"我父亲从未提交这个。他本来要提交的——但后来Vincent死了，Harrison医生说找不到证据，案子已经结了，而且...而且他很害怕。"</p>
+
+        <p>"不会再害怕了，"Jack轻声说。</p>
+
+        <p>他的手机震动了。一条来自未知号码的短信："你找到了文件。很好。但文件无法让死者复活，Jack。只有正义可以。而正义需要牺牲。你愿意牺牲一切吗？——M"</p>
+
+        <p>Jack盯着那条信息。The Machinist不只是在监视调查。他在监视Jack，专门针对他。</p>
+
+        <p>他回复："你到底是谁？"</p>
+
+        <p>回复几秒钟就来了："我是Ashford良知的幽灵。当正义被剥夺时，我就出现了。很快，Jack——很快你就必须选择站哪一边。因为在这场战争中没有无辜的旁观者。只有受害者和复仇者。"</p>
+
+        <p>Jack把手机收进口袋，双手微微颤抖。他带着文件走出律师事务所，走进灰暗的下午，腋下的文件沉甸甸的。</p>
+
+        <p>二十三条人命。三人被害。还有一个自以为在执行正义的杀手。</p>
+
+        <p>又开始下雨了，冰冷而执着，冲不走任何东西。Jack Morrison竖起衣领抵挡寒风，走向他的车，走向真相，走向一场他感觉即将到来的对决，就像暴风雨前的雷鸣。</p>
+
+        <p>The Machinist就在那里，监视着，等待着。但现在Jack拥有了他之前没有的东西。</p>
+
+        <p>他有了证据。他有了名字。他有了答案的开端。</p>
+
+        <p>而他不再想做受害者了。</p>
+      </div>
+    </article>
+
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments. 版权所有。</strong></p>
+        <p>本内容受版权法保护。未经作者事先书面许可，严禁以任何形式未经授权复制、分发或传播本作品的任何部分。</p>
+      </div>
+    </div>
+
+    <nav class="chapter-nav">
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-2/" class="prev">
+        <span class="label">← 上一章</span>
+        <span class="title">第二章：机器中的幽灵</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-4/" class="next">
+        <span class="label">下一章 →</span>
+        <span class="title">第四章：即将推出</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/" class="toc">← 返回目录</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">一个安静的文学档案馆</div>
+      <div class="footer-copyright">© 2026 Fading Moments</div>
+    </div>
+  </footer>
+</body>
+</html>

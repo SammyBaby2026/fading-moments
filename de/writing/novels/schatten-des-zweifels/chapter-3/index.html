@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 3: Der verschlossene Raum — Schatten des Zweifels — Fading Moments</title>
+  <meta name="description" content="Das Pflegeheim roch nach Desinfektionsmittel und Reue, einer chemischen Süße, die den darunter liegenden Gestank der Verwesung kaum übertünchen konnte...">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    main { flex: 1; position: relative; }
+    .site-footer { margin-top: auto; }
+    .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
+    .watermark::before { content: "SHADOWS OF DOUBT © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
+    .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .chapter-hero .novel-title { font-family: var(--font-display); font-size: 48px; font-weight: 400; color: var(--text-light); margin-bottom: 0.75rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-name { font-family: var(--font-body); font-size: 22px; font-style: italic; color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    .chapter-meta { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #d9d4cc; }
+    .chapter-meta .date { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .chapter-meta .word-count { font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content p:first-of-type { text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: span 2; }
+    .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
+    .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
+    .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .copyright-box p:last-child { margin-bottom: 0; }
+    .copyright-box strong { color: var(--text-dark); }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .chapter-nav .prev, .chapter-nav .next { text-align: center; } .chapter-nav .toc { grid-column: span 1; } .watermark::before { font-size: 60px; } }
+  </style>
+</head>
+<body>
+  <div class="watermark"></div>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/de/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-3/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-3/" class="active">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-3/">中文</a></nav>
+    </div>
+    <nav class="main-nav"><ul><li><a href="/de/">Home</a></li><li><a href="/de/writing/" class="active">Writing</a></li><li><a href="/de/visual-archive/">Visual Archive</a></li><li><a href="/de/videos/">Videos</a></li><li><a href="/de/films-music/">Films & Music</a></li><li><a href="/de/about/">About</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero">
+      <div class="chapter-hero-content">
+        <div class="novel-title"><a href="/de/writing/novels/schatten-des-zweifels/">Schatten des Zweifels</a></div>
+        <div class="chapter-name">Kapitel 3: Der verschlossene Raum</div>
+      </div>
+    </section>
+
+    <article class="chapter-container">
+      <div class="chapter-meta">
+        <div class="date">9. März 2026</div>
+        <div class="word-count">3.500 Wörter · Kapitel 3 von 20</div>
+      </div>
+
+      <div class="chapter-content">
+        <p>Das Pflegeheim roch nach Desinfektionsmittel und Reue, einer chemischen Süße, die den darunter liegenden Gestank der Verwesung kaum übertünchen konnte. Jack Morrison stand in der Lobby des Ashford Senior Care Center und beobachtete einen alten Mann im Rollstuhl, der aus dem Fenster auf einen Parkplatz starrte, auf dem nie etwas Interessantes passierte.</p>
+
+        <p>Richard Holloway war einst ein Löwe gewesen. In den Neunzigern hatte er sich dem Rechtsteam von Harrison Steel gestellt, wissend, dass er verlieren würde, aber er hatte trotzdem gekämpft—denn jemand musste es tun, denn dreiundzwanzig Familien verdienten etwas Besseres als einen versiegelten Vergleich und eine Geheimhaltungsvereinbarung. Jetzt war er dreiundsiebzig Jahre alt, sein Verstand löste sich auf wie Zucker im Regen, und die Akten, die möglicherweise Antworten enthielten, waren in alle Winde verstreut.</p>
+
+        <p>Oder so dachte jeder.</p>
+
+        <p>"Sind Sie Detective Morrison?" Die Frau, die auf ihn zukam, war Mitte vierzig, mit Holloways markanten Wangenknochen und müden Augen. "Ich bin Elizabeth Holloway-Morris. Die Tochter meines Vaters."</p>
+
+        <p>"Danke, dass Sie sich Zeit nehmen, Ms. Holloway-Morris."</p>
+
+        <p>"Es geht um den Stahlwerksfall, nicht wahr?" Sie wartete nicht auf Bestätigung. "Alle denken, dieser Fall sei mit dem Verstand meines Vaters gestorben. Aber er war paranoid, Detective. Die gute Art von paranoid—die Art, die dich alles sicherheitskopieren lässt."</p>
+
+        <p>Jack verspürte einen Hoffnungsfunken, so gefährlich wie ein Streichholz bei einem Gasleck. "Sie haben die Akten?"</p>
+
+        <p>"Nicht hier." Sie warf einen Blick zur Empfangsschwester und senkte ihre Stimme. "Mein Vater wusste, dass eines Tages jemand kommen würde. Er machte mir versprechen, sie sicher aufzubewahren. Folgen Sie mir."</p>
+
+        <p>Das Anwaltsbüro Holloway & Associates lag im zweiten Stock eines viktorianischen Gebäudes an der Main Street, eingezwängt zwischen einem Insolvenzanwalt und einem Zahltagkreditgeschäft. Die Ironie war Jack nicht entgangen—Gerechtigkeit und Verzweiflung, im selben Block.</p>
+
+        <p>Elizabeth öffnete einen Feuersafe, der hinter einem Bücherregal im alten Büro ihres Vaters versteckt war. "Er hat vor fünf Jahren aufgehört zu praktizieren, als das Alzheimer schlimmer wurde. Aber er machte mir ein Versprechen—wenn jemals jemand nach dem Harrison-Fall fragte, sollte ich ihm Zugang zu den Sicherungsakten gewähren."</p>
+
+        <p>"Warum ich? Warum jetzt?"</p>
+
+        <p>"Weil drei Menschen, die mit dieser Explosion in Verbindung stehen, in den letzten drei Monaten gestorben sind, Detective. Ich lese die Nachrichten." Sie zog eine Metallaktenbox heraus, alt aber gut gepflegt. "Und weil vor zwei Tagen jemand in dieses Büro eingebrochen ist. Sie nahmen nichts mit—sie suchten nach etwas Bestimmtem."</p>
+
+        <p>Jacks Puls beschleunigte sich. "Wonach suchten sie?"</p>
+
+        <p>"Das hier." Sie öffnete die Box, die Ordner enthielt, organisiert nach Jahr, nach Fall, nach Mandant. "Die vollständigen Harrison Steel wrongful death Akten. Einschließlich derer, die mein Vater niemals eingereicht hat."</p>
+
+        <p>Sie reichte ihm einen Ordner, auf dem in der vertrauten Handschrift ihres Vaters "CONFIDENTIAL—DO NOT FILE" stand. Darin befanden sich Zeugenaussagen, die nie vor Gericht kamen, Fotos, die niemals als Beweismittel eingereicht wurden, und eine einzelne Audiokassette mit der Aufschrift "V. Kowalski—Todestbett-Aussage, März 2019".</p>
+
+        <p>Vincent Kowalski. Patricias Ehemann. Der Mann, der fünfzehn Jahre Nachtschicht gearbeitet hatte und starb mit der Behauptung, er habe Beweise, dass die Explosion kein Unfall war.</p>
+
+        <p>"Im Schreibtisch ist ein Abspieler," sagte Elizabeth leise. "Ich denke, Sie müssen das hören."</p>
+
+        <blockquote>"Hier spricht Vincent Kowalski. Ich habe in der Nacht des 14. November 2009 gearbeitet. Ich war da, als die Kessel explodierten. Und ich weiß, was wirklich passiert ist. Harrison Sr. wusste von der Methanansammlung. Wir alle wussten es. Die Detektoren waren seit Wochen defekt, aber die Wartung wurde bis nach der Quartalsinspektion 'verschoben'. Uns wurde gesagt, entweder wir arbeiten weiter oder wir verlieren unsere Jobs."</blockquote>
+
+        <p>Das Band zischte, dann kehrte Vincents Stimme zurück, schwächer jetzt: "Ich habe Beweise. Kopien des Bestechungsbuchs, Fotos der defekten Ausrüstung vor der Explosion, eine Aussage des Inspektors, bevor er 2015 an 'natürlichen Ursachen' starb. Ich gebe alles an Dr. Harrison. Er weiß, wie man Dinge versteckt, wo das Unternehmen sie nicht finden kann."</p>
+
+        <p>Das Band endete mit einem Klicken, das im stillen Büro zu hallen schien.</p>
+
+        <p>Elizabeth weinte still. "Mein Vater hat das niemals eingereicht. Er wollte es—aber dann starb Vincent, und Dr. Harrison sagte, er könne die Beweise nicht finden, und der Fall war bereits abgeschlossen, und... und er hatte Angst."</p>
+
+        <p>"Nicht mehr lange," sagte Jack leise.</p>
+
+        <p>Sein Telefon vibrierte. Eine SMS von einer unbekannten Nummer: "Sie haben die Akten gefunden. Gut. Aber Akten können die Toten nicht zurückbringen, Jack. Nur Gerechtigkeit kann das. Und Gerechtigkeit erfordert Opfer. Sind Sie bereit, alles zu opfern? —M"</p>
+
+        <p>Jack starrte auf die Nachricht. Der Maschinist beobachtete nicht nur die Ermittlungen. Er beobachtete Jack, ganz gezielt. Er zielte auf ihn ab.</p>
+
+        <p>Er tippte zurück: "Wer sind Sie wirklich?"</p>
+
+        <p>Die Antwort kam innerhalb von Sekunden: "Ich bin der Geist des Gewissens von Ashford. Ich bin das, was passiert, wenn Gerechtigkeit verweigert wird. Und bald, Jack—sehr bald—müssen Sie wählen, auf welcher Seite Sie stehen. Denn in diesem Krieg gibt es keine unschuldigen Zuschauer. Nur Opfer und Rächer."</p>
+
+        <p>Jack steckte das Telefon ein, seine Hände zitterten leicht. Er ging aus dem Anwaltsbüro hinaus in den grauen Nachmittag, das Gewicht der Akten schwer unter seinem Arm.</p>
+
+        <p>Dreiundzwanzig Tote. Drei seitdem ermordet. Und ein Killer, der glaubte, er würde Gerechtigkeit üben.</p>
+
+        <p>Der Regen setzte wieder ein, kalt und beharrlich, der die Straßen von nichts reinigte. Jack Morrison zog seinen Kragen gegen den Wind hoch und ging zu seinem Auto, zur Wahrheit, zu einer Konfrontation, die er kommen spürte wie Donner vor einem Sturm.</p>
+
+        <p>Der Maschinist war da draußen, beobachtend, wartend. Aber jetzt hatte Jack etwas, das er zuvor nicht hatte.</p>
+
+        <p>Er hatte Beweise. Er hatte Namen. Er hatte den Anfang einer Antwort.</p>
+
+        <p>Und er hatte genug davon, ein Opfer zu sein.</p>
+      </div>
+    </article>
+
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments. Alle Rechte vorbehalten.</strong></p>
+        <p>Dieser Inhalt ist urheberrechtlich geschützt. Die unbefugte Vervielfältigung, Verbreitung oder Übertragung eines Teils dieses Werkes in jeglicher Form ist ohne vorherige schriftliche Genehmigung des Autors strengstens untersagt.</p>
+      </div>
+    </div>
+
+    <nav class="chapter-nav">
+      <a href="/de/writing/novels/schatten-des-zweifels/chapter-2/" class="prev">
+        <span class="label">← Vorheriges Kapitel</span>
+        <span class="title">Kapitel 2: Der Geist in der Maschine</span>
+      </a>
+      <a href="/de/writing/novels/schatten-des-zweifels/chapter-4/" class="next">
+        <span class="label">Nächstes Kapitel →</span>
+        <span class="title">Kapitel 4: Demnächst</span>
+      </a>
+      <a href="/de/writing/novels/schatten-des-zweifels/" class="toc">← Inhaltsverzeichnis</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">Ein leises literarisches Archiv</div>
+      <div class="footer-copyright">© 2026 Fading Moments</div>
+    </div>
+  </footer>
+</body>
+</html>
