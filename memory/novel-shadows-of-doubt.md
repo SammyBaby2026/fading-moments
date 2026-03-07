@@ -180,3 +180,21 @@ The Machinist (Daniel Chen) 开始复仇
 - Jack父亲Michael Morrison的秘密曝光
 - Emily (Jack的女儿) 被The Machinist威胁
 - 剧情进入高潮阶段
+#### 第6章新发现的线索
+20. **Jack的坦白**: Jack向女儿Emily坦白当年作为保安发现异常但没有坚持上报
+21. **父女和解**: Emily原谅父亲，成为Jack继续追查的动力
+22. **前妻Karen的警告**: 要求Jack远离家人以保护Emily
+23. **新证人线索**: Sarah在Ashford发现当年维修工Robert Hayes还活着，藏在底特律
+
+#### 第7章新发现的线索
+24. **Robert Hayes发现**: Jack和Sarah在底特律找到被Machinist囚禁的维修工
+25. **Hayes证词**: 当年被Marcus Pierce威胁保持沉默，被迫签署虚假维修报告
+26. **Machinist的交易暗示**: 他告诉Jack可以提供Pierce的罪证，但需要Jack帮他做一件事
+27. **关键证据**: Hayes提供的录音证明Pierce直接参与掩盖真相
+
+#### 第8章新发现的线索
+28. **陷阱**: Jack准备逮捕Pierce时发现是陷阱，Pierce早已设局
+29. **Jack被停职**: 内务部调查，Jack暂时失去警徽和配枪
+30. **Pierce背后的势力**: Sarah发现Pierce与州级政客有联系
+31. **Machinist的交易**: 他主动联系Jack，提出用Pierce罪证换取Jack帮他"清理最后一个名字"
+32. **惊人暗示**: Machinist暗示Jack也是当年的责任人之一
