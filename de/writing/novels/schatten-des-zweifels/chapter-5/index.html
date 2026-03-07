@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 5: Der Zeuge, der zu viel wusste — Schatten des Zweifels — Fading Moments</title>
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    main { flex: 1; position: relative; }
+    .site-footer { margin-top: auto; }
+    .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
+    .watermark::before { content: "SCHATTEN DES ZWEIFELS © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
+    .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .chapter-hero .novel-title { font-family: var(--font-display); font-size: 48px; font-weight: 400; color: var(--text-light); margin-bottom: 0.75rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-name { font-family: var(--font-body); font-size: 22px; font-style: italic; color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    .chapter-meta { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #d9d4cc; }
+    .chapter-meta .date { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .chapter-meta .word-count { font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content p:first-of-type { text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: span 2; }
+    .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
+    .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
+    .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .copyright-box p:last-child { margin-bottom: 0; }
+    .copyright-box strong { color: var(--text-dark); }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .chapter-nav .prev, .chapter-nav .next { text-align: center; } .chapter-nav .toc { grid-column: span 1; } .watermark::before { font-size: 60px; } }
+  </style>
+</head>
+<body>
+  <div class="watermark"></div>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/de/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-5/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-5/" class="active">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-5/">中文</a></nav>
+    </div>
+    <nav class="main-nav"><ul><li><a href="/de/">Startseite</a></li><li><a href="/de/writing/" class="active">Texte</a></li><li><a href="/de/visual-archive/">Bildarchiv</a></li><li><a href="/de/films-music/">Filme & Musik</a></li><li><a href="/de/about/">Über</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero">
+      <div class="chapter-hero-content">
+        <div class="novel-title"><a href="/de/writing/novels/schatten-des-zweifels/">Schatten des Zweifels</a></div>
+        <div class="chapter-name">Kapitel 5: Der Zeuge, der zu viel wusste</div>
+      </div>
+    </section>
+
+    <article class="chapter-container">
+      <div class="chapter-meta">
+        <div class="date">11. März 2026</div>
+        <div class="word-count">3.500 Wörter · Kapitel 5 von 20</div>
+      </div>
+
+      <div class="chapter-content">
+        <p>Die Poconos im November waren eine Studie in sterbender Schönheit—Bäume, die kahl gegen stählerne Himmel standen, Seen, die nichts als das Versprechen des Winters widerspiegelten. Sarah Chen fuhr, während Jack auf dem Beifahrersitz ihres ramponierten Subaru saß und die Welt mit siebzig Meilen pro Stunde an sich vorbeiblurren sah.</p>
+
+        <p>"Walter Dunn änderte seinen Namen vor fünfzehn Jahren in Thomas Webb", sagte Sarah, die Augen auf die gewundene Bergstraße gerichtet. "Kaufte die Hütte mit Bargeld, zahlt seine Steuern über eine Briefkastenfirma, war seit der Woche nach der Explosion nicht mehr in Ashford."</p>
+
+        <p>"Wenn er sich so lange versteckt hat, warum jetzt reden?"</p>
+
+        <p>"Weil ich ihm von Dr. Harrison erzählt habe. Und Earl Thompson. Und Patricia Kowalski." Sarahs Knöchel waren weiß am Lenkrad. "Ich sagte ihm, dass alle, die die Wahrheit wussten, starben. Er sagte, er würde lieber aussagen als der Nächste zu sein."</p>
+
+        <p>Jack überprüfte sein Telefon. Kein Empfang. Sie waren jetzt tief in den Bergen, weit von Funkmasten und Zivilisation entfernt. Der perfekte Ort, sich zu verstecken. Oder zu sterben.</p>
+
+        <p>"Glaubst du, der Maschinist weiß von ihm?"</p>
+
+        <p>"Ich denke, der Maschinist weiß alles." Sarahs Stimme war flach, resigniert. "Aber Dunn rief mich gestern an. Er klang verängstigt aber entschlossen. Er will, dass dies endet, Jack. Er will endlich das Richtige tun."</p>
+
+        <p>Die Hütte erschien um eine Kurve—eine verwitterte Holzstruktur am Rand eines Grats, Rauch kräuselte sich aus ihrem Steinschornstein. Ein roter Pickup stand in der Kiesauffahrt, Staub setzte sich bereits auf seiner Motorhaube ab.</p>
+
+        <p>Sarah parkte neben dem Truck. Sie saßen einen Moment lang in Stille, lauschten dem Klicken des Motors, als er abkühlte.</p>
+
+        <p>"Jack." Sarah drehte sich zu ihm um, und er sah etwas in ihren Augen, das er nicht erwartet hatte—Angst. "Was, wenn wir zu spät sind? Was, wenn er bereits—"</p>
+
+        <p>"Wir wissen das nicht." Aber Jack griff bereits nach seiner Dienstwaffe, überprüfte das Magazin aus Gewohnheit. "Bleib hinter mir. Und wenn ich dir sage, du sollst rennen, rennst du."</p>
+
+        <p>Die Haustür der Hütte stand leicht offen. Jack fühlte, wie sich sein Magen verdrehte.</p>
+
+        <p>"Mr. Webb?" rief er und identifizierte sich als Polizei. "Mr. Webb, hier ist Detective Jack Morrison. Wir sind hier, um zu helfen."</p>
+
+        <p>Stille. Die Art von Stille, die Jacks Haut zum Kriechen brachte.</p>
+
+        <p>Er schob die Tür mit dem Fuß auf, die Waffe erhoben. Das Wohnzimmer war leer—ein Kamin, der niedrig brannte, eine halbvolle Kaffeetasse auf dem Tisch, ein Buch aufgeschlagen auf der Armlehne eines Stuhls. Zeichen unterbrochenen Lebens.</p>
+
+        <p>"Küche klar", flüsterte Sarah hinter ihm.</p>
+
+        <p>Sie fanden Dunn im Schlafzimmer. Er lag auf dem Boden neben seinem Bett, die Augen offen und zur Decke starrend, ein Ausdruck milder Überraschung auf seinem Gesicht erstarrt. Kein Blut. Keine sichtbaren Wunden. Nur ein toter Mann, der aussah, als hätte er einfach aufgehört zu leben.</p>
+
+        <p>"Herzstillstand", sagte Jack, aber seine Stimme fehlte die Überzeugung. Er kniete neben der Leiche, prüfte einen Puls, von dem er bereits wusste, dass er nicht da war. Die Haut war noch warm. "Er ist nicht lange tot. Eine Stunde, vielleicht zwei."</p>
+
+        <p>Sarah war bleich geworden. "Wir sollten ihn vor drei Stunden treffen. Er lebte, als er mich anrief."</p>
+
+        <p>Jacks Telefon summte. Ein Balken Empfang, gerade genug für eine Nachricht. Die Nummer war jetzt vertraut.</p>
+
+        <blockquote>Du wirst vorhersehbar, Jack. Immer jagend, niemals fangend. Ich war vor zwei Stunden hier. Armer Walter war so erleichtert, ein freundliches Gesicht zu sehen—jemanden, der seine Schuld verstand, seine Scham, all diese Jahre geschwiegen zu haben. Ich gab ihm eine Wahl: seine Geheimnisse ins Grab nehmen, oder mich ihm helfen lassen, Frieden zu finden. Er wählte Frieden.
+
+Du hättest schneller sein sollen. Aber dann, du warst schon immer einen Schritt zurück, nicht wahr? Zuerst dein Vater, jetzt das. Was für ein Detective bist du geworden.
+
+—M</blockquote>
+
+        <p>Jacks Hände zitterten, als er die Nachricht las. Nicht vor Angst—vor Wut.</p>
+
+        <p>"Er war hier", sagte Jack leise. "Vor zwei Stunden. Er hat Dunn getötet und darauf gewartet, dass wir die Leiche finden."</p>
+
+        <p>"Wie konnte er wissen?" Sarahs Stimme brach. "Ich war so vorsichtig. Ich habe meine Spuren verwischt, ein Wegwerftelefon benutzt—"</p>
+
+        <p>"Er arbeitet nicht allein." Jack stand auf und sah sich in der Hütte um nach irgendetwas, das der Maschinist zurückgelassen haben könnte. "Oder er hat Zugang zu etwas, das wir nicht verstehen. Polizeidatenbanken, Telefonakten, irgendetwas."</p>
+
+        <p>Das Telefon klingelte.</p>
+
+        <p>Unbekannte Nummer. Jack nahm beim zweiten Klingeln ab.</p>
+
+        <p>"Ich sehe, du hast mein Handwerk gefunden." Die Stimme war gefiltert, roboterhaft, aber Jack konnte die Befriedigung darin hören. "Walter ging friedlich, Jack. Ich will, dass du das weißt. Kein Schmerz. Nur... Aufhören. Ein Herz, das entschied, fünfzehn Jahre Schuld waren genug."</p>
+
+        <p>"Du bist ein Mörder", sagte Jack. "Nichts mehr."</p>
+
+        <p>"Und du bist eine Enttäuschung." Die Stimme des Maschinisten trug echtes Bedauern. "Ich hatte solche Hoffnungen für dich, Jackie. Der Sohn eines Mannes, der versuchte, das Richtige zu tun. Ich dachte, vielleicht, nur vielleicht, würdest du verstehen, warum dies notwendig ist."</p>
+
+        <p>"Ich verstehe, dass du ein Killer bist, der denkt, er sei rechtschaffen. Ich habe Dutzende wie dich weggesperrt."</p>
+
+        <p>Lachen, verzerrt und seltsam. "Du hast keine Ahnung, wer ich bin. Was ich verloren habe. Was ich bereit bin zu verlieren."</p>
+
+        <p>"Dann sag es mir."</p>
+
+        <p>Eine Pause. Jack konnte Atmen hören, stetig und kontrolliert.</p>
+
+        <p>"14. November 2009. Ich war siebzehn Jahre alt. Mein Vater arbeitete die Nachtschicht bei Harrison Steel—Überstunden, die er sich nicht leisten konnte abzulehnen, weil meine Mutter krank war und die Arztrechnungen uns ertränkten." Die Stimme des Maschinisten hatte sich verändert, ihre roboterhafte Qualität verlierend, etwas Rohes und Menschliches werdend. "Er rief mich um 23:47 Uhr an. Sagte, etwas stimme nicht, dass die Alarme losgingen, dass er mich liebe. Die Leitung ging tot. Als ich zur Mühle kam, brannte sie bereits. Sie ließen mich nicht nah genug kommen, um zu sehen. Sie sagten mir, ich solle nach Hause gehen, dass sie anrufen würden, wenn sie etwas wüssten."</p>
+
+        <p>Jack fühlte, wie sich der Boden unter ihm verschob. "Dein Vater war einer der dreiundzwanzig."</p>
+
+        <p>"Sein Name war David Chen." Die Stille, die folgte, war ohrenbetäubend. "Klingelt das eine Glocke, Detective?"</p>
+
+        <p>Jack sah zu Sarah. Ihr Gesicht war von bleich zu geisterhaft weiß geworden. Sie formte ein Wort mit den Lippen: "Cousin."</p>
+
+        <p>"Du wusstest es", sagte Jack ins Telefon. "Du wusstest, dass Sarah danach suchte. Du wusstest, dass sie mit mir zusammenarbeitete."</p>
+
+        <p>"Sarah würde immer involviert werden. Familie ist... kompliziert." Die Stimme des Maschinisten weicherte. "Ich will ihr nicht wehtun, Jack. Ich will niemandem wehtun, der es nicht verdient. Aber mir geht die Zeit aus, und dir auch. Marcus Pierce weiß, dass ihr nahe kommt. Er macht bereits Anrufe, plant bereits, wie er euch beide verschwinden lassen kann."</p>
+
+        <p>"Hilf mir, ihn aufzuhalten. Den legalen Weg."</p>
+
+        <p>"Den legalen Weg?" Das Lachen wieder, diesmal bitter. "Wo war der legale Weg für meinen Vater? Für Jackies Vater? Für dreiundzwanzig Männer, die starben, weil ein reicher Mann Geld bei Sicherheitsinspektionen sparen wollte? Das Gesetz schützt Leute wie Harrison. Es hat immer. Jemand muss die Waage ausgleichen."</p>
+
+        <p>"Nicht so. Nicht indem du wirst, was du hasst."</p>
+
+        <p>"Vielleicht." Eine Pause. "Vielleicht hast du recht. Aber für mich ist es zu spät, Jackie. Es war zu spät, in dem Moment, als ich sah, wie sie den Körper meines Vaters aus den Trümmern zogen. Die einzige Frage jetzt ist: Was bist du bereit zu opfern, um mich aufzuhalten?"</p>
+
+        <p>Die Leitung ging tot.</p>
+
+        <p>Jack senkte das Telefon langsam. Sarah weinte still, Tränen strömten über ihre Wangen.</p>
+
+        <p>"Mein Cousin", flüsterte sie. "Davids Sohn. Sein Name ist Daniel. Ich habe ihn seit der Beerdigung nicht gesehen. Er war nur ein Kind."</p>
+
+        <p>"Er ist kein Kind mehr." Jack ging zum Fenster und sah hinaus auf den leeren Wald. "Er hat fünfzehn Jahre damit verbracht, dies zu planen. Zu trainieren. Zu lernen, wie man tötet, ohne Beweise zu hinterlassen."</p>
+
+        <p>"Wir müssen ihn aufhalten, Jack. Nicht nur für die Menschen, die er getötet hat—für ihn. Er war nicht immer so. Er war süß. Er liebte seinen Vater so sehr."</p>
+
+        <p>"Ich weiß." Jack drehte sich zu ihr um. "Und wir werden ihn aufhalten. Aber zuerst müssen wir herausfinden, was Dunn wusste. Was er uns erzählen wollte."</p>
+
+        <p>Sie durchsuchten die Hütte. In einem Bodenbrett unter dem Bett fand Jack eine Metallbox. Darin waren Dokumente—Inspektionsberichte von 2009, Fotos der sabotierten Methandetektoren, und eine handschriftliche Aussage von Walter Dunn, in der er zugab, fünfzigtausend Dollar erhalten zu haben, um seine Sicherheitszertifizierung zu fälschen.</p>
+
+        <p>Der Zahlende: Harrison Steel Corporation. Die genehmigende Unterschrift: William Harrison Sr.</p>
+
+        <p>"Das ist es", sagte Sarah, ihre Stimme zitternd. "Beweise für kriminelle Fahrlässigkeit. Beweise für Bestechung. Wir können das nutzen, um—"</p>
+
+        <p>Jacks Telefon klingelte wieder. Nicht diesmal eine Nachricht. Ein Anruf. Er erkannte die Nummer nicht.</p>
+
+        <p>"Morrison."</p>
+
+        <p>Eine Frauenstimme, verzweifelt und verängstigt. "Detective Morrison? Hier ist Karen Miller. Ich bin Emilys Lehrerin. Es gab einen Vorfall in der Schule."</p>
+
+        <p>Jack fühlte, wie das Blut aus seinem Gesicht wich. "Emily? Geht es ihr gut? Was ist passiert?"</p>
+
+        <p>"Es geht ihr gut. Körperlich. Aber... jemand hat ihr eine Nachricht hinterlassen. Ein Paket. Der Direktor denkt, Sie sollten sofort kommen."</p>
+
+        <p>Jack bewegte sich bereits zur Tür. "Was für ein Paket?"</p>
+
+        <p>"Eine Schachtel. Darin war..." Die Stimme der Lehrerin brach. "Ein Zahnrad, Detective. Ein verrostetes Metallzahnrad. Und eine Notiz. Darauf stand: 'Sagen Sie Ihrem Vater, er soll aufhören zu graben, oder nächstes Mal schicke ich etwas, das blutet.'"</p>
+
+        <p>Die Welt neigte sich. Jack packte den Türrahmen, seine Knöchel weiß.</p>
+
+        <p>"Ich bin in Chicago. Ich bin drei Stunden entfernt."</p>
+
+        <p>"Die Polizei ist hier. Sie beobachten sie. Aber Detective... er war in der Schule. Überwachungsaufnahmen zeigen einen Mann in einer Wartungsuniform, der das Paket um 9:00 Uhr liefert. Niemand hat ihn in Frage gestellt. Er ging einfach hinein, legte es in ihr Schließfach und ging hinaus."</p>
+
+        <p>Vor drei Stunden. Während Jack zu den Poconos fuhr, war der Maschinist in Chicago und besuchte seine Tochter.</p>
+
+        <p>Er wusste es immer. Er beobachtete immer.</p>
+
+        <p>"Sagen Sie Emily, dass ich sie liebe", sagte Jack, seine Stimme kaum mehr als ein Flüstern. "Sagen Sie ihr, dass ich unterwegs bin. Sagen Sie ihr... sagen Sie ihr, ich werde es wieder gutmachen."</p>
+
+        <p>Er beendete das Gespräch und wandte sich an Sarah. Sie stand bereits, Schlüssel in der Hand.</p>
+
+        <p>"Chicago", sagte sie. "Ich fahre. Du kannst im Auto schlafen."</p>
+
+        <p>"Sarah, du musst nicht—"</p>
+
+        <p>"Er ist mein Cousin, Jack. Mein Blut. Wenn er jetzt Kinder ins Visier nimmt, dann habe ich vor fünfzehn Jahren versagt, als ich ihn verschwinden ließ. Ich helfe dir, ihn aufzuhalten. Ende der Diskussion."</p>
+
+        <p>Sie fuhren durch die Nacht, Jack starrte auf sein Telefon, wünschte, es würde klingeln mit der Nachricht, dass Emily sicher war, dass der Maschinist seinen Punkt gemacht hatte und zurückweichen würde. Aber der Bildschirm blieb dunkel.</p>
+
+        <p>Irgendwo in Pennsylvania brach Sarah das Schweigen.</p>
+
+        <p>"Er wird ihr nicht wehtun, Jack. Ich kenne ihn. Oder ich kannte ihn. Er hat einen Kodex. Er verletzt nur Menschen, die er für verdient hält."</p>
+
+        <p>"Er hat Dunn getötet. Er hat drei andere getötet."</p>
+
+        <p>"Erwachsene. Menschen, die mit der Explosion verbunden waren. Emily ist unschuldig."</p>
+
+        <p>"Das waren die dreiundzwanzig Arbeiter auch." Jacks Stimme war harsch, bitter. "Jeder ist unschuldig, bis jemand entscheidet, dass sie es nicht sind."</p>
+
+        <p>Sie fuhren weiter, zwei Menschen, die durch Verlust und Geheimnisse zusammengebunden waren, rasend auf eine Konfrontation zu, die fünfzehn Jahre in der Mache war. Hinter ihnen, in einer Hütte in den Bergen, wurde der Körper von Walter Dunn kalt, ein weiterer Zeuge verstummt, eine weitere Wahrheit begraben.</p>
+
+        <p>Aber Jack hatte jetzt die Dokumente. Er hatte Beweise für Harrisons Verbrechen, Beweise für die Vertuschung, Beweise, dass dreiundzwanzig Männer nicht durch Unfall, sondern durch Gier gestorben waren.</p>
+
+        <p>Die Frage war: Würde das alles eine Rolle spielen? Oder würde der Maschinist sie alle töten, bevor Gerechtigkeit gesprochen werden konnte?</p>
+
+        <p>Das Telefon summte. Eine Textnachricht von einer unbekannten Nummer.</p>
+
+        <p>"Fahre vorsichtig, Jackie. Deine Tochter ist wunderschön. Genau wie ihr Großvater tapfer war. Wähle deinen nächsten Zug sorgfältig. Manche Figuren, einmal genommen, können nie zurückgegeben werden."</p>
+
+        <p>Jack schloss die Augen und ließ die Wut über sich hinwegspülen.</p>
+
+        <p>Das Spiel hatte sich geändert. Die Einsätze waren persönlich geworden.</p>
+
+        <p>Und er war es leid, nach den Regeln zu spielen.</p>
+      </div>
+    </article>
+
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments. Alle Rechte vorbehalten.</strong></p>
+        <p>Dieser Inhalt ist durch das Urheberrecht geschützt. Die unbefugte Vervielfältigung, Verbreitung oder Übertragung eines Teils dieses Werkes in jeglicher Form ist ohne vorherige schriftliche Genehmigung des Autors strengstens untersagt.</p>
+      </div>
+    </div>
+
+    <nav class="chapter-nav">
+      <a href="/de/writing/novels/schatten-des-zweifels/chapter-4/" class="prev">
+        <span class="label">← Vorheriges Kapitel</span>
+        <span class="title">Kapitel 4: Der Schatten des Vaters</span>
+      </a>
+      <a href="/de/writing/novels/schatten-des-zweifels/chapter-6/" class="next">
+        <span class="label">Nächstes Kapitel →</span>
+        <span class="title">Kapitel 6: Demnächst verfügbar</span>
+      </a>
+      <a href="/de/writing/novels/schatten-des-zweifels/" class="toc">← Zurück zum Inhaltsverzeichnis</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">Ein ruhiges literarisches Archiv</div>
+      <div class="footer-copyright">© 2026 Fading Moments. Alle Rechte vorbehalten.</div>
+    </div>
+  </footer>
+</body>
+</html>

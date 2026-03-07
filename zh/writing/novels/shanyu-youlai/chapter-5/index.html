@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第五章：知道太多的证人 — 疑云暗影 — Fading Moments</title>
+  <meta name="description" content="Jack和Sarah赶往寻找关键证人，但The Machinist总是领先一步。">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    main { flex: 1; position: relative; }
+    .site-footer { margin-top: auto; }
+    .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
+    .watermark::before { content: "疑云暗影 © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
+    .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .chapter-hero .novel-title { font-family: var(--font-display); font-size: 48px; font-weight: 400; color: var(--text-light); margin-bottom: 0.75rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-name { font-family: var(--font-body); font-size: 22px; font-style: italic; color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    .chapter-meta { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #d9d4cc; }
+    .chapter-meta .date { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .chapter-meta .word-count { font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content p:first-of-type { text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: span 2; }
+    .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
+    .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
+    .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .copyright-box p:last-child { margin-bottom: 0; }
+    .copyright-box strong { color: var(--text-dark); }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .chapter-nav .prev, .chapter-nav .next { text-align: center; } .chapter-nav .toc { grid-column: span 1; } .watermark::before { font-size: 60px; } }
+  </style>
+</head>
+<body>
+  <div class="watermark"></div>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/zh/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-5/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-5/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-5/" class="active">中文</a></nav>
+    </div>
+    <nav class="main-nav"><ul><li><a href="/zh/">首页</a></li><li><a href="/zh/writing/" class="active">原创小说与随笔</a></li><li><a href="/zh/visual-archive/">旧照片</a></li><li><a href="/zh/videos/">视频</a></li><li><a href="/zh/films-music/">影像与音乐</a></li><li><a href="/zh/about/">关于</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero">
+      <div class="chapter-hero-content">
+        <div class="novel-title"><a href="/zh/writing/novels/shanyu-youlai/">疑云暗影</a></div>
+        <div class="chapter-name">第五章：知道太多的证人</div>
+      </div>
+    </section>
+
+    <article class="chapter-container">
+      <div class="chapter-meta">
+        <div class="date">2026年3月11日</div>
+        <div class="word-count">3,500字 · 第五章，共20章</div>
+      </div>
+
+      <div class="chapter-content">
+        <p>十一月的波科诺山脉呈现出一种死亡之美——光秃秃的树木映衬着铁灰色的天空，湖泊只映照出冬天的承诺。Sarah Chen驾驶着她破旧的斯巴鲁，Jack坐在副驾驶，看着世界以每小时七十英里的速度在窗外模糊掠过。</p>
+
+        <p>"Walter Dunn十五年前改名为Thomas Webb，"Sarah说，眼睛盯着蜿蜒的山路。"用现金买了小屋，通过空壳公司交税，自从爆炸后一周就再也没回过Ashford。"</p>
+
+        <p>"如果他藏了这么久，为什么现在愿意开口？"</p>
+
+        <p>"因为我告诉他Harrison医生的事。还有Earl Thompson。还有Patricia Kowalski。"Sarah的手指关节因紧握方向盘而发白。"我告诉他，所有知道真相的人都在死去。他说宁愿作证也不想成为下一个。"</p>
+
+        <p>Jack检查手机。没有信号。他们现在已经深入山区，远离信号塔和文明社会。完美的藏身之地。或者，完美的死亡之地。</p>
+
+        <p>"你觉得The Machinist知道他吗？"</p>
+
+        <p>"我觉得The Machinist什么都知道。"Sarah的声音平淡，听天由命。"但Dunn昨天给我打了电话。他听起来害怕但坚定。他想结束这一切，Jack。他终于想做正确的事了。"</p>
+
+        <p>小屋出现在一个弯道后面——一座饱经风霜的木屋坐落在山脊边缘，石砌烟囱里飘出袅袅炊烟。一辆红色皮卡停在碎石车道上，车盖上已经积了一层灰尘。</p>
+
+        <p>Sarah把车停在卡车旁边。他们沉默地坐了一会儿，听着引擎冷却时的滴答声。</p>
+
+        <p>"Jack。"Sarah转过身看着他，他看到了她眼中意料之外的东西——恐惧。"如果我们来得太迟了呢？如果他已经——"</p>
+
+        <p>"我们还不知道。"但Jack已经在伸手拿他的配枪，习惯性地检查弹匣。"跟在我后面。如果我让你跑，你就跑。"</p>
+
+        <p>小屋的前门虚掩着。Jack感到胃部一沉。</p>
+
+        <p>"Webb先生？"他喊道，表明自己是警察。"Webb先生，我是Jack Morrison探员。我们是来帮你的。"</p>
+
+        <p>寂静。那种让Jack皮肤发麻的寂静。</p>
+
+        <p>他用脚推开门，举枪进入。客厅空无一人——壁炉烧得正旺，桌上放着半杯咖啡，椅子扶手上倒扣着一本打开的书。生命被中断的迹象。</p>
+
+        <p>"厨房安全，"Sarah在他身后低声说。</p>
+
+        <p>他们在卧室找到了Dunn。他躺在床边的地板上，眼睛睁着盯着天花板，脸上凝固着一丝惊讶的表情。没有血。没有明显伤口。只是一个死去的人，看起来像是突然停止了生命。</p>
+
+        <p>"心脏骤停，"Jack说，但他的声音缺乏说服力。他跪在尸体旁边，检查一个他已经知道不存在的脉搏。皮肤还有余温。"没死多久。一小时，也许两小时。"</p>
+
+        <p>Sarah脸色苍白。"我们本来应该三小时前和他见面。他给我打电话时还活着。"</p>
+
+        <p>Jack的手机震动了。一格信号，刚好够收短信。号码现在已经很熟悉了。</p>
+
+        <blockquote>你变得可预测了，Jack。总是追逐，永远抓不到。我两小时前就在这里。可怜的Walter看到一张友好的面孔时如此欣慰——一个理解他的内疚、他为保持沉默十五年而感到羞耻的人。我给了他一个选择：把秘密带进坟墓，或者让我帮他找到平静。他选择了平静。
+
+你应该动作快点的。不过，你一直慢一步，不是吗？先是你的父亲，现在是这。你算什么探员啊。
+
+——M</blockquote>
+
+        <p>Jack的手在读短信时颤抖着。不是因为恐惧——是因为愤怒。</p>
+
+        <p>"他来过这里，"Jack轻声说。"两小时前。他杀了Dunn，然后等着我们发现尸体。"</p>
+
+        <p>"他怎么可能知道？"Sarah的声音破裂。"我非常小心。我掩盖了踪迹，用了一次性手机——"</p>
+
+        <p>"他不是一个人行动。"Jack站起来，环顾小屋寻找The Machinist可能留下的任何东西。"或者他掌握着我们不理解的东西。警察数据库、电话记录、某种东西。"</p>
+
+        <p>电话响了。</p>
+
+        <p>未知号码。Jack在第二声铃响时接起。</p>
+
+        <p>"我看到你找到我的杰作了。"声音经过处理，机械般，但Jack能听出其中的满足。"Walter走得很平静，Jack。我想让你知道。没有痛苦。只是...停止。一颗心脏决定十五年的内疚已经足够了。"</p>
+
+        <p>"你是个杀人犯，"Jack说。"仅此而已。"</p>
+
+        <p>"而你是个令人失望的人。"The Machinist的声音带着真正的遗憾。"我对你寄予了如此大的希望，Jackie。一个试图做正确事情的人的儿子。我想也许，只是也许，你会理解为什么这是必要的。"</p>
+
+        <p>"我理解你是个自以为正义的杀手。我送走了几十个像你这样的人。"</p>
+
+        <p>笑声，扭曲而奇怪。"你根本不知道我是谁。我失去了什么。我愿意再失去什么。"</p>
+
+        <p>"那就告诉我。"</p>
+
+        <p>沉默。Jack能听到呼吸声，平稳而有控制。</p>
+
+        <p>"2009年11月14日。我十七岁。我父亲在Harrison钢铁厂上夜班——他不敢拒绝加班，因为我母亲生病了，医疗费用快把我们淹没了。"The Machinist的声音变了，失去了机械质感，变得原始而人性。"他在晚上11:47给我打电话。说有什么东西出错了，警报在响，说他爱我。电话断了。当我赶到钢铁厂时，已经在燃烧了。他们不让我靠近。他们让我回家，说知道了什么会给我打电话。"</p>
+
+        <p>Jack感到脚下的地板在移动。"你父亲是那二十三人之一。"</p>
+
+        <p>"他的名字是David Chen。"随后的沉默震耳欲聋。"听起来耳熟吗，探员？"</p>
+
+        <p>Jack看向Sarah。她的脸色从苍白变成了死白。她用口型说了一个词："叔叔。"</p>
+
+        <p>"你知道，"Jack对着电话说。"你知道Sarah在调查这个。你知道她在和我合作。"</p>
+
+        <p>"Sarah总是会卷入这件事。家人是...复杂的。"The Machinist的声音柔和下来。"我不想伤害她，Jack。我不想伤害任何不该受伤的人。但我的时间快用完了，你也是。Marcus Pierce知道你们快接近真相了。他已经在打电话，已经在计划怎么让你们两个消失。"</p>
+
+        <p>"帮我阻止他。用合法的方式。"</p>
+
+        <p>"合法的方式？"又是那种笑声，这次带着苦涩。"我父亲得到合法的方式了吗？Jackie的父亲呢？那二十三个因为富人想省安全检查费用而死去的人？法律保护的是Harrison那样的人。一直都是。总得有人平衡天平。"</p>
+
+        <p>"不是用这种方式。不是通过成为你憎恨的东西。"</p>
+
+        <p>"也许。"停顿。"也许你是对的。但对我来说已经太迟了，Jackie。从我看着他们把我父亲的尸体从废墟中拉出来的那一刻起，就已经太迟了。现在唯一的问题是：你愿意牺牲什么来阻止我？"</p>
+
+        <p>电话断了。</p>
+
+        <p>Jack慢慢放下手机。Sarah在无声地哭泣，泪水滑过脸颊。</p>
+
+        <p>"我的堂弟，"她低语。"David的儿子。他叫Daniel。我从葬礼后就没见过他。那时他还是个孩子。"</p>
+
+        <p>"他不再是孩子了。"Jack走到窗边，看着空旷的森林。"他花了十五年计划这个。训练。学习如何不留证据地杀人。"</p>
+
+        <p>"我们必须阻止他，Jack。不只是为了他杀的人——也为了他。他以前不是这样的。他很可爱。他那么爱他的父亲。"</p>
+
+        <p>"我知道。"Jack转过身看着她。"而且我们会阻止他。但首先，我们需要弄清楚Dunn知道什么。他要告诉我们什么。"</p>
+
+        <p>他们搜查了小屋。在床下的地板里，Jack找到了一个金属盒。里面有文件——2009年的检查报告、被破坏的甲烷探测器的照片，以及Walter Dunn的手写陈述，承认他收受了五万美元来伪造安全认证。</p>
+
+        <p>付款人：Harrison钢铁公司。授权签字：William Harrison Sr.</p>
+
+        <p>"就是这些，"Sarah说，声音颤抖。"刑事过失的证据。贿赂的证据。我们可以用这个来——"</p>
+
+        <p>Jack的手机又响了。这次不是短信，是电话。他不认识这个号码。</p>
+
+        <p>"Morrison。"</p>
+
+        <p>一个女人的声音，恐慌而害怕。"Morrison探员？我是Karen Miller。我是Emily的老师。学校出了点事。"</p>
+
+        <p>Jack感到血液从脸上流走。"Emily？她没事吧？发生了什么？"</p>
+
+        <p>"她没事。身体上。但是...有人给她留了一个信息。一个包裹。校长认为你应该马上过来。"</p>
+
+        <p>Jack已经向门口走去。"什么样的包裹？"</p>
+
+        <p>"一个盒子。里面是..."老师的声音破了。"一个齿轮，探员。一个生锈的金属齿轮。还有一张纸条。上面写着：'告诉你父亲别再挖了，否则下次我寄的就是会流血的东西。'"</p>
+
+        <p>世界倾斜了。Jack抓住门框，指节发白。</p>
+
+        <p>"我在芝加哥。我三小时路程之外。"</p>
+
+        <p>"警察在这里。他们在看着她。但是探员...他进了学校。监控录像显示一个男人穿着维修制服上午9点送包裹。没有人质疑他。他就这样走进来，把东西放进她的储物柜，然后走了出去。"</p>
+
+        <p>三小时前。当Jack开车去波科诺山脉时，The Machinist在芝加哥，拜访了他的女儿。</p>
+
+        <p>他一直知道。他一直在监视。</p>
+
+        <p>"告诉Emily我爱她，"Jack说，声音低得几乎听不见。"告诉她我在路上。告诉她...告诉她我会把一切都纠正过来。"</p>
+
+        <p>他挂断电话转向Sarah。她已经站起来，手里拿着钥匙。</p>
+
+        <p>"芝加哥，"她说。"我开车。你可以在车里睡觉。"</p>
+
+        <p>"Sarah，你不必——"</p>
+
+        <p>"他是我的堂弟，Jack。我的血亲。如果他现在 targeting 孩子，那我十五年前让他消失时就失败了。我会帮你阻止他。没得商量。"</p>
+
+        <p>他们连夜开车，Jack盯着手机，希望它能响起来告知Emily安全的消息，希望The Machinist只是表明立场就会退后。但屏幕保持黑暗。</p>
+
+        <p>在宾夕法尼亚州的某个地方，Sarah打破了沉默。</p>
+
+        <p>"他不会伤害她的，Jack。我认识他。或者说，我认识的他是不会这样做的。他有自己的原则。他只伤害他认为该受惩罚的人。"</p>
+
+        <p>"他杀了Dunn。他杀了另外三个人。"</p>
+
+        <p>"成年人。与爆炸有关的人。Emily是无辜的。"</p>
+
+        <p>"那死去的二十三名工人也是无辜的。"Jack的声音严厉，苦涩。"在有人决定他们不是之前，每个人都是无辜的。"</p>
+
+        <p>他们继续开，两个因失去和秘密而绑在一起的人，奔向一场酝酿了十五年的对抗。在他们身后，在山上的一间小屋里，Walter Dunn的尸体渐渐变冷，又一个证人被沉默，又一个真相被埋葬。</p>
+
+        <p>但Jack现在有文件了。他有Harrison罪行的证据，掩盖的证据，证明二十三个人不是死于意外而是贪婪的证据。</p>
+
+        <p>问题是：这些会有用吗？还是The Machinist会在正义得到伸张之前把他们都杀了？</p>
+
+        <p>手机震动。一条来自未知号码的短信。</p>
+
+        <p>"一路平安，Jackie。你的女儿很美。就像她的祖父很勇敢一样。小心选择你的下一步。有些棋子，一旦吃掉，就再也回不来了。"</p>
+
+        <p>Jack闭上眼睛，让愤怒淹没自己。</p>
+
+        <p>游戏已经改变。赌注已经变得私人化。</p>
+
+        <p>而他不再按规则玩了。</p>
+      </div>
+    </article>
+
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments. 版权所有。</strong></p>
+        <p>本内容受版权法保护。未经作者事先书面许可，严禁以任何形式未经授权复制、分发或传播本作品的任何部分。</p>
+      </div>
+    </div>
+
+    <nav class="chapter-nav">
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-4/" class="prev">
+        <span class="label">← 上一章</span>
+        <span class="title">第四章：父亲的影子</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-6/" class="next">
+        <span class="label">下一章 →</span>
+        <span class="title">第六章：即将推出</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/" class="toc">← 返回目录</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">一个安静的文学档案馆</div>
+      <div class="footer-copyright">© 2026 Fading Moments</div>
+    </div>
+  </footer>
+</body>
+</html>
