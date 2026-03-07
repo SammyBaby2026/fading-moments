@@ -7,28 +7,137 @@
   <meta name="description" content="这座城市从不入睡，但它会在凌晨三点带着廉价波旁威士忌和破碎承诺的味道踉跄回家。">
   <link rel="stylesheet" href="/assets/css/style.css?v=2">
   <style>
-    body { display: flex; flex-direction: column; min-height: 100vh; }
-    main { flex: 1; }
+    /* Anti-copy protection */
+    body { 
+      display: flex; flex-direction: column; min-height: 100vh;
+      -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+    }
+    main { flex: 1; position: relative; }
     .site-footer { margin-top: auto; }
-    .chapter-hero { position: relative; height: 380px; background-image: url('/images/novel-station-hero.png'); background-size: cover; background-position: center 40%; display: flex; align-items: center; justify-content: center; text-align: center; }
-    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.65); }
+    
+    /* Watermark */
+    .watermark {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 9999; opacity: 0.03;
+      background-image: repeating-linear-gradient(
+        45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px
+      );
+    }
+    .watermark::before {
+      content: "山雨欲来 © 2026"; position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg);
+      font-family: var(--font-display); font-size: 120px; color: #000;
+      white-space: nowrap;
+    }
+    
+    /* Hero - Simplified */
+    .chapter-hero { 
+      position: relative; height: 320px; 
+      background-image: url('/images/shadows-of-doubt-hero.png'); 
+      background-size: cover; background-position: center 30%; 
+      display: flex; align-items: center; justify-content: center; text-align: center;
+    }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
     .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
-    .chapter-hero .label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 0.5rem; }
-    .chapter-hero .series { font-family: var(--font-body); font-size: 14px; color: rgba(237, 231, 223, 0.7); font-style: italic; margin-bottom: 1rem; }
-    .chapter-hero h1 { font-family: var(--font-display); font-size: 32px; font-weight: 400; color: var(--text-light); margin-bottom: 0.5rem; }
-    .chapter-hero .meta { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); }
-    .chapter-container { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
-    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); }
+    .chapter-hero .novel-title { 
+      font-family: var(--font-display); font-size: 48px; font-weight: 400; 
+      color: var(--text-light); margin-bottom: 0.75rem;
+    }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-name { 
+      font-family: var(--font-body); font-size: 22px; font-style: italic;
+      color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em;
+    }
+    
+    /* Content Container */
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    
+    /* Chapter Meta - Small text before content */
+    .chapter-meta { 
+      text-align: center; margin-bottom: 32px; padding-bottom: 24px; 
+      border-bottom: 1px solid #d9d4cc;
+    }
+    .chapter-meta .date { 
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); 
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .chapter-meta .word-count { 
+      font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px;
+    }
+    
+    /* Chapter Content - Cream Card Background */
+    .chapter-content { 
+      font-family: var(--font-body); font-size: 17px; line-height: 1.9; 
+      color: var(--text-dark); background: #f3efe6; 
+      border: 1px solid #d9d4cc; padding: 60px; 
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
     .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
     .chapter-content p:first-of-type { text-indent: 0; }
-    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5em; float: left; line-height: 0.8; margin-right: 0.1em; color: var(--text-dark); }
-    .chapter-nav { padding: 30px 0 40px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-    .chapter-nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; }
-    .chapter-nav a:hover { color: var(--text-dark); }
-    @media (max-width: 768px) { .chapter-hero h1 { font-size: 24px; } .chapter-container { padding: 40px 20px; } }
+    .chapter-content p:first-of-type::first-letter { 
+      font-family: var(--font-display); font-size: 3.5rem; float: left; 
+      line-height: 1; padding-right: 12px; color: var(--text-dark);
+    }
+    .chapter-content blockquote { 
+      margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; 
+      background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0;
+    }
+    
+    /* Navigation - Deep Sage Green */
+    .chapter-nav { 
+      max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; 
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; 
+      border-top: 1px solid #d9d4cc;
+    }
+    .chapter-nav a { 
+      text-decoration: none; color: var(--text-light); 
+      padding: 14px 24px; background: #3a4a42; 
+      transition: all 0.3s ease; font-size: 13px; text-align: center;
+    }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { 
+      font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; 
+      color: rgba(237, 231, 223, 0.7); text-transform: uppercase; 
+      margin-bottom: 0.25rem; display: block;
+    }
+    .chapter-nav .title { 
+      font-family: var(--font-display); font-size: 15px; color: var(--text-light); 
+      display: block;
+    }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: span 2; }
+    
+    /* Copyright Section */
+    .copyright-section {
+      max-width: 720px; margin: 0 auto; padding: 0 24px 60px;
+    }
+    .copyright-box {
+      background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px;
+    }
+    .copyright-box p {
+      font-family: var(--font-body); font-size: 12px; line-height: 1.7;
+      color: var(--text-muted); margin: 0 0 0.75rem;
+    }
+    .copyright-box p:last-child { margin-bottom: 0; }
+    .copyright-box strong { color: var(--text-dark); }
+    
+    @media (max-width: 768px) { 
+      .chapter-hero .novel-title { font-size: 32px; }
+      .chapter-hero .chapter-name { font-size: 18px; }
+      .chapter-container { padding: 30px 20px 40px; } 
+      .chapter-content { padding: 40px 24px; } 
+      .chapter-nav { grid-template-columns: 1fr; }
+      .chapter-nav .prev, .chapter-nav .next { text-align: center; }
+      .chapter-nav .toc { grid-column: span 1; }
+      .watermark::before { font-size: 60px; }
+    }
   </style>
 </head>
 <body>
+  <!-- Watermark -->
+  <div class="watermark"></div>
+  
   <div class="botanical"></div>
   <header class="site-header">
     <div class="header-inner">
@@ -43,15 +152,19 @@
   <main>
     <section class="chapter-hero">
       <div class="chapter-hero-content">
-        <div class="label">小说 · 悬疑</div>
-        <div class="series">山雨欲来 · 第二章</div>
-        <h1>机器中的幽灵</h1>
-        <div class="meta">2026年3月8日 · 3,600字 · 连载中</div>
+        <div class="novel-title"><a href="/zh/writing/novels/shanyu-youlai/">山雨欲来</a></div>
+        <div class="chapter-name">第二章：机器中的幽灵</div>
       </div>
     </section>
 
-    <div class="chapter-container">
-      <article class="chapter-content">
+    <article class="chapter-container">
+      <!-- Chapter Meta - Before Content -->
+      <div class="chapter-meta">
+        <div class="date">2026年3月8日</div>
+        <div class="word-count">3,600字 · 第2章，共20章</div>
+      </div>
+
+      <div class="chapter-content">
         <p>这座城市从不入睡，但它会在凌晨三点带着廉价波旁威士忌和破碎承诺的味道踉跄回家。杰克·莫里森坐在停在哈里森大厦三个街区外的雪佛兰Caprice里，看着蒸汽从井盖升起，如同阿什福德工业往昔的幽灵。雨已经停了，街道在虚假的洁净中闪闪发光，仿佛夜晚洗刷掉的不仅是尘埃。</p>
 
         <p>但并没有。杰克心知肚明。这座城市把秘密深埋，锁在生锈的文件柜里，藏在那些明白记住过去有多危险的人的记忆中。</p>
@@ -197,13 +310,30 @@
         <p>游戏正在升级。而杰克·莫里森不再只是一个调查谋杀的探员。</p>
 
         <p>他现在是一个玩家了，无论他愿不愿意。</p>
-      </article>
+      </div>
+    </article>
 
-      <nav class="chapter-nav">
-        <a href="/zh/writing/novels/shanyu-youlai/chapter-1/">← 第一章</a>
-        <a href="/zh/writing/novels/shanyu-youlai/chapter-3/">第三章 →</a>
-      </nav>
+    <!-- Copyright Section -->
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments. 版权所有。</strong></p>
+        <p>本内容受版权法保护。未经作者事先书面许可，严禁以任何形式复制、分发或传播本作品的任何部分。</p>
+        <p>任何未经授权的复制、再分发或将本作品声称为自己的行为都将导致法律诉讼。侵权者将根据适用的版权法律受到最大程度的法律追究，包括但不限于民事赔偿和刑事处罚。</p>
+        <p>作者保留对所有侵犯这些权利的个人或实体采取法律补救措施的权利，无论管辖区域为何。</p>
+      </div>
     </div>
+
+    <nav class="chapter-nav">
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-1/" class="prev">
+        <span class="label">← 上一章</span>
+        <span class="title">第一章：第一枚齿轮</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-3/" class="next">
+        <span class="label">下一章 →</span>
+        <span class="title">第三章</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/" class="toc">返回目录</a>
+    </nav>
   </main>
 
   <footer class="site-footer">

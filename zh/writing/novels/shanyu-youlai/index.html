@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>山雨欲来 — Fading Moments</title>
+  <meta name="description" content="十五年前的一场钢铁厂爆炸夺去了二十三条生命。如今，当年的幸存者开始一个个"意外"死亡...">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    main { flex: 1; }
+    .site-footer { margin-top: auto; }
+    
+    /* Hero Section */
+    .novel-hero { position: relative; height: 420px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .novel-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.7); }
+    .novel-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .novel-hero h1 { font-family: var(--font-display); font-size: 52px; font-weight: 400; color: var(--text-light); margin-bottom: 1rem; }
+    .novel-hero .subtitle { font-family: var(--font-body); font-size: 18px; color: rgba(237, 231, 223, 0.85); font-style: italic; max-width: 600px; margin: 0 auto 1.5rem; }
+    
+    /* Tags - Non-clickable */
+    .tags { display: flex; gap: 8px; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
+    .tag { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; padding: 4px 12px; border: 1px solid rgba(237, 231, 223, 0.3); }
+    
+    /* Meta info - Non-clickable */
+    .meta-info { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); }
+    
+    /* Content Container */
+    .novel-container { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
+    
+    /* Novel Info Card - Cream Background */
+    .novel-info-card { background: #f3efe6; border: 1px solid #d9d4cc; padding: 40px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); margin-bottom: 48px; }
+    .novel-info-card h2 { font-family: var(--font-display); font-size: 24px; font-weight: 400; color: var(--text-dark); margin-bottom: 1rem; }
+    .novel-info-card p { font-family: var(--font-body); font-size: 16px; line-height: 1.8; color: var(--text-dark); margin-bottom: 1rem; }
+    .novel-info-card .meta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #d9d4cc; }
+    .novel-info-card .meta-item { text-align: center; }
+    .novel-info-card .meta-item .label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.25rem; }
+    .novel-info-card .meta-item .value { font-family: var(--font-display); font-size: 18px; color: var(--text-dark); }
+    
+    /* Chapter List */
+    .chapter-list-header { margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .chapter-list-header h3 { font-family: var(--font-display); font-size: 28px; font-weight: 400; color: var(--text-dark); margin: 0; }
+    .update-info { font-family: var(--font-ui); font-size: 13px; color: var(--text-muted); }
+    
+    .chapter-grid { display: flex; flex-direction: column; gap: 16px; }
+    
+    /* Chapter Card - Cream Background */
+    .chapter-card { display: flex; align-items: center; background: #f3efe6; border: 1px solid #d9d4cc; padding: 20px 28px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); transition: all 0.3s ease; text-decoration: none; color: inherit; }
+    .chapter-card:hover { transform: translateX(6px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); }
+    .chapter-card .chapter-num { font-family: var(--font-display); font-size: 32px; font-weight: 400; color: #c9c1b4; min-width: 60px; }
+    .chapter-card .chapter-info { flex: 1; }
+    .chapter-card .chapter-info h4 { font-family: var(--font-display); font-size: 18px; font-weight: 400; color: var(--text-dark); margin-bottom: 0.25rem; }
+    .chapter-card .chapter-info .meta { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); }
+    .chapter-card .read-btn { font-family: var(--font-ui); font-size: 13px; padding: 10px 24px; background: #3a4a42; color: var(--text-light); border: none; transition: all 0.3s ease; }
+    .chapter-card:hover .read-btn { background: #2f3d36; }
+    
+    /* Future Chapter Placeholder */
+    .chapter-card.future { opacity: 0.6; pointer-events: none; }
+    .chapter-card.future .read-btn { background: #c9c1b4; color: #666; }
+    
+    /* Copyright Notice */
+    .copyright-notice { margin-top: 40px; padding: 24px; background: #f3efe6; border: 1px solid #d9d4cc; }
+    .copyright-notice p { font-family: var(--font-body); font-size: 13px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.5rem; }
+    .copyright-notice p:last-child { margin-bottom: 0; }
+    .copyright-notice strong { color: var(--text-dark); }
+    
+    /* Bottom Navigation */
+    .bottom-nav { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .bottom-nav a { font-family: var(--font-ui); font-size: 14px; padding: 14px 24px; background: #3a4a42; color: var(--text-light); text-decoration: none; text-align: center; transition: all 0.3s ease; }
+    .bottom-nav a:hover { background: #2f3d36; }
+    
+    @media (max-width: 768px) { 
+      .novel-hero h1 { font-size: 36px; } 
+      .novel-info-card .meta-grid { grid-template-columns: repeat(2, 1fr); }
+      .chapter-card { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .chapter-list-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/zh/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/">DE</a><a href="/zh/writing/novels/shanyu-youlai/" class="active">中文</a></nav>
+    </div>
+    <nav class="main-nav">
+      <ul><li><a href="/zh/">首页</a></li><li><a href="/zh/writing/" class="active">原创小说与随笔</a></li><li><a href="/zh/visual-archive/">旧照片</a></li><li><a href="/zh/videos/">视频</a></li><li><a href="/zh/films-music/">影像与音乐</a></li><li><a href="/zh/about/">关于</a></li></ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="novel-hero">
+      <div class="novel-hero-content">
+        <h1>山雨欲来</h1>
+        <div class="subtitle">十五年前的一场钢铁厂爆炸夺去了二十三条生命。如今，当年的幸存者开始一个个"意外"死亡...</div>
+        <div class="tags">
+          <span class="tag">小说</span>
+          <span class="tag">悬疑</span>
+          <span class="tag">黑色</span>
+          <span class="tag">连载中</span>
+        </div>
+        <div class="meta-info">已更新至第二章 · 9,300字 · 预计20章，7万字
+        </div>
+      </div>
+    </section>
+
+    <div class="novel-container">
+      <!-- 小说介绍卡片 -->
+      <div class="novel-info-card">
+        <h2>关于本书</h2>
+        <p><strong>阿什福德，宾夕法尼亚州</strong> —— 美国铁锈地带一座垂死的钢铁小镇。十五年前，<strong>哈里森钢铁厂</strong>在一个寒冷的十一月夜晚爆炸，二十三名夜班工人死亡。官方定论： tragic accident（悲惨意外）。真相：远为 sinister（ sinister）。</p>
+        <p>如今，一名杀手正在猎杀幸存者——一个接一个。每场死亡都被伪装成意外。每名受害者手中都握着一枚生锈的齿轮，上面刻着数字<strong>15</strong>。媒体称他为<strong>机械师</strong>。</p>
+        <p>探员<strong>杰克·莫里森</strong>（38岁）知道真相。他就在那晚的现场——唯一走出来的幸存者。现在他必须在时间耗尽之前抓住一个知道他秘密的杀手。但杰克挖得越深，就越意识到有些门一旦打开就永远无法关闭。而机械师不仅仅是在玩一场谋杀游戏——他是在平衡正义的天平。</p>
+        <p>调查记者<strong>陈莎拉</strong>（34岁）在那场爆炸中失去了父亲。她花了十五年挖掘真相。现在她是杰克唯一的盟友——也可能是他的下一个弱点。因为在这座建立在钢铁与秘密之上的小镇里，信任是最危险的货币。</p>
+        
+        <div class="meta-grid">
+          <div class="meta-item">
+            <div class="label">作者</div>
+            <div class="value">Kant King</div>
+          </div>
+          <div class="meta-item">
+            <div class="label">类型</div>
+            <div class="value">悬疑 / 黑色</div>
+          </div>
+          <div class="meta-item">
+            <div class="label">状态</div>
+            <div class="value">连载中</div>
+          </div>
+          <div class="meta-item">
+            <div class="label">更新频率</div>
+            <div class="value">每日早9点</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 章节列表 -->
+      <div class="chapter-list-header">
+        <h3>章节</h3>
+        <div class="update-info">📖 已发布第二章 · 下次更新：明天早9点</div>
+      </div>
+
+      <div class="chapter-grid">
+        <!-- 第一章 -->
+        <a href="/zh/writing/novels/shanyu-youlai/chapter-1/" class="chapter-card">
+          <div class="chapter-num">01</div>
+          <div class="chapter-info">
+            <h4>第一枚齿轮</h4>
+            <div class="meta">2026年3月7日 · 4,500字</div>
+          </div>
+          <span class="read-btn">阅读</span>
+        </a>
+
+        <!-- 第二章 -->
+        <a href="/zh/writing/novels/shanyu-youlai/chapter-2/" class="chapter-card">
+          <div class="chapter-num">02</div>
+          <div class="chapter-info">
+            <h4>机器中的幽灵</h4>
+            <div class="meta">2026年3月8日 · 4,800字</div>
+          </div>
+          <span class="read-btn">阅读</span>
+        </a>
+
+        <!-- 未来章节占位 -->
+        <div class="chapter-card future">
+          <div class="chapter-num">03</div>
+          <div class="chapter-info">
+            <h4>第三章</h4>
+            <div class="meta">即将推出...</div>
+          </div>
+          <span class="read-btn">Soon</span>
+        </div>
+
+        <div class="chapter-card future">
+          <div class="chapter-num">04</div>
+          <div class="chapter-info">
+            <h4>第四章</h4>
+            <div class="meta">即将推出...</div>
+          </div>
+          <span class="read-btn">Soon</span>
+        </div>
+
+        <div class="chapter-card future">
+          <div class="chapter-num">05</div>
+          <div class="chapter-info">
+            <h4>第五章</h4>
+            <div class="meta">即将推出...</div>
+          </div>
+          <span class="read-btn">Soon</span>
+        </div>
+      </div>
+
+      <!-- 版权声明 -->
+      <div class="copyright-notice">
+        <p><strong>© 2026 Fading Moments. 版权所有。</strong></p>
+        <p>本小说受版权法保护。未经作者事先书面许可，严禁以任何形式复制、分发或传播本作品的任何部分，包括但不限于复印、录音或其他电子或机械方法。</p>
+        <p>任何未经授权复制、分发或剽窃本作品的行为将被追究法律责任。这包括但不限于根据适用版权法的民事赔偿和刑事起诉。</p>
+        
+      </div>
+
+      <!-- 底部导航 -->
+      <div class="bottom-nav">
+        <a href="/zh/writing/">← 返回原创小说与随笔</a>
+        <a href="/zh/">返回首页 →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">一个安静的文学档案馆</div>
+      <div class="footer-copyright">© 2026 Fading Moments</div>
+    </div>
+  </footer>
+</body>
+</html>
