@@ -15,10 +15,15 @@
     .novel-hero { position: relative; height: 420px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
     .novel-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.7); }
     .novel-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
-    .novel-hero .label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 0.5rem; }
     .novel-hero h1 { font-family: var(--font-display); font-size: 52px; font-weight: 400; color: var(--text-light); margin-bottom: 1rem; }
     .novel-hero .subtitle { font-family: var(--font-body); font-size: 18px; color: rgba(237, 231, 223, 0.85); font-style: italic; max-width: 600px; margin: 0 auto 1.5rem; }
-    .novel-hero .meta { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.6); }
+    
+    /* Tags - Non-clickable */
+    .tags { display: flex; gap: 8px; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
+    .tag { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; padding: 4px 12px; border: 1px solid rgba(237, 231, 223, 0.3); }
+    
+    /* Meta info - Non-clickable */
+    .meta-info { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); }
     
     /* Content Container */
     .novel-container { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
@@ -33,9 +38,9 @@
     .novel-info-card .meta-item .value { font-family: var(--font-display); font-size: 18px; color: var(--text-dark); }
     
     /* Chapter List */
-    .chapter-list-header { margin-bottom: 24px; }
-    .chapter-list-header h3 { font-family: var(--font-display); font-size: 28px; font-weight: 400; color: var(--text-dark); margin-bottom: 0.5rem; }
-    .chapter-list-header p { font-family: var(--font-body); font-size: 15px; color: var(--text-muted); }
+    .chapter-list-header { margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .chapter-list-header h3 { font-family: var(--font-display); font-size: 28px; font-weight: 400; color: var(--text-dark); margin: 0; }
+    .update-info { font-family: var(--font-ui); font-size: 13px; color: var(--text-muted); }
     
     .chapter-grid { display: flex; flex-direction: column; gap: 16px; }
     
@@ -50,14 +55,24 @@
     .chapter-card:hover .read-btn { background: #2f3d36; }
     
     /* Future Chapter Placeholder */
-    .chapter-card.future { opacity: 0.6; }
-    .chapter-card.future:hover { transform: none; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); }
+    .chapter-card.future { opacity: 0.6; pointer-events: none; }
     .chapter-card.future .read-btn { background: #c9c1b4; color: #666; }
+    
+    /* Start Reading Button */
+    .start-reading { display: inline-block; font-family: var(--font-ui); font-size: 14px; padding: 14px 32px; background: #3a4a42; color: var(--text-light); text-decoration: none; border: none; transition: all 0.3s ease; margin-top: 8px; }
+    .start-reading:hover { background: #2f3d36; }
+    
+    /* Copyright Notice */
+    .copyright-notice { margin-top: 40px; padding: 24px; background: #f3efe6; border: 1px solid #d9d4cc; }
+    .copyright-notice p { font-family: var(--font-body); font-size: 13px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.5rem; }
+    .copyright-notice p:last-child { margin-bottom: 0; }
+    .copyright-notice strong { color: var(--text-dark); }
     
     @media (max-width: 768px) { 
       .novel-hero h1 { font-size: 36px; } 
       .novel-info-card .meta-grid { grid-template-columns: 1fr; }
       .chapter-card { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .chapter-list-header { flex-direction: column; align-items: flex-start; gap: 8px; }
     }
   </style>
 </head>
@@ -83,10 +98,16 @@
   <main>
     <section class="novel-hero">
       <div class="novel-hero-content">
-        <div class="label">Novel · Mystery · Ongoing</div>
         <h1>Shadows of Doubt</h1>
         <div class="subtitle">Fifteen years after a steel mill explosion killed twenty-three workers, the survivors begin dying one by one. Detective Jack Morrison must confront his own past while hunting a killer who remembers everything.</div>
-        <div class="meta">Updated to Chapter 2 · 9,300 words · Est. 20 chapters, 70,000 words</div>
+        <div class="tags">
+          <span class="tag">Novel</span>
+          <span class="tag">Mystery</span>
+          <span class="tag">Noir</span>
+          <span class="tag">Ongoing</span>
+        </div>
+        <div class="meta-info">Updated to Chapter 2 · 9,300 words · Est. 20 chapters, 70,000 words
+        </div>
       </div>
     </section>
 
@@ -94,9 +115,10 @@
       <!-- Novel Info Card -->
       <div class="novel-info-card">
         <h2>About This Novel</h2>
-        <p><strong>Ashford</strong>, a dying industrial city in America's Rust Belt. Fifteen years ago, the <strong>Harrison Steel Mill</strong> exploded, killing twenty-three night-shift workers. The official ruling: tragic accident. The truth: far more sinister.</p>
-        <p>Now, the survivors are dying—one by one—in "accidents" that bear the signature of a meticulous killer. Each victim is found with a rusted gear in their hand, marked with the number <strong>15</strong>.</p>
-        <p>Detective <strong>Jack Morrison</strong>, the only survivor who walked away from that night, must unravel a conspiracy that reaches into the highest levels of Ashford's power structure. But the deeper he digs, the more he realizes that the killer—known only as <strong>The Machinist</strong>—knows secrets about Jack's own past that could destroy him.</p>
+        <p><strong>Ashford, Pennsylvania</strong> — a dying steel town in America's Rust Belt, where the mills closed, the jobs vanished, and the American Dream rusted away. Fifteen years ago, the <strong>Harrison Steel Mill</strong> exploded on a cold November night, killing twenty-three night-shift workers. The official ruling: tragic accident. The truth: something far more sinister.</p>
+        <p>Now, a killer is hunting the survivors—one by one. Each death is staged as an accident. Each victim is found clutching a rusted gear marked with the number <strong>15</strong>. The press calls him <strong>The Machinist</strong>.</p>
+        <p>Detective <strong>Jack Morrison</strong> (38) knows the truth. He was there that night—the only survivor who made it out. Now he must catch a killer who knows his secrets before the clock runs out. But the deeper Jack digs, the more he realizes that some doors, once opened, can never be closed. And the Machinist isn't just playing a game of murder—he's balancing the books of justice.</p>
+        <p>Investigative journalist <strong>Sarah Chen</strong> (34) lost her father in that explosion. She's spent fifteen years digging for the truth. Now she's Jack's only ally—and possibly his next weakness. Because in a town built on steel and secrets, trust is the most dangerous currency of all.</p>
         
         <div class="meta-grid">
           <div class="meta-item">
@@ -116,8 +138,8 @@
 
       <!-- Chapter List -->
       <div class="chapter-list-header">
-        <h3>Chapters</h3>
-        <p>Read from the beginning or jump to the latest chapter.</p>
+        <h3>Chapters>/h3>
+        <div class="update-info">📖 Chapter 2 of ~20 published · Next update: Tomorrow 9:00 AM</div>
       </div>
 
       <div class="chapter-grid">
@@ -170,11 +192,12 @@
         </div>
       </div>
 
-      <div style="margin-top: 40px; padding: 24px; background: #f3efe6; border: 1px solid #d9d4cc; text-align: center;">
-        <p style="font-family: var(--font-body); font-size: 15px; color: var(--text-muted); margin: 0;">
-          📖 This novel is updated daily at 9:00 AM (Beijing Time). <br>
-          Estimated completion: 20 chapters, approximately 70,000 words.
-        </p>
+      <!-- Copyright Notice -->
+      <div class="copyright-notice">
+        <p><strong>© 2026 Fading Moments. All Rights Reserved.</strong></p>
+        <p>This novel is protected by copyright law. Unauthorized reproduction, distribution, or transmission of any part of this work, including but not limited to photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the author, is strictly prohibited.</p>
+        <p>Any person who reproduces, distributes, or plagiarizes this work without authorization will be pursued for legal liability. This includes but is not limited to civil damages and criminal prosecution under applicable copyright laws.</p>
+        
       </div>
     </div>
   </main>
@@ -183,7 +206,7 @@
     <div class="container">
       <div class="footer-brand">Fading Moments</div>
       <div class="footer-tagline">A Quiet Literary Archive</div>
-      <div class="footer-copyright">© 2026 Fading Moments. All rights reserved.</div>
+      <div class="footer-copyright">© 2026 Fading Moments</div>
     </div>
   </footer>
 </body>

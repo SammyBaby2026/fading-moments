@@ -7,51 +7,137 @@
   <meta name="description" content="The city never sleeps, but it does stumble home drunk at 3 AM, smelling of cheap bourbon and broken promises.">
   <link rel="stylesheet" href="/assets/css/style.css?v=2">
   <style>
-    body { display: flex; flex-direction: column; min-height: 100vh; }
-    main { flex: 1; }
+    /* Anti-copy protection */
+    body { 
+      display: flex; flex-direction: column; min-height: 100vh;
+      -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+    }
+    main { flex: 1; position: relative; }
     .site-footer { margin-top: auto; }
     
-    /* Hero with novel-specific image */
-    .chapter-hero { position: relative; height: 380px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
-    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.65); }
+    /* Watermark */
+    .watermark {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 9999; opacity: 0.03;
+      background-image: repeating-linear-gradient(
+        45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px
+      );
+    }
+    .watermark::before {
+      content: "SHADOWS OF DOUBT © 2026"; position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg);
+      font-family: var(--font-display); font-size: 120px; color: #000;
+      white-space: nowrap;
+    }
+    
+    /* Hero - Simplified */
+    .chapter-hero { 
+      position: relative; height: 320px; 
+      background-image: url('/images/shadows-of-doubt-hero.png'); 
+      background-size: cover; background-position: center 30%; 
+      display: flex; align-items: center; justify-content: center; text-align: center;
+    }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
     .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
-    .chapter-hero .novel-title { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 0.5rem; }
+    .chapter-hero .novel-title { 
+      font-family: var(--font-display); font-size: 48px; font-weight: 400; 
+      color: var(--text-light); margin-bottom: 0.75rem;
+    }
     .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
-    .chapter-hero .chapter-num { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-    .chapter-hero h1 { font-family: var(--font-display); font-size: 40px; font-weight: 400; color: var(--text-light); margin-bottom: 0.5rem; }
-    .chapter-hero .meta { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); }
+    .chapter-hero .chapter-name { 
+      font-family: var(--font-body); font-size: 22px; font-style: italic;
+      color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em;
+    }
     
     /* Content Container */
-    .chapter-container { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    
+    /* Chapter Meta - Small text before content */
+    .chapter-meta { 
+      text-align: center; margin-bottom: 32px; padding-bottom: 24px; 
+      border-bottom: 1px solid #d9d4cc;
+    }
+    .chapter-meta .date { 
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); 
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .chapter-meta .word-count { 
+      font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px;
+    }
     
     /* Chapter Content - Cream Card Background */
-    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+    .chapter-content { 
+      font-family: var(--font-body); font-size: 17px; line-height: 1.9; 
+      color: var(--text-dark); background: #f3efe6; 
+      border: 1px solid #d9d4cc; padding: 60px; 
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
     .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
     .chapter-content p:first-of-type { text-indent: 0; }
-    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
-    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { 
+      font-family: var(--font-display); font-size: 3.5rem; float: left; 
+      line-height: 1; padding-right: 12px; color: var(--text-dark);
+    }
+    .chapter-content blockquote { 
+      margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; 
+      background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0;
+    }
     
-    /* Navigation */
-    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
-    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; border: 1px solid #3a4a42; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
-    .chapter-nav a:hover { background: #2f3d36; border-color: #2f3d36; }
-    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
-    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    /* Navigation - Deep Sage Green */
+    .chapter-nav { 
+      max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; 
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; 
+      border-top: 1px solid #d9d4cc;
+    }
+    .chapter-nav a { 
+      text-decoration: none; color: var(--text-light); 
+      padding: 14px 24px; background: #3a4a42; 
+      transition: all 0.3s ease; font-size: 13px; text-align: center;
+    }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { 
+      font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; 
+      color: rgba(237, 231, 223, 0.7); text-transform: uppercase; 
+      margin-bottom: 0.25rem; display: block;
+    }
+    .chapter-nav .title { 
+      font-family: var(--font-display); font-size: 15px; color: var(--text-light); 
+      display: block;
+    }
     .chapter-nav .prev { text-align: left; }
     .chapter-nav .next { text-align: right; }
     .chapter-nav .toc { grid-column: span 2; }
     
+    /* Copyright Section */
+    .copyright-section {
+      max-width: 720px; margin: 0 auto; padding: 0 24px 60px;
+    }
+    .copyright-box {
+      background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px;
+    }
+    .copyright-box p {
+      font-family: var(--font-body); font-size: 12px; line-height: 1.7;
+      color: var(--text-muted); margin: 0 0 0.75rem;
+    }
+    .copyright-box p:last-child { margin-bottom: 0; }
+    .copyright-box strong { color: var(--text-dark); }
+    
     @media (max-width: 768px) { 
-      .chapter-hero h1 { font-size: 28px; } 
-      .chapter-container { padding: 40px 20px; } 
+      .chapter-hero .novel-title { font-size: 32px; }
+      .chapter-hero .chapter-name { font-size: 18px; }
+      .chapter-container { padding: 30px 20px 40px; } 
       .chapter-content { padding: 40px 24px; } 
       .chapter-nav { grid-template-columns: 1fr; }
       .chapter-nav .prev, .chapter-nav .next { text-align: center; }
       .chapter-nav .toc { grid-column: span 1; }
+      .watermark::before { font-size: 60px; }
     }
   </style>
 </head>
 <body>
+  <!-- Watermark -->
+  <div class="watermark"></div>
+  
   <div class="botanical"></div>
   <header class="site-header">
     <div class="header-inner">
@@ -59,14 +145,7 @@
       <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-2/" class="active">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-2/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-2/">中文</a></nav>
     </div>
     <nav class="main-nav">
-      <ul>
-        <li><a href="/en/">Home</a></li>
-        <li><a href="/en/writing/" class="active">Writing</a></li>
-        <li><a href="/en/visual-archive/">Visual Archive</a></li>
-        <li><a href="/en/videos/">Videos</a></li>
-        <li><a href="/en/films-music/">Films & Music</a></li>
-        <li><a href="/en/about/">About</a></li>
-      </ul>
+      <ul><li><a href="/en/">Home</a></li><li><a href="/en/writing/" class="active">Writing</a></li><li><a href="/en/visual-archive/">Visual Archive</a></li><li><a href="/en/videos/">Videos</a></li><li><a href="/en/films-music/">Films & Music</a></li><li><a href="/en/about/">About</a></li></ul>
     </nav>
   </header>
 
@@ -74,13 +153,17 @@
     <section class="chapter-hero">
       <div class="chapter-hero-content">
         <div class="novel-title"><a href="/en/writing/novels/shadows-of-doubt/">Shadows of Doubt</a></div>
-        <div class="chapter-num">Chapter 2</div>
-        <h1>The Ghost in the Machine</h1>
-        <div class="meta">March 8, 2026 · 4,800 words · Ongoing</div>
+        <div class="chapter-name">Chapter 2: The Ghost in the Machine</div>
       </div>
     </section>
 
     <article class="chapter-container">
+      <!-- Chapter Meta - Before Content -->
+      <div class="chapter-meta">
+        <div class="date">March 8, 2026</div>
+        <div class="word-count">4,800 words · Chapter 2 of 20</div>
+      </div>
+
       <div class="chapter-content">
         <p>The city never sleeps, but it does stumble home drunk at 3 AM, smelling of cheap bourbon and broken promises. Jack Morrison sat in his parked Chevy Caprice three blocks from the Harrison Building, watching the steam rise from manhole covers like the ghosts of Ashford's industrial past. The rain had stopped, leaving the streets gleaming with a false cleanliness, as if the night had washed away more than just dirt.</p>
 
@@ -228,6 +311,16 @@
       </div>
     </article>
 
+    <!-- Copyright Section -->
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments. All Rights Reserved.</strong></p>
+        <p>This content is protected by copyright law. Unauthorized reproduction, distribution, or transmission of any part of this work in any form is strictly prohibited without prior written permission from the author.</p>
+        <p>Any unauthorized copying, redistribution, or claiming of this work as one's own will result in legal action. Violators will be prosecuted to the fullest extent of the law, including but not limited to civil damages and criminal penalties under applicable copyright laws.</p>
+        <p>The author reserves all rights to pursue legal remedies against any person or entity who infringes upon these rights, regardless of jurisdiction.</p>
+      </div>
+    </div>
+
     <nav class="chapter-nav">
       <a href="/en/writing/novels/shadows-of-doubt/chapter-1/" class="prev">
         <span class="label">← Previous Chapter</span>
@@ -245,7 +338,7 @@
     <div class="container">
       <div class="footer-brand">Fading Moments</div>
       <div class="footer-tagline">A Quiet Literary Archive</div>
-      <div class="footer-copyright">© 2026 Fading Moments. All rights reserved.</div>
+      <div class="footer-copyright">© 2026 Fading Moments</div>
     </div>
   </footer>
 </body>
