@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第八章：陷阱 — 疑云暗影 — Fading Moments</title>
+  <meta name="description" content="Jack准备逮捕Marcus Pierce，但发现自己走进了一个精心布置的陷阱。">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    main { flex: 1; position: relative; }
+    .site-footer { margin-top: auto; }
+    .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
+    .watermark::before { content: "疑云暗影 © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
+    .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .chapter-hero .novel-title { font-family: var(--font-display); font-size: 48px; font-weight: 400; color: var(--text-light); margin-bottom: 0.75rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-name { font-family: var(--font-body); font-size: 22px; font-style: italic; color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    .chapter-meta { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #d9d4cc; }
+    .chapter-meta .date { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .chapter-meta .word-count { font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content p:first-of-type { text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: span 2; }
+    .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
+    .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
+    .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .copyright-box p:last-child { margin-bottom: 0; }
+    .copyright-box strong { color: var(--text-dark); }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .chapter-nav .prev, .chapter-nav .next { text-align: center; } .chapter-nav .toc { grid-column: span 1; } .watermark::before { font-size: 60px; } }
+  </style>
+</head>
+<body>
+  <div class="watermark"></div>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/zh/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-8/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-8/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-8/" class="active">中文</a></nav>
+    </div>
+    <nav class="main-nav"><ul><li><a href="/zh/">首页</a></li><li><a href="/zh/writing/" class="active">原创小说与随笔</a></li><li><a href="/zh/visual-archive/">旧照片</a></li><li><a href="/zh/videos/">视频</a></li><li><a href="/zh/films-music/">影像与音乐</a></li><li><a href="/zh/about/">关于</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero">
+      <div class="chapter-hero-content">
+        <div class="novel-title"><a href="/zh/writing/novels/shanyu-youlai/">疑云暗影</a></div>
+        <div class="chapter-name">第八章：陷阱</div>
+      </div>
+    </section>
+
+    <article class="chapter-container">
+      <div class="chapter-meta">
+        <div class="date">2026年3月14日</div>
+        <div class="word-count">3,500字 · 第八章，共20章</div>
+      </div>
+
+      <div class="chapter-content">
+        <p>清晨的 gray light 中，Ashford看起来不一样了。同样的建筑，同样的街道，但 somehow sharper——更鲜明，仿佛Jack是第一次看见它们。或者，也许他是第一次看清它们真正的样子：一个十五年前悲剧的舞台布景。</p>
+
+        <p>他坐在车里，在Marcus Pierce的庄园外，又一次 review 证据。Robert Hayes的供词，从他在医院 recovered，他在那里与生命搏斗。显示 pay off 的银行记录。 sabotaged 甲烷检测器的照片，有Pierce本人的签名。足够了——绰绰有余——可以逮捕那个 orchestrated 二十三个工人死亡的人。</p>
+
+        <p>然而，Jack无法摆脱不对劲的感觉。</p>
+
+        <p>电话响了。Williams队长。</p>
+
+        <p>"Morrison。你在哪里？"</p>
+
+        <p>"在Pierce住所外面。我要带他进来。"</p>
+
+        <p>停顿。太长。"Jack，我需要你退后。别靠近房子。"</p>
+
+        <p>"队长，我们有足够的证据——"</p>
+
+        <p>"内务部在这里。"Williams的声音紧绷，控制。"他们想和你谈谈你在底特律行动中的行为。关于过度使用武力，非法进入。"</p>
+
+        <p>Jack感到 blood drain from his face。"胡说。Hayes快死了。我有 probable cause——"</p>
+
+        <p>"不由我决定。"Williams叹气。"听着，来警局。我们会解决这事。但在这事澄清前别靠近Pierce。"</p>
+
+        <p>电话断了。</p>
+
+        <p>Jack盯着房子——Pierce的房子，一座建在钢铁厂利润骨头上的现代豪宅。他如此接近。敲一下门，亮一下徽章，他就能结束这一切。</p>
+
+        <p>但他当警察够久，知道什么时候被玩弄了。</p>
+
+        <p>他发动车开向警局。</p>
+
+        <p>两个穿西装的男人在会议室等着。他们自我介绍是内务部调查员——Dawson和Cole。他们不笑。他们不提供咖啡。他们只是打开文件开始提问。</p>
+
+        <p>"Morrison探员，你能解释一下你3月12日在底特律的出现吗？"</p>
+
+        <p>"我在跟进Harrison钢铁案的线索。"</p>
+
+        <p>"没有你队长的授权？"</p>
+
+        <p>"线索 time-sensitive。Robert Hayes有危险。"</p>
+
+        <p>Cole倾身向前。"你怎么确定的？"</p>
+
+        <p>Jack犹豫。他不能透露和机械师的对话——不暴露他走进的陷阱。"我收到匿名 tip。"</p>
+
+        <p>"匿名 tip。"Dawson做笔记。"这个 tip 导致你闯入Michigan Avenue的私人车库？"</p>
+
+        <p>"车库是Robert Hayes注册的。我有理由相信——"</p>
+
+        <p>"你相信有证据，所以你 kicked in 门而没有搜查令。"Cole滑过一张照片—— broken door，splintered frame。"这是你的杰作吗？"</p>
+
+        <p>Jack什么也没说。</p>
+
+        <p>"还有Robert Hayes本人的事。"Dawson查阅笔记。"你在废弃工厂发现他被打得半死。根据医院记录，他的伤和……警察审讯技术一致。"</p>
+
+        <p>"什么？"Jack站起来，椅子刮擦地板。"我没碰Hayes。我发现他时就这样。我叫了救护车。"</p>
+
+        <p>"有人能证实吗？"</p>
+
+        <p>"Sarah Chen和我在一起。她——"</p>
+
+        <p>"Sarah Chen，那个从一开始就在干扰你调查记者的记者？"Cole笑了，thin，unpleasant。"她可不是无偏见的证人，探员。"</p>
+
+        <p>碎片以 sickening clarity 拼凑在一起。Pierce知道。他一直知道。有人向他通风报信关于底特律的事，他准备了 counter-move——一个旨在Jack能逮捕他之前 discredit Jack的陷阱。</p>
+
+        <p>"你被停职了，"Dawson说。"等待调查。交出你的徽章和武器。"</p>
+
+        <p>Jack看着他们——这些 expensive suits 的男人，他们 practiced neutrality。他们不腐败。他们只是做他们的工作，遵循程序，扮演他们不知道自己在其中的游戏的角色。</p>
+
+        <p>他把徽章放在桌上。他的武器随后。</p>
+
+        <p>"我被捕了吗？"</p>
+
+        <p>"还没有。"Dawson收拾物品。"但我们强烈建议你不要离开 town。"</p>
+
+        <p>Jack走出警局，走进明亮的晨光。没有枪，他感到 naked，vulnerable，像他年轻时很久没有过的感觉。但在恐惧之下，还有别的东西——愤怒，burning cold and bright。</p>
+
+        <p>Pierce赢了这一轮。但游戏没有结束。</p>
+
+        <p>手机震动。Sarah。</p>
+
+        <p>"Jack，你在哪里？我们需要谈谈。"</p>
+
+        <p>"我知道。我刚被停职。"</p>
+
+        <p>Sharp intake of breath。"更糟。我在医院。Hayes……他没挺过来。一小时前死的。"</p>
+
+        <p>Jack停止走路，world tilting around him。"什么？"</p>
+
+        <p>"心脏骤停。医生说他的伤太重，心脏受不了。"Sarah的声音空洞。"Jack，他死了。我们唯一的证人死了。"</p>
+
+        <p>Jack靠在一辆停着的车上，legs suddenly weak。没有Hayes，对Pierce的案子充其量是 circumstantial。银行记录可以解释掉。供词是死人的 hearsay。Jack为之工作的一切——他牺牲的一切——正从他指间滑落。</p>
+
+        <p>"你在哪里？"他问。</p>
+
+        <p>"St. Mary's医院。但Jack，还有别的事。你和内务部在一起时我做了些调查。Pierce不是独自工作。"</p>
+
+        <p>"我知道。他哥哥是州参议员——"</p>
+
+        <p>"比这更大。"Sarah的声音变成低语。"我发现和 organized crime 的联系。Moretti家族。自从工厂关闭后，他们一直在用Harrison钢铁厂的财产洗钱。Pierce是他们的前台。"</p>
+
+        <p>Morettis。Jack知道这个名字——老派黑手党，总部在费城但在整个宾夕法尼亚都有触须。他们以 ruthless，efficient，virtually untouchable 闻名。</p>
+
+        <p>"如果Morettis involved，"Jack慢慢说，"那么Pierce不只是保护自己。他在保护他们。"</p>
+
+        <p>"正是。而且Jack——Morettis不原谅干扰。如果他们认为你是威胁……"</p>
+
+        <p>"那我已经死了。"Jack站直，mind racing。"Sarah，离开医院。现在。去公共场所，有摄像头的地方。别回家。别用信用卡。"</p>
+
+        <p>"发生了什么？"</p>
+
+        <p>"还不确定。但我会找出来。"</p>
+
+        <p>他挂断电话，开始走路——不是走向他的车，而是走向他知道能找到答案的唯一地方。那个似乎总是提前知道一切的人。</p>
+
+        <p>机械师。</p>
+
+        <p>Jack在阴影中度过一天，穿过Ashford的 underbelly——警察不去的酒吧，不问问题的车库，城市 ghost 徘徊的废弃建筑。他在多年从警生涯中学到的地方留下信息——信号会传到 right ears，找到 right eyes。</p>
+
+        <p>午夜后，他的手机震动。</p>
+
+        <blockquote>你学得很快，Jackie。但不够快。在老厂见我。一切开始的地方。独自来。 ——M</blockquote>
+
+        <p>Harrison钢铁厂坐落在 town 边缘，一座 rusted metal 和破碎梦想的 hulking skeleton。Jack把车停在四分之一英里外，步行接近，手放在藏在车里的 backup piece 上——一把 snub-nosed .38，未注册，非法。</p>
+
+        <p>主大门用铁链锁着，但Jack在 fence 上找到一个孩子们多年前 cut 的缺口。他溜进去，在黑暗中带着练习过的 silence 移动。</p>
+
+        <p>"你来了。"</p>
+
+        <p>声音从主楼传来——铸造车间，二十三个人在火与钢中死去的地方。Jack爬上楼梯，靴子敲响金属，走进巨大的空间。</p>
+
+        <p>机械师站在房间中央，broken windows 的映衬下。他手里拿着一个齿轮——第十五个，Jack意识到，几周前开始的序列的最后一个。</p>
+
+        <p>"你知道，"Jack说。"你知道Pierce，关于Morettis，关于陷阱。"</p>
+
+        <p>"我知道很多事。"机械师转向他。"我知道Marcus Pierce今晚在他的庄园举办 fundraiser。我知道他哥哥参议员会在那里，还有Moretti组织的几名成员。我知道三小时后，他们会为 neutralizing 麻烦的Morrison探员的成功干杯。"</p>
+
+        <p>"而且我还知道别的。"他走近，近到Jack能在月光下看清他的脸。"我知道Pierce把他的保险放在哪里。连接他和Morettis的文件，洗钱的文件，一切的文件。他没他以为的那么聪明——他留着副本，以防他的伙伴背叛他。"</p>
+
+        <p>"你为什么告诉我这些？"</p>
+
+        <p>"因为我想做交易。"机械师伸出手中的齿轮。"我可以给你Pierce。不只是爆炸——是一切。你需要的证据，让他永远消失。"</p>
+
+        <p>"交换什么？"</p>
+
+        <p>机械师微笑。"交换，你帮我做最后一件事。我名单上的一个名字。"</p>
+
+        <p>Jack感到 spine 一阵寒意。"谁？"</p>
+
+        <p>"你一直专注于Pierce，专注于下命令的人。但还有别人。那些知道，看见，却什么也没做的人。"机械师的声音柔和，几乎温柔。"像你这样的人，Jackie。注意到故障检测器的保安。忽略警告的主管。受贿视而不见的安全检查员。"</p>
+
+        <p>他更近，直到他们 face to face。</p>
+
+        <p>"你的名字在我的名单上，Jackie。从一开始就是。"</p>
+
+        <p>世界似乎停止。Jack盯着那双 dark eyes，看不到 mercy，看不到 forgiveness——只有一个花了十五年 planning his revenge 的人的 relentless logic。</p>
+
+        <p>"你想杀我，"Jack说。</p>
+
+        <p>"不。"机械师摇头。"我想让你帮我杀其他人。那些还没为罪行付出代价的人。当他们消失后……"他停顿。"然后我们决定怎么处置你。"</p>
+
+        <p>Jack看着杀手手中的齿轮——生锈的，标着数字15，法律之外存在的正义的象征。</p>
+
+        <p>"如果我拒绝呢？"</p>
+
+        <p>"那Pierce就 walk。Morettis继续他们的生意。二十三个人死无对证。"机械师转向窗户。"但你不会拒绝，Jackie。你不能。因为 deep down，你知道我是对的。你知道有些债务只能用血偿还。"</p>
+
+        <p>Jack站在工厂的黑暗中，被死者的 ghost 包围，感到十五年的重量压在他身上。他来这是为了阻止一个杀手。相反，他被提供了一个 partnership。</p>
+
+        <p>"给我Pierce的证据，"他最终说。"让我用正确的方式做。"</p>
+
+        <p>机械师笑了。"没有正确的方式。只有正义。"</p>
+
+        <p>他把齿轮扔给Jack，Jack本能地接住。</p>
+
+        <p>"文件在Pierce书房的一个保险箱里。组合：11-23-09。爆炸日期。Poetic，你不觉得吗？"他走向楼梯。"去拿。揭露他。但记住，Jackie——当你完成，当Pierce在监狱里，世界继续前进，我的名单上还会有名字。"</p>
+
+        <p>他在门口 pause，回头看。</p>
+
+        <p>"而你的名字还会在其中。"</p>
+
+        <p>然后他走了，留下Jack独自在黑暗中，一个生锈的齿轮和一个 impossible choice。</p>
+
+        <p>Jack看着齿轮，然后看着 broken windows，然后看着他父亲死去的地方。</p>
+
+        <p>陷阱已经 sprung。但设置它的不是Pierce。</p>
+
+        <p>是机械师。</p>
+
+        <p>而Jack直接走进了它。</p>
+      </div>
+    </article>
+
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments。版权所有。</strong></p>
+        <p>本内容受版权保护。未经作者事先书面许可，严禁以任何形式复制、分发或传播本作品的任何部分。</p>
+      </div>
+    </div>
+
+    <nav class="chapter-nav">
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-7/" class="prev">
+        <span class="label">← 上一章</span>
+        <span class="title">第七章：来自底特律的机修工</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-9/" class="next">
+        <span class="label">下一章 →</span>
+        <span class="title">第九章：即将推出</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/" class="toc">← 返回目录</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">一个安静的文学档案馆</div>
+      <div class="footer-copyright">© 2026 Fading Moments</div>
+    </div>
+  </footer>
+</body>
+</html>

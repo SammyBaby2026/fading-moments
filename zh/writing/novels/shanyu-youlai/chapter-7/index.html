@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第七章：来自底特律的机修工 — 疑云暗影 — Fading Moments</title>
+  <meta name="description" content="Jack和Sarah去底特律寻找关键证人，但机械师已经在等他们。">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    main { flex: 1; position: relative; }
+    .site-footer { margin-top: auto; }
+    .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
+    .watermark::before { content: "疑云暗影 © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
+    .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .chapter-hero .novel-title { font-family: var(--font-display); font-size: 48px; font-weight: 400; color: var(--text-light); margin-bottom: 0.75rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-name { font-family: var(--font-body); font-size: 22px; font-style: italic; color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    .chapter-meta { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #d9d4cc; }
+    .chapter-meta .date { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .chapter-meta .word-count { font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content p:first-of-type { text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: span 2; }
+    .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
+    .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
+    .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .copyright-box p:last-child { margin-bottom: 0; }
+    .copyright-box strong { color: var(--text-dark); }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .chapter-nav .prev, .chapter-nav .next { text-align: center; } .chapter-nav .toc { grid-column: span 1; } .watermark::before { font-size: 60px; } }
+  </style>
+</head>
+<body>
+  <div class="watermark"></div>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/zh/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-7/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-7/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-7/" class="active">中文</a></nav>
+    </div>
+    <nav class="main-nav"><ul><li><a href="/zh/">首页</a></li><li><a href="/zh/writing/" class="active">原创小说与随笔</a></li><li><a href="/zh/visual-archive/">旧照片</a></li><li><a href="/zh/videos/">视频</a></li><li><a href="/zh/films-music/">影像与音乐</a></li><li><a href="/zh/about/">关于</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero">
+      <div class="chapter-hero-content">
+        <div class="novel-title"><a href="/zh/writing/novels/shanyu-youlai/">疑云暗影</a></div>
+        <div class="chapter-name">第七章：来自底特律的机修工</div>
+      </div>
+    </section>
+
+    <article class="chapter-container">
+      <div class="chapter-meta">
+        <div class="date">2026年3月13日</div>
+        <div class="word-count">3,500字 · 第七章，共20章</div>
+      </div>
+
+      <div class="chapter-content">
+        <p>冬天的底特律是一座灰色的城市——灰色天空，灰色街道，灰色建筑，似乎都在自身历史的重压下 sag。Jack多年前曾来过一次，追踪一个跨州逃跑的 fugitive。那时他就觉得底特律像是世界继续前进把你抛在后面的警告。</p>
+
+        <p>他现在仍然这样觉得。</p>
+
+        <p>"Robert Hayes，六十二岁，最后已知地址在Hamtramck，"Sarah边开车穿过废弃工厂和烧毁房屋 lined 的街道，边从笔记本电脑上读。"2005年到爆炸前在Harrison钢铁厂做维护技术员。根据DMV记录，他三年前在Woodward Avenue的AAA办公室更新了驾照。"</p>
+
+        <p>"有信用卡活动吗？银行记录？"</p>
+
+        <p>"什么都没有。要么他完全 off the grid 生活，要么在用假身份。"Sarah合上笔记本。"但像Hayes这样的人——熟练技工、机械专家——他们不会就这样消失。他们需要工作。工具。供应品。这城市有人知道他在哪里。"</p>
+
+        <p>他们的第一站是东边的一家机械供应店，卖工业设备零件、不问问题的那种。店主叫Deshawn，一个瘦削的男人，指甲下永远嵌着 grease。他看着Jack给他看的照片，摇头。</p>
+
+        <p>"不认识。"</p>
+
+        <p>"确定吗？他会买甲烷检测系统零件、安全设备——"</p>
+
+        <p>"我说了我不认识。"Deshawn的眼睛移向门口，然后回来。"如果我是你，我会停止询问。"</p>
+
+        <p>Jack顺着他的目光。街对面停着一辆黑色厢型车，窗户 tinted，引擎在运转。驾驶座没人。</p>
+
+        <p>"他们什么时候来的？"Jack轻声问。</p>
+
+        <p>"比你们早十分钟。"Deshawn倾身靠近。"听着，伙计，我不想惹麻烦。不管那是谁，他们一直在问同一个人。展示他的照片。在邮箱里留纸条。"</p>
+
+        <p>"什么样的纸条？"</p>
+
+        <p>"有齿轮的纸条。"Deshawn敲敲柜台。"你知道那意味着什么。这附近每个人都知道。意味着机械师在狩猎。"</p>
+
+        <p>Jack和Sarah交换眼神。他们太迟了——机械师已经来过，已经在社区里 sowing fear。</p>
+
+        <p>"我们可以保护你，"Sarah说。"如果你知道Hayes在哪里，告诉我们。我们可以在机械师之前找到他。"</p>
+
+        <p>Deshawn笑了，harsh，humorless。"女士，没人能保护任何人不受那个 psycho 伤害。宾夕法尼亚死了四个人，全是'意外'。警察抓不到他。你抓不到他。你唯一能做的就是别挡他的路。"</p>
+
+        <p>"我们不会不挡他的路。"Jack把名片放在柜台上。"如果你改变主意，打电话给我。任何时间，白天或晚上。"</p>
+
+        <p>接下来的六小时，他们开车穿过底特律的工业废墟，拜访机械店、废料场、地下车库。无论去哪里，他们都发现同样的事——恐惧，沉默，有时，Hayes可能工作过的地方留下一个生锈的齿轮。</p>
+
+        <p>"他在玩我们，"Sarah坐在一家餐馆里，喝着冷咖啡说。"把齿轮放在他知道我们会找到的地方。他在告诉我们他知道得比我们多。"</p>
+
+        <p>"或者他在告诉我们我们很接近。"Jack搅着咖啡，看着 dark swirl。"如果他在留标记，那是因为Hayes还活着。机械师还没找到他。"</p>
+
+        <p>"但他在缩小搜索范围。我们每谈一个人，每遇到一个死胡同——机械师也学到东西。"</p>
+
+        <p>Jack的手机震动。未知号码。他第二声就接了。</p>
+
+        <p>"你很执着，Jackie。我得承认。"</p>
+
+        <p>这次声音不同——不是之前的机械 filter，而是更 raw，更 human。仍然伪装，但不那么谨慎。</p>
+
+        <p>"机械师，"Jack说，开免提让Sarah能听到。"你想谈谈？"</p>
+
+        <p>"我想警告你。你正在走进你不理解的事情。"</p>
+
+        <p>"那就帮我理解。"</p>
+
+        <p>线上沉默。然后："沿着Gratiot Avenue向东开。过了机场五英里，有一座废弃的克莱斯勒工厂。三十分钟内到那里。独自来，否则我就消失，Hayes就会像其他人一样在黑暗中死去。"</p>
+
+        <p>"如果我来了呢？"</p>
+
+        <p>"那我们就谈谈。面对面。就你和我。"</p>
+
+        <p>电话断了。</p>
+
+        <p>"不可能，"Sarah立刻说。"是陷阱。"</p>
+
+        <p>"当然是陷阱。"Jack站起来，扔下钱。"但他有一件事说得对——如果我不去，Hayes会死。我们会失去唯一的证人。"</p>
+
+        <p>"那我跟你去。"</p>
+
+        <p>"他说独自。"</p>
+
+        <p>"Jack——"</p>
+
+        <p>"Sarah。"他转向她，双手放在她肩上。"我需要你做别的事。去底特律警局，找他们的有组织犯罪部门。告诉他们齿轮的事，关于机械师，关于一切。如果我出事了，他们需要知道从哪里开始。"</p>
+
+        <p>"你不会出事的。"</p>
+
+        <p>"答应我。"</p>
+
+        <p>她审视他的脸，然后慢慢点头。"我答应。"</p>
+
+        <p>废弃的克莱斯勒工厂在 gray sky 中隐约可见，一座 rusted metal 和破碎梦想的 cathedral。Jack把车停在四分之一英里外，步行接近，手靠近武器但不拔出。他独自一人，除了臀部的手枪和口袋里的录音机外手无寸铁。</p>
+
+        <p>主大门用铁链锁着，但Jack在 fence 上找到一个孩子们多年前 cut 的缺口。他溜进去，在黑暗中带着练习过的 silence 移动。</p>
+
+        <p>"你来了。"</p>
+
+        <p>声音从上方传来。Jack抬头看见一个身影站在头顶的 catwalk 上，broken skylights 的映衬下。平均身高，平均身材——除了静止的姿态外完全不起眼。</p>
+
+        <p>"机械师，"Jack说。</p>
+
+        <p>"你可以这么叫我。"身影没有动。"我喜欢媒体给我的名字。听起来工业化。机械化。像钟表一样。"</p>
+
+        <p>"Hayes在哪里？"</p>
+
+        <p>"安全。暂时。"机械师向前走，Jack第一次能在月光下看清他的脸——一张普通的脸，你会在人群中忘记的那种，dark eyes 没有温暖。他穿着工作服和工靴，千千工厂工人的制服。"我需要先和你谈谈。需要你在见他之前理解。"</p>
+
+        <p>"理解什么？"</p>
+
+        <p>"这真正是关于什么的。"机械师靠在栏杆上，低头看着Jack。"你认为我是怪物。一个有正义幻觉的连环杀手。也许我是。但我也是别的什么——我是唯一记得的人。唯一在乎的人。"</p>
+
+        <p>"我在乎，"Jack说。"我花了十五年——"</p>
+
+        <p>"十五年做了什么？喝酒？逃跑？假装你不是让二十三个人死去的同一个懦夫？"机械师的声音平静，几乎同情。"我了解你，Jackie。比你自己更了解。我了解内疚。噩梦。你睡前检查三遍 stove 因为你再也无法相信自己的 perception。"</p>
+
+        <p>Jack感到 blood run cold。"你怎么——"</p>
+
+        <p>"我观察你很多年了。在我开始杀人之前。在我知道我会成为什么之前。"机械师走下楼梯，带着练习过的 grace 移动。"你是我的第一选择，Jackie。我的模板。英雄的儿子变成了懦夫。我以为如果我能理解你，我就能理解我父亲发生了什么。"</p>
+
+        <p>"你父亲在厂里。"</p>
+
+        <p>"我父亲是David Chen。"</p>
+
+        <p>这个名字像 physical blow 击中Jack。David Chen——Sarah的父亲。那个 whose death 驱使她成为记者、寻找真相的人。</p>
+
+        <p>"你是Sarah的……"</p>
+
+        <p>"兄弟。"机械师——David Chen的儿子——走进光线，Jack现在能看到相似了。同样的 dark eyes，同样的 sharp cheekbones。"技术上说是同父异母。不同母亲。我妈妈在我两岁时去世。爸爸独自抚养我，直到遇见Sarah的妈妈。爆炸时我九岁。"</p>
+
+        <p>"Sarah不知道。"</p>
+
+        <p>"Sarah以为我五年前死于车祸。"机械师——Jack不能再那样想他了，现在不能——sadly 微笑。"那样更容易。更容易变成 ghost 而不是解释为什么我需要消失。"</p>
+
+        <p>"你为什么告诉我这些？"</p>
+
+        <p>"因为你会帮我。"他从工作服里掏出一张折叠的纸。"Hayes在地下室。他活着，但如果得不到医疗照顾他不会活很久。他告诉我一切——Marcus Pierce如何威胁他，他如何被迫重新校准检测器，Pierce如何付他五万美元让他在爆炸后消失。"</p>
+
+        <p>Jack接过纸。是手写的供词，Robert Hayes签名，注明日期，有见证。</p>
+
+        <p>"这足以逮捕Pierce了。"</p>
+
+        <p>"这足以做更多。"年轻的Chen眼睛闪烁。"但你需要做选择，Jackie。你可以带Hayes去医院，救他的命，用这份供词建立你的案件。或者你可以让他死，把Pierce给我。没有法律拖延的正义。"</p>
+
+        <p>"你想让我让他死？"</p>
+
+        <p>"我想让你理解有些债务只能用血偿还。"他转向工厂后面的一扇门。"Hayes在那边。他被打了——我的杰作，恐怕。我需要确定他说的是真话。他可能还有两小时内出血就会死。"</p>
+
+        <p>"你疯了。"</p>
+
+        <p>"我是一致的。"他走回楼梯。"叫你的救护车，Jackie。成为你父亲那样的英雄。但记住——Pierce不会停。他在州政府、法院、警察局都有关系。他会拖延，他会上诉，他会 walk。当他这样做时，我会在等他。"</p>
+
+        <p>"如果我阻止你呢？"</p>
+
+        <p>身影在楼梯顶 pause，回头看。"那你就得杀了我。而我认为你做不到。至少现在还不能。"</p>
+
+        <p>他消失在阴影中。</p>
+
+        <p>Jack跑向门，burst through 发现Robert Hayes被绑在椅子上，在一个 makeshift operating room 里。老人家的脸肿得几乎认不出来，呼吸 shallow and wet。</p>
+
+        <p>"救援来了，"Jack掏出手机说，"和我在一起，Hayes先生。告诉我你告诉他的。告诉我一切。"</p>
+
+        <p>Hayes的眼睛 flutter open。"Pierce……他逼我做的。威胁我的家人。说如果我开口，他会……"他咳嗽，血染红唇。"我有证据。银行记录。藏在我的店里……"</p>
+
+        <p>"你的店在哪里？"</p>
+
+        <p>"1432……Michigan Avenue。假墙后面……"他的头垂下。"对不起。对不起。我不想……那些人死……"</p>
+
+        <p>"我知道。我知道你不是故意的。"Jack握着他的手打911，听着Hayes的呼吸变弱。"和我在一起。求你了。我们需要你作证。"</p>
+
+        <p>但救护车到时Hayes已经 unconscious。Jack看着他们把他装进车里，手里攥着供词，知道他今天越过了某条线。</p>
+
+        <p>他看着杀手的眼睛，看到了自己。</p>
+
+        <p>开车去Michigan Avenue花了二十分钟。Jack轻松找到店——一家 between liquor store 和 vacant lot 的不起眼 garage。门锁着，但他 steel-toed boot 的一脚就解决了。</p>
+
+        <p>假墙后面，就在Hayes说的那里，Jack找到一个保险箱。里面是银行记录，transfer slips 显示从Harrison钢铁厂账户转到Hayes个人账户，总共正好五万美元。还有一张便条，用Pierce distinctive 的手写："为服务付费。感谢您的沉默。"</p>
+
+        <p>Jack拍下一切，然后打电话给Sarah。</p>
+
+        <p>"我们抓住他了，"他说。"Pierce完了。"</p>
+
+        <p>"Hayes呢？"</p>
+
+        <p>"在手术。touch and go。"Jack看着面前 spread 的证据。"但我们不需要他作证了。我们有足够的证据现在逮捕Pierce。"</p>
+
+        <p>"Jack，还有别的事。"Sarah的声音奇怪，紧绷。"你不在的时候我做些调查。Marcus Pierce不只是前高管。他 connected——deeply connected——到州政治。他哥哥是州参议员。他表亲坐在上诉法院。"</p>
+
+        <p>"我不在乎他叔叔是不是总统。"</p>
+
+        <p>"你应该在乎。因为我还发现了别的事。"停顿。"Pierce知道你要来。他知道底特律的事，Hayes，一切。有人通风报信。"</p>
+
+        <p>Jack感到 stomach 结冰。"谁？"</p>
+
+        <p>"不知道。但Jack——小心。这不再是关于爆炸的事了。有权势的人在保护Pierce，他们知道你的名字。"</p>
+
+        <p>Jack收起证据，走进底特律的夜晚。城市在他面前展开，像 shadows and secrets 的迷宫，在那些阴影中的某处，机械师——David Chen的儿子，Sarah的兄弟——正在观看。</p>
+
+        <p>他们有一份供词。他们有银行记录。他们有足够的证据让Marcus Pierce终身监禁。</p>
+
+        <p>但当Jack上车发动引擎时，他无法摆脱被玩弄的感觉。他做的每一个动作都被预料，每一个选择都被预测。</p>
+
+        <p>游戏没有结束。</p>
+
+        <p>才刚刚开始。</p>
+      </div>
+    </article>
+
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments。版权所有。</strong></p>
+        <p>本内容受版权保护。未经作者事先书面许可，严禁以任何形式复制、分发或传播本作品的任何部分。</p>
+      </div>
+    </div>
+
+    <nav class="chapter-nav">
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-6/" class="prev">
+        <span class="label">← 上一章</span>
+        <span class="title">第六章：黑暗中的告白</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-8/" class="next">
+        <span class="label">下一章 →</span>
+        <span class="title">第八章：陷阱</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/" class="toc">← 返回目录</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">一个安静的文学档案馆</div>
+      <div class="footer-copyright">© 2026 Fading Moments</div>
+    </div>
+  </footer>
+</body>
+</html>
