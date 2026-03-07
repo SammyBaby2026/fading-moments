@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第十一章：父亲的遗产 — 疑云暗影 — Fading Moments</title>
+  <meta name="description" content="Jack发现父亲死亡的真相，找到毒杀证据，决心为复仇而战。">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    main { flex: 1; position: relative; }
+    .site-footer { margin-top: auto; }
+    .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
+    .watermark::before { content: "疑云暗影 © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
+    .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .chapter-hero .novel-title { font-family: var(--font-display); font-size: 48px; font-weight: 400; color: var(--text-light); margin-bottom: 0.75rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-name { font-family: var(--font-body); font-size: 22px; font-style: italic; color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    .chapter-meta { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #d9d4cc; }
+    .chapter-meta .date { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .chapter-meta .word-count { font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content p:first-of-type { text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: span 2; }
+    .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
+    .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
+    .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .copyright-box p:last-child { margin-bottom: 0; }
+    .copyright-box strong { color: var(--text-dark); }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .chapter-nav .prev, .chapter-nav .next { text-align: center; } .chapter-nav .toc { grid-column: span 1; } .watermark::before { font-size: 60px; } }
+  </style>
+</head>
+<body>
+  <div class="watermark"></div>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/zh/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-11/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-11/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-11/" class="active">中文</a></nav>
+    </div>
+    <nav class="main-nav"><ul><li><a href="/zh/">首页</a></li><li><a href="/zh/writing/" class="active">原创小说与随笔</a></li><li><a href="/zh/visual-archive/">旧照片</a></li><li><a href="/zh/videos/">视频</a></li><li><a href="/zh/films-music/">影像与音乐</a></li><li><a href="/zh/about/">关于</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero">
+      <div class="chapter-hero-content">
+        <div class="novel-title"><a href="/zh/writing/novels/shanyu-youlai/">疑云暗影</a></div>
+        <div class="chapter-name">第十一章：父亲的遗产</div>
+      </div>
+    </section>
+
+    <article class="chapter-container">
+      <div class="chapter-meta">
+        <div class="date">2026年3月14日</div>
+        <div class="word-count">3,500字 · 第十一章，共20章</div>
+      </div>
+
+      <div class="chapter-content">
+        <p>Pierce的豪宅是财富与秘密的迷宫，走廊里排列着比大多数房子还要昂贵的画作，房间里充斥着三百位客人的低语，他们不知道捕食者就在其中。Jack以James Morrison的身份在人群中穿梭，当被微笑时微笑，当被点头时点头，眼睛不断扫描威胁和机会。</p>
+
+        <p>Sarah紧跟在他身边，以练习过的轻松扮演社会专栏作家的角色。她对糟糕的笑话发笑，赞美昂贵的礼服，引导对话远离可能暴露她们缺乏背景知识的话题。她擅长这个——比Jack强，Jack觉得每一个假笑都像对他灵魂的伤。</p>
+
+        <p>"书房在二楼，"Torres在最后一次简报中告诉他们。"东翼，穿过家族肖像画廊。保险箱在Harrison Sr.的肖像后面——他站在钢铁厂前，看起来像个征服英雄的那幅。"</p>
+
+        <p>Jack记住了平面图、警卫轮班、监控摄像头的盲区。但理论和实践是不同的动物，当他们爬上宏伟的楼梯时，他的心在肋骨间狂跳。</p>
+
+        <p>"轻松点，"Sarah低声说，手找到他的肘部。"我们属于这里。表现得像。"</p>
+
+        <p>他们不属于这里。Jack绝对确定。他是警察的儿子，一个成为警察自己的工人阶级孩子。这些人——政治家、商人、社交名媛——生活在一个法律是建议、后果是给穷人的世界。</p>
+
+        <p>但今晚，他会利用他们的傲慢对付他们。</p>
+
+        <p>二楼更安静，派对的声音被厚地毯和沉重的门 muffled。一名保安站在东翼入口，眼睛以专业警觉扫描走廊。</p>
+
+        <p>Jack带着友好的微笑走近他。"打扰一下——我在找洗手间？"</p>
+
+        <p>"走廊尽头，先生。这翼是限制的。"</p>
+
+        <p>"限制的？"Jack挑起眉毛，扮演特权客人的角色。"我希望能看到著名的Pierce艺术收藏。我表亲——Marcus——告诉我关于Harrison肖像的事。"</p>
+
+        <p>保安的表情稍微软化。"私人办公室，先生。Pierce先生的个人空间。"</p>
+
+        <p>"当然。"Jack点头，好像接受这个，然后靠近，压低声音。"你我之间，我考虑今晚做一笔可观的捐款。但我想看看我的钱去了哪里，你明白吗？快速看一眼办公室——我三十秒内进出。"</p>
+
+        <p>他把一百美元塞进保安手里。</p>
+
+        <p>保安看着钱，然后看着Jack昂贵的燕尾服，然后回到钱。贪婪与职责在他眼中交战。贪婪赢了。</p>
+
+        <p>"三十秒，"保安说，站到一边。"别碰任何东西。"</p>
+
+        <p>Jack捏了捏Sarah的手——一个信号——独自走下走廊。肖像画廊用画出的眼睛看着他：Harrison祖先、Pierce家族里程碑、建立在工人阶级骨头上的世代财富。</p>
+
+        <p>Harrison肖像在尽头，正如Torres描述的。老人站在钢铁厂前，手放在设施模型上，笑容胜利。在他身后，在画作背景中几乎看不见，工人们在他们的钢铁与火大教堂中像蚂蚁一样移动。</p>
+
+        <p>二十三只蚂蚁因为这个人的贪婪而死。</p>
+
+        <p>Jack看表。还剩二十秒。他把手指按在画框上，找到Torres描述的隐藏门闩。肖像在无声铰链上摆动打开，露出嵌在墙里的钢制保险箱。</p>
+
+        <p>11-23-09。爆炸日期。</p>
+
+        <p>保险箱咔哒打开。</p>
+
+        <p>里面是文件——几十份，仔细整理，精心标记。Jack掏出手机开始拍照，一页又一页证据。转账给空壳公司的银行记录。与Moretti犯罪家族的通信。破坏甲烷检测器的命令，Marcus Pierce签名。</p>
+
+        <p>然后，在保险箱底部，一个让Jack血液冰冷的皮革文件夹。</p>
+
+        <p><em>Thomas Morrison。</em>他父亲的名字，用Pierce的手写。</p>
+
+        <p>Jack用颤抖的手指打开它。里面是照片——他父亲与Walter Dunn会面、与Harrison Sr.对质、秘密前往匹兹堡FBI办公室的监视照片。还有文件：毒理学报告、尸检摘要、用普通纸打出来Jack不认识的名字签署的供词。</p>
+
+        <p><em>我，Arthur Reeves医生，心智健全，在此供认2009年11月23日，应Marcus Pierce的要求，我向Thomas Morrison注射了致命剂量的氯化钾。该物质通过IV线在Morrison先生的常规体检中引入。我为这项服务获得了50,000美元。我背负这份愧疚已经十五年了。</em></p>
+
+        <p>Jack盯着供词，周围的世界倾斜。他父亲不是死于车祸。他是被谋杀的——被自己的医生毒杀，按照Marcus Pierce的命令。</p>
+
+        <p>充满他的愤怒是他从未知道的。它同时白热和冰冷，一种纯净的结晶狂怒，烧掉了每一个怀疑、每一个犹豫、他曾是的那个人的每一个残余。</p>
+
+        <p>他拍下供词、毒理学报告、一切。他的手现在稳了，头脑清晰。三十秒变成了三分钟，但他不在乎。他有了需要的东西。</p>
+
+        <p>当他转身离开时，他听到走廊里的脚步声。沉重、自信的脚步声——太多，不可能只有保安。</p>
+
+        <p>Jack把肖像甩上，紧贴墙壁，手找到藏在腰带里的枪。脚步声停在书房门外。</p>
+
+        <p>"我知道你在里面，Detective Morrison。"</p>
+
+        <p>声音属于Richard Cole。</p>
+
+        <p>"或者我应该说，James Morrison？聪明的别名。你父亲会骄傲的。"</p>
+
+        <p>Jack什么也没说，大脑飞速运转选择。窗户在二十英尺外，锁着，通向两层楼高的坠落。门是唯一出口，Cole在另一边。</p>
+
+        <p>"你不妨出来，"Cole继续，声音滴着 mock courtesy。"我们有那个女人——Sarah Chen，是吗？——我们有建筑包围。无处可去。"</p>
+
+        <p>Jack的心跳停止。Sarah。他们有Sarah。</p>
+
+        <p>"我要数到三，"Cole说。"然后我的人进来开枪。一……"</p>
+
+        <p>Jack做出决定。他不能死在这里——不是当他有能揭露一切的证据时。他走向窗户，用肘部砸碎，看着下面的黑暗。</p>
+
+        <p>"二……"</p>
+
+        <p>Jack跳了。</p>
+
+        <p>坠落似乎永远持续，空气冲过他，地面冲上来。他撞到树篱，感觉树枝撕裂衣服和皮肤，滚到草地上，起身就跑。</p>
+
+        <p>身后喊叫。手电筒扫过地面。Jack跑向树线，肺燃烧，腿以绝望的能量泵动。</p>
+
+        <p>一声枪响。什么东西从他耳边呼啸而过。他之字形跑动，用树作掩护，头脑除了生存一片空白。</p>
+
+        <p>他到达围栏，爬上去，感觉带刺铁丝撕裂手掌。另一边，一辆车等着——Torres在方向盘后，引擎运转。</p>
+
+        <p>"进来！"</p>
+
+        <p>Jack跳进副驾驶座，Torres猛踩油门。他们冲进黑夜，灯关着，把Pierce豪宅和它的秘密抛在身后。</p>
+
+        <p>"Sarah，"Jack喘着气。"他们有Sarah。"</p>
+
+        <p>"我知道。"Torres的脸在仪表灯中严峻。"他们五分钟前带走她。我没能及时赶到她。"</p>
+
+        <p>Jack一拳砸在仪表板上。"我们必须回去。"</p>
+
+        <p>"我们不能。还没。"Torres转向一条乡间小路，检查后视镜。"他们会期待我们尝试救援。每个出口都会被覆盖，每个接近都被监视。我们需要聪明点。"</p>
+
+        <p>"她在那里是因为我。因为我让她来。"</p>
+
+        <p>"她在那里是因为她选择来。"Torres的声音很硬。"和你一样。和我一样。我们都做了选择，Jack。现在我们处理后果。"</p>
+
+        <p>他们沉默地开车到一个安全屋——树林中的一个小屋，远离任何地方，配备补给和通讯设备。Torres给两人倒了威士忌，Jack喝下去没有品尝。</p>
+
+        <p>"我找到了证据，"Jack说，声音空洞。"我父亲被谋杀了。被他的医生毒杀。Pierce下令的。"</p>
+
+        <p>Torres点头，好像这证实了他长期怀疑的事。"Reeves医生。我几年前试图找到他，但他消失了。Pierce一定把他留在身边，保险对付这一刻。"</p>
+
+        <p>"我们需要把那份供词交给当局。交给媒体。交给任何愿意听的人。"</p>
+
+        <p>"我们会。"Torres前倾，眼中燃烧着冷火。"但首先，我们救回Sarah。然后我们结束这一切——适当地。"</p>
+
+        <p>Jack看着对面的男人——杀手、复仇者、在法律之外运作的正义工具。他在Torres眼中看到了自己，看到了同样的愤怒、同样的决心、同样的愿意跨越任何界限以实现正确。</p>
+
+        <p>"你发生了什么？"Jack轻声问。"在所有这些之前——在你成为机械师之前。你是什么？"</p>
+
+        <p>Torres沉默了很长时间，盯着他的威士忌。"我是个好探员，"他最终说。"我相信体制。我相信如果你遵守规则、努力工作、说真话，正义会占上风。"</p>
+
+        <p>他喝了长长一口。"我错了。体制不保护无辜——它保护有权势的人。规则不约束有罪——它们约束那些会阻止他们的人。而真相……"他笑了，一个苦涩的声音。"真相是有钱人说它是什么。"</p>
+
+        <p>"所以你成为了法官、陪审团和刽子手。"</p>
+
+        <p>"我成为了必要。"Torres与Jack对视。"这个世界有怪物，Jack。真正的怪物戴着人脸，住在豪宅里，制定法律。法律碰不到他们。体制阻止不了他们。必须有人这样做。"</p>
+
+        <p>"那个人是你？"</p>
+
+        <p>"那个人是有勇气行动的任何人。"Torres站起来，走向一个柜子，拿出一个金属箱。里面是武器——枪、刀、Jack不认识的东西。"十五年前，我看着你父亲死去，什么也没做。我告诉自己我在遵循程序，等待正确的时刻，建立一个能站得住脚的案子。但真相是，我害怕。害怕失去工作、名誉、舒适的生活。"</p>
+
+        <p>他转身面对Jack。"我不会再犯那个错误。你也不会。"</p>
+
+        <p>Jack看着武器，看着已成为他不寻常盟友的男人，看着他面前的道路。他想他的父亲，在医生办公室被毒杀，因为敢于说真话。他想Sarah，被 capture 因为她敢于帮助他。他想二十三个在负责人逍遥法外时活活烧死的男人。</p>
+
+        <p>他伸手进箱子，拿起一把枪。</p>
+
+        <p>"告诉我计划，"他说。</p>
+
+        <p>Torres笑了——这次是真的笑，冷酷、凶猛、完全没有怜悯。"Pierce认为他赢了。他有女人，有豪宅，有有权势朋友的保护。他认为他安全。"</p>
+
+        <p>"他不是？"</p>
+
+        <p>"没有人从我们手中安全，Jack。不再。"Torres在桌上铺开地图，开始指出位置。"明天早上，Pierce计划举行新闻发布会。他要宣布竞选州长。活动会被严密守卫，但那不是我们打击他的地方。"</p>
+
+        <p>"那是哪里？"</p>
+
+        <p>"医院。St. Mary's，你父亲死的地方。Reeves医生仍在工作——受Pierce保护，由Pierce支付，因为Pierce而沉默。"Torres的手指戳向地图。"我们抓住Reeves。我们让他作证。然后我们推倒整个腐朽的结构。"</p>
+
+        <p>Jack研究地图、计划、已成为他复仇艺术老师的男人。他感到手中枪的重量、肩上父亲遗产的重量、他正在做出的选择的重量。</p>
+
+        <p>他不再是Detective Jack Morrison，法律的维护者。他现在别的东西了——更黑暗、更危险、必要的东西。</p>
+
+        <p>"一个条件，"Jack说。"Sarah活着出来。无论Pierce发生什么，无论Cole发生什么，无论其他任何人发生什么——Sarah走出去。"</p>
+
+        <p>Torres点头。"同意。无辜的人活着。有罪的人……"他停顿，眼睛遥远。"有罪的人得到他们应得的。"</p>
+
+        <p>他们整夜准备——审查布局、计时巡逻、为每种应急情况做计划。Jack的手机偶尔震动Emily的消息，他用工作忙工作的谎言回复。他还不能告诉她真相，还没。直到结束。</p>
+
+        <p>黎明破晓森林，Jack站在小屋窗前，看着光线穿过树木。他想他的父亲，想Thomas Morrison是怎样的人——有缺陷、害怕，但最终足够勇敢尝试做正确的事。</p>
+
+        <p>他想他正在继承的遗产。不是Elm Street的房子，不是旧家具和灰尘记忆。真正的遗产——未完成正义的负担、为死者说话的责任、无论代价如何都敢于对抗权力的勇气。</p>
+
+        <p>"准备好了吗？"Torres问，站到他身边。</p>
+
+        <p>Jack看着手中的枪，看着身边的男人，看着迫使他成为从未想成为的东西的世界。</p>
+
+        <p>"准备好了，"他说。</p>
+
+        <p>他们步入早晨，两个被悲剧和复仇绑在一起的男人，走向将决定不仅他们未来，而且正义本身意义的对决。</p>
+
+        <p>风暴即将来临。而Jack Morrison准备好迎接它。</p>
+      </div>
+    </article>
+
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments。版权所有。</strong></p>
+        <p>本内容受版权保护。未经作者事先书面许可，严禁以任何形式复制、分发或传播本作品的任何部分。</p>
+      </div>
+    </div>
+
+    <nav class="chapter-nav">
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-10/" class="prev">
+        <span class="label">← 上一章</span>
+        <span class="title">第十章：背叛</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-12/" class="next">
+        <span class="label">下一章 →</span>
+        <span class="title">第十二章：山雨欲来</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/" class="toc">← 返回目录</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">一个安静的文学档案馆</div>
+      <div class="footer-copyright">© 2026 Fading Moments</div>
+    </div>
+  </footer>
+</body>
+</html>
