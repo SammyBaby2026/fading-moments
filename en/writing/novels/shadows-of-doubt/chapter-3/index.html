@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: The Locked Room — Shadows of Doubt — Fading Moments</title>
+  <meta name="description" content="The nursing home smelled of antiseptic and regret...">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    main { flex: 1; position: relative; }
+    .site-footer { margin-top: auto; }
+    .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
+    .watermark::before { content: "SHADOWS OF DOUBT © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
+    .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .chapter-hero .novel-title { font-family: var(--font-display); font-size: 48px; font-weight: 400; color: var(--text-light); margin-bottom: 0.75rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-name { font-family: var(--font-body); font-size: 22px; font-style: italic; color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    .chapter-meta { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #d9d4cc; }
+    .chapter-meta .date { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .chapter-meta .word-count { font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content p:first-of-type { text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: span 2; }
+    .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
+    .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
+    .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
+    .copyright-box p:last-child { margin-bottom: 0; }
+    .copyright-box strong { color: var(--text-dark); }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .chapter-nav .prev, .chapter-nav .next { text-align: center; } .chapter-nav .toc { grid-column: span 1; } .watermark::before { font-size: 60px; } }
+  </style>
+</head>
+<body>
+  <div class="watermark"></div>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/en/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-3/" class="active">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-3/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-3/">中文</a></nav>
+    </div>
+    <nav class="main-nav"><ul><li><a href="/en/">Home</a></li><li><a href="/en/writing/" class="active">Writing</a></li><li><a href="/en/visual-archive/">Visual Archive</a></li><li><a href="/en/videos/">Videos</a></li><li><a href="/en/films-music/">Films & Music</a></li><li><a href="/en/about/">About</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero">
+      <div class="chapter-hero-content">
+        <div class="novel-title"><a href="/en/writing/novels/shadows-of-doubt/">Shadows of Doubt</a></div>
+        <div class="chapter-name">Chapter 3: The Locked Room</div>
+      </div>
+    </section>
+
+    <article class="chapter-container">
+      <div class="chapter-meta">
+        <div class="date">March 9, 2026</div>
+        <div class="word-count">4,800 words · Chapter 3 of 20</div>
+      </div>
+
+      <div class="chapter-content">
+        <p>The nursing home smelled of antiseptic and regret, a chemical sweetness that couldn't quite mask the underlying scent of decay. Jack Morrison stood in the lobby of the Ashford Senior Care Center, watching an old man in a wheelchair stare out the window at a parking lot where nothing interesting ever happened.</p>
+
+        <p>Richard Holloway had been a lion once. In the nineties, he'd taken on Harrison Steel's legal team expecting to lose, but he'd fought anyway—because someone had to, because twenty-three families deserved better than a sealed settlement and a nondisclosure agreement. Now he was seventy-three years old, his mind dissolving like sugar in rain, and the case files that might have held answers were scattered to the winds.</p>
+
+        <p>Or so everyone thought.</p>
+
+        <p>"You're Detective Morrison?" The woman approaching him was in her forties, with Holloway's sharp cheekbones and tired eyes. "I'm Elizabeth Holloway-Morris. My father's daughter."</p>
+
+        <p>"Thank you for seeing me, Ms. Holloway-Morris."</p>
+
+        <p>"It's about the steel mill case, isn't it?" She didn't wait for confirmation. "Everyone thinks that case died with my father's mind. But he was paranoid, Detective. The good kind of paranoid—the kind that makes you keep backup copies of everything."</p>
+
+        <p>Jack felt a flicker of hope, dangerous as a match in a gas leak. "You have the files?"</p>
+
+        <p>"Not here." She glanced toward the desk nurse, lowering her voice. "My father knew someone might come looking one day. He made me promise to keep them safe. Follow me."</p>
+
+        <p>The Holloway & Associates law office occupied the second floor of a Victorian building on Main Street, sandwiched between a bankruptcy attorney and a payday loan shop. The irony wasn't lost on Jack—justice and desperation, sharing the same block.</p>
+
+        <p>Elizabeth unlocked a fire safe hidden behind a bookshelf in her father's old office. "He stopped practicing five years ago when the Alzheimer's started getting bad. But he made me promise—if anyone ever asked about the Harrison case, I was to give them access to the backup files."</p>
+
+        <p>"Why me? Why now?"</p>
+
+        <p>"Because three people connected to that explosion are dead in the last three months, Detective. I read the news." She pulled out a metal file box, old but well-maintained. "And because two days ago, someone broke into this office. They didn't take anything—they were looking for something specific."</p>
+
+        <p>Jack's pulse quickened. "What were they looking for?"</p>
+
+        <p>"This." She opened the box, revealing folders organized by year, by case, by client. "The complete Harrison Steel wrongful death files. Including the ones my father never filed."</p>
+
+        <p>She handed him a folder marked "CONFIDENTIAL—DO NOT FILE" in her father's familiar handwriting. Inside were witness statements that had never made it to court, photographs that had never been entered into evidence, and a single audio cassette labeled "V. Kowalski—Deathbed Statement, March 2019."</p>
+
+        <p>Vincent Kowalski. Patricia's husband. The man who'd worked the night shift for fifteen years and died claiming he had proof the explosion wasn't an accident.</p>
+
+        <p>"There's a player in the desk," Elizabeth said quietly. "I think you need to hear this."</p>
+
+        <blockquote>"This is Vincent Kowalski. I worked the night of November 14, 2009. I was there when the boilers blew. And I know what really happened. Harrison Sr. knew about the methane buildup. We all knew. The detectors had been faulty for weeks, but maintenance was 'deferred' until after the quarterly inspection. We were told to keep working or lose our jobs."</blockquote>
+
+        <p>The tape hissed, then Vincent's voice returned, weaker now: "I've got proof. Copies of the payoff ledger, photos of the faulty equipment before the blast, a statement from the inspector before he died of 'natural causes' in 2015. I'm giving everything to Dr. Harrison. He knows how to hide things where the company can't find them."</p>
+
+        <p>The tape ended with a click that seemed to echo in the quiet office.</p>
+
+        <p>Elizabeth was crying silently. "My father never filed this. He was going to—but then Vincent died, and Dr. Harrison said he couldn't find the evidence, and the case was already settled, and... and he was afraid."</p>
+
+        <p>"Not for much longer," Jack said quietly.</p>
+
+        <p>His phone buzzed. A text from an unknown number: "You found the files. Good. But files won't bring back the dead, Jack. Only justice can do that. And justice requires sacrifice. Are you willing to sacrifice everything? —M"</p>
+
+        <p>Jack stared at the message. The Machinist wasn't just watching the investigation. He was watching Jack, specifically. Targeting him.</p>
+
+        <p>He typed back: "Who are you really?"</p>
+
+        <p>The reply came in seconds: "I'm the ghost of Ashford's conscience. I'm what happens when justice is denied. And soon, Jack—very soon—you'll have to choose which side you're on. Because there are no innocent bystanders in this war. Only victims and avengers."</p>
+
+        <p>Jack pocketed the phone, his hands shaking slightly. He walked out of the law office into the gray afternoon, the weight of the files heavy under his arm.</p>
+
+        <p>Twenty-three dead. Three murdered since. And a killer who thought he was doing justice.</p>
+
+        <p>The rain started again, cold and persistent, washing the streets clean of nothing. Jack Morrison pulled his collar up against the wind and walked toward his car, toward the truth, toward a confrontation he could feel coming like thunder before a storm.</p>
+
+        <p>The Machinist was out there, watching, waiting. But now Jack had something he hadn't had before.</p>
+
+        <p>He had proof. He had names. He had the beginning of an answer.</p>
+
+        <p>And he was done being a victim.</p>
+      </div>
+    </article>
+
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments. All Rights Reserved.</strong></p>
+        <p>This content is protected by copyright law. Unauthorized reproduction, distribution, or transmission of any part of this work in any form is strictly prohibited without prior written permission from the author.</p>
+      </div>
+    </div>
+
+    <nav class="chapter-nav">
+      <a href="/en/writing/novels/shadows-of-doubt/chapter-2/" class="prev">
+        <span class="label">← Previous Chapter</span>
+        <span class="title">Chapter 2: The Ghost in the Machine</span>
+      </a>
+      <a href="/en/writing/novels/shadows-of-doubt/chapter-4/" class="next">
+        <span class="label">Next Chapter →</span>
+        <span class="title">Chapter 4: Coming Soon</span>
+      </a>
+      <a href="/en/writing/novels/shadows-of-doubt/" class="toc">← Table of Contents</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">A Quiet Literary Archive</div>
+      <div class="footer-copyright">© 2026 Fading Moments. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
