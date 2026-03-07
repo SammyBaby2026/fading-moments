@@ -10,22 +10,27 @@
     body { display: flex; flex-direction: column; min-height: 100vh; }
     main { flex: 1; }
     .site-footer { margin-top: auto; }
-    .chapter-hero { position: relative; height: 380px; background-image: url('/images/novel-station-hero.png'); background-size: cover; background-position: center 40%; display: flex; align-items: center; justify-content: center; text-align: center; }
-    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.65); }
+    .chapter-hero { position: relative; height: 380px; background-image: url('/images/novel-station-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.55); }
     .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
-    .chapter-hero .label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 0.5rem; }
-    .chapter-hero .series { font-family: var(--font-body); font-size: 14px; color: rgba(237, 231, 223, 0.7); font-style: italic; margin-bottom: 1rem; }
-    .chapter-hero h1 { font-family: var(--font-display); font-size: 32px; font-weight: 400; color: var(--text-light); margin-bottom: 0.5rem; }
-    .chapter-hero .meta { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); }
+    .chapter-hero .novel-title { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 0.5rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero h1 { font-family: var(--font-display); font-size: 36px; font-weight: 400; color: var(--text-light); margin-bottom: 0.5rem; }
+    .chapter-hero .chapter-num { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); letter-spacing: 0.1em; }
     .chapter-container { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
-    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); }
-    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.8; color: var(--text-dark); background: var(--bg-card); border: 1px solid var(--border-color); padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); }
+    .chapter-content p { margin-bottom: 1.5rem; text-indent: 2em; }
     .chapter-content p:first-of-type { text-indent: 0; }
-    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5em; float: left; line-height: 0.8; margin-right: 0.1em; color: var(--text-dark); }
-    .chapter-nav { padding: 30px 0 40px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-    .chapter-nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; }
-    .chapter-nav a:hover { color: var(--text-dark); }
-    @media (max-width: 768px) { .chapter-hero h1 { font-size: 24px; } .chapter-container { padding: 40px 20px; } }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid var(--border-color); background: rgba(201, 193, 180, 0.15); font-style: italic; text-indent: 0; }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border-color); }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 12px 20px; border: 1px solid #3a4a42; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; }
+    .chapter-nav a:hover { background: #2f3d36; border-color: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 14px; color: var(--text-light); }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: 1; text-align: center; }
+    @media (max-width: 768px) { .chapter-hero h1 { font-size: 28px; } .chapter-container { padding: 40px 20px; } .chapter-content { padding: 40px 24px; } .chapter-nav .next { text-align: left; } }
   </style>
 </head>
 <body>
@@ -33,25 +38,24 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="/en/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
-      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-1/" class="active">EN</a></nav>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-1/" class="active">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-1/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-1/">中文</a></nav>
     </div>
     <nav class="main-nav">
-      <ul><li><a href="/en/">Home</a></li><li><a href="/en/writing/" class="active">Writing</a></li><li><a href="/en/visual-archive/">Visual Archive</a></li><li><a href="/en/films-music/">Films & Music</a></li><li><a href="/en/studio/">Studio</a></li><li><a href="/en/digital-lab/">Digital Lab</a></li><li><a href="/en/about/">About</a></li></ul>
+      <ul><li><a href="/en/">Home</a></li><li><a href="/en/writing/" class="active">Writing</a></li><li><a href="/en/visual-archive/">Visual Archive</a></li><li><a href="/en/videos/">Videos</a></li><li><a href="/en/films-music/">Films & Music</a></li><li><a href="/en/digital-lab/">Digital Lab</a></li><li><a href="/en/about/">About</a></li></ul>
     </nav>
   </header>
 
   <main>
     <section class="chapter-hero">
       <div class="chapter-hero-content">
-        <div class="label">Novel · Mystery</div>
-        <div class="series">Shadows of Doubt · #1</div>
-        <h1>Chapter 1: The First Gear</h1>
-        <div class="meta">March 7, 2026 · 4,500 words · Ongoing</div>
+        <div class="novel-title"><a href="/en/writing/novels/shadows-of-doubt/">Shadows of Doubt</a></div>
+        <div class="chapter-num">Chapter 1</div>
+        <h1>The First Gear</h1>
       </div>
     </section>
 
-    <div class="chapter-container">
-      <article class="chapter-content">
+    <article class="chapter-container">
+      <div class="chapter-content">
         <p>The rain fell on Ashford like God's own tears, washing nothing clean. Jack Morrison stood at the edge of the crime scene, watching the water carry blood down the gutter in thin, diluted streams. It was the kind of Midwestern night that made you question your life choices—the wind cutting through your coat, the smell of rust and decay in the air, the knowledge that somewhere warm, people were living lives that didn't involve staring at dead bodies.</p>
 
         <p>But that wasn't his life. His life was here, in the shadow of the old Harrison Steel Mill, where the American Dream had gone to die fifteen years ago along with twenty-three night-shift workers.</p>
@@ -68,7 +72,7 @@
 
         <p>"Keep her back," Jack said. "This isn't a goddamn press conference."</p>
 
-        <p>But even as he spoke, he saw her—small frame wrapped in a black raincoat, camera slung around her neck, already talking to one of the younger officers who looked like he was about to give her his life story. She caught Jack's eye across the distance, and he saw the challenge in her gaze. The unspoken accusation: *What are you hiding, Morrison?*</p>
+        <p>But even as he spoke, he saw her—small frame wrapped in a black raincoat, camera slung around her neck, already talking to one of the younger officers who looked like he was about to give her his life story. She caught Jack's eye across the distance, and he saw the challenge in her gaze. The unspoken accusation: <em>What are you hiding, Morrison?</em></p>
 
         <p>He turned back to the body.</p>
 
@@ -78,7 +82,7 @@
 
         <p>"None found. But his office door was locked from the inside. Window was open."</p>
 
-        <p>*Classic setup*, Jack thought. *But why would a retired county medical examiner rate a professional hit?*</p>
+        <blockquote>The wages of sin is death.</blockquote>
 
         <p>The answer came fifteen minutes later, when the new medical examiner—a young woman named Dr. Patel, fresh from the Cleveland office—knelt beside the body and carefully opened the dead man's clenched right hand.</p>
 
@@ -104,7 +108,7 @@
 
         <p>"And you know this isn't a suicide."</p>
 
-        <p>Jack stood, his knees popping. "I know that Dr. Harrison had access to every death certificate in this county for the past thirty years. I know he was the ME on duty the night of the mill explosion. And I know that twenty-three men died that night, and someone thinks they deserve justice that the courts never delivered."</p>
+        <p>Jack stood, his knees popping. "I know that Dr. Harrison had access to every death certificate in this county for the past thirty years. I know he was the ME on duty the night of the mill explosion. And I know that twenty-three men died that night, and someone thinks they deserve justice that the law never delivered."</p>
 
         <p>He looked up at the Harrison Building, dark against the rainy sky. Fourteenth floor. The window was still open, curtains billowing like ghostly fingers beckoning.</p>
 
@@ -122,52 +126,55 @@
 
         <p>"I believe in evidence."</p>
 
-        <p>"Then you'll want to see this." She held out her phone. On the screen was an email—sent to Dr. Harrison forty-eight hours ago. The subject line read: *The wages of sin is death.* The body: *You signed twenty-three death certificates. Tonight you sign your own. The Machinist.*"
+        <p>"Then you'll want to see this." She held out her phone. On the screen was an email—sent to Dr. Harrison forty-eight hours ago. The subject line read: <em>The wages of sin is death.</em> The body: <em>You signed twenty-three death certificates. Tonight you sign your own. The Machinist.</em></p>
 
-        <p>Jack took the phone. His hands were steady. They'd been steady since that night fifteen years ago, when he'd learned what it meant to survive while everyone else died.
+        <p>Jack took the phone. His hands were steady. They'd been steady since that night fifteen years ago, when he'd learned what it meant to survive while everyone else died.</p>
 
         <p>"Where did you get this?"</p>
 
-        <p>"Harrison forwarded it to me. He was... scared. He wanted to talk." Her voice caught slightly. "He knew something about the explosion. Something he'd kept secret all these years."
+        <p>"Harrison forwarded it to me. He was... scared. He wanted to talk." Her voice caught slightly. "He knew something about the explosion. Something he'd kept secret all these years."</p>
 
-        <p>*The Machinist*, Jack thought. A name from the industrial past, when Ashford had been a city of steel and coal instead of opioids and despair. Someone who understood machines. Someone who knew how to make murder look like accident.
+        <p><em>The Machinist</em>, Jack thought. A name from the industrial past, when Ashford had been a city of steel and coal instead of opioids and despair. Someone who understood machines. Someone who knew how to make murder look like accident.</p>
 
-        <p>Someone who remembered.
+        <p>Someone who remembered.</p>
 
-        <p>Jack looked at the gear in the evidence bag, at the number scratched into its rusted surface. He thought about the twenty dead men—good men, working men, men who'd had families and dreams and futures until a spark in a methane pocket ended everything. He thought about the three survivors: himself, a man named Earl Thompson who'd died in a "hunting accident" three months ago, and a woman named Patricia Kowalski who'd fallen down her basement stairs two weeks ago.
+        <p>Jack looked at the gear in the evidence bag, at the number scratched into its rusted surface. He thought about the twenty dead men—good men, working men, men who'd had families and dreams and futures until a spark in a methane pocket ended everything. He thought about the three survivors: himself, a man named Earl Thompson who'd died in a "hunting accident" three months ago, and a woman named Patricia Kowalski who'd fallen down her basement stairs two weeks ago.</p>
 
-        <p>Now Dr. Harrison, who'd ruled both deaths accidental.
+        <p>Now Dr. Harrison, who'd ruled both deaths accidental.</p>
 
-        <p>Twenty-three minus three survivors equals twenty. Plus the three who'd been killed since...
+        <p>Twenty-three minus three survivors equals twenty. Plus the three who'd been killed since...</p>
 
-        <p>Twenty-three.
+        <p>Twenty-three.</p>
 
-        <p>Someone was balancing the books.
+        <p>Someone was balancing the books.</p>
 
-        <p>Jack handed Sarah Chen her phone. "You need to leave. Now."
+        <p>Jack handed Sarah Chen her phone. "You need to leave. Now."</p>
 
-        <p>"I'm not going anywhere. My father died in that mill. If someone is finally telling the truth—"
+        <p>"I'm not going anywhere. My father died in that mill. If someone is finally telling the truth—"</p>
 
-        <p>"If someone is killing everyone connected to that night," Jack interrupted, "then you're in danger just by being here. By talking to me. By knowing what you know."
+        <p>"If someone is killing everyone connected to that night," Jack interrupted, "then you're in danger just by being here. By talking to me. By knowing what you know."</p>
 
-        <p>He leaned in close enough to smell the rain on her skin, the faint trace of coffee on her breath.
+        <p>He leaned in close enough to smell the rain on her skin, the faint trace of coffee on her breath.</p>
 
-        <p>"The Machinist isn't done." He kept his voice low, just between them. "Three down, twenty to go. And if you're not careful, Ms. Chen, you'll be twenty-four."
+        <p>"The Machinist isn't done." He kept his voice low, just between them. "Three down, twenty to go. And if you're not careful, Ms. Chen, you'll be twenty-four."</p>
 
-        <p>He walked away before she could respond, toward the flashing lights of the ambulance that would carry Dr. Harrison's body to the morgue. Behind him, the Harrison Steel Mill loomed against the night sky—a skeleton of rusted girders and broken windows, a monument to greed and grief.
+        <p>He walked away before she could respond, toward the flashing lights of the ambulance that would carry Dr. Harrison's body to the morgue. Behind him, the Harrison Steel Mill loomed against the night sky—a skeleton of rusted girders and broken windows, a monument to greed and grief.</p>
 
-        <p>Somewhere in that darkness, The Machinist was watching. Waiting.
+        <p>Somewhere in that darkness, The Machinist was watching. Waiting.</p>
 
-        <p>And Jack Morrison, the man who should have died fifteen years ago, finally understood that the past wasn't done with him. Not by a long shot.
+        <p>And Jack Morrison, the man who should have died fifteen years ago, finally understood that the past wasn't done with him. Not by a long shot.</p>
 
-        <p>The game, it seemed, had just begun.
-      </article>
+        <p>The game, it seemed, had just begun.</p>
+      </div>
+    </article>
 
-      <nav class="chapter-nav">
-        <a href="/en/writing/novels/">← Back to Novels</a>
-        <a href="/en/writing/novels/shadows-of-doubt/chapter-2/">Chapter 2 →</a>
-      </nav>
-    </div>
+    <nav class="chapter-nav">
+      <a href="/en/writing/novels/shadows-of-doubt/chapter-2/" class="next">
+        <div class="label">Next →</div>
+        <div class="title">Chapter 2: The Machinist's Shadow</div>
+      </a>
+      <a href="/en/writing/novels/shadows-of-doubt/" class="toc">Table of Contents</a>
+    </nav>
   </main>
 
   <footer class="site-footer">

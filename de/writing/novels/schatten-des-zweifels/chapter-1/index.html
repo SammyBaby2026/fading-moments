@@ -10,22 +10,27 @@
     body { display: flex; flex-direction: column; min-height: 100vh; }
     main { flex: 1; }
     .site-footer { margin-top: auto; }
-    .chapter-hero { position: relative; height: 380px; background-image: url('/images/novel-station-hero.png'); background-size: cover; background-position: center 40%; display: flex; align-items: center; justify-content: center; text-align: center; }
-    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.65); }
+    .chapter-hero { position: relative; height: 380px; background-image: url('/images/novel-station-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.55); }
     .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
-    .chapter-hero .label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 0.5rem; }
-    .chapter-hero .series { font-family: var(--font-body); font-size: 14px; color: rgba(237, 231, 223, 0.7); font-style: italic; margin-bottom: 1rem; }
-    .chapter-hero h1 { font-family: var(--font-display); font-size: 32px; font-weight: 400; color: var(--text-light); margin-bottom: 0.5rem; }
-    .chapter-hero .meta { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); }
+    .chapter-hero .novel-title { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 0.5rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero h1 { font-family: var(--font-display); font-size: 36px; font-weight: 400; color: var(--text-light); margin-bottom: 0.5rem; }
+    .chapter-hero .chapter-num { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); letter-spacing: 0.1em; }
     .chapter-container { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
-    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); }
-    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.8; color: var(--text-dark); background: var(--bg-card); border: 1px solid var(--border-color); padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); }
+    .chapter-content p { margin-bottom: 1.5rem; text-indent: 2em; }
     .chapter-content p:first-of-type { text-indent: 0; }
-    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5em; float: left; line-height: 0.8; margin-right: 0.1em; color: var(--text-dark); }
-    .chapter-nav { padding: 30px 0 40px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-    .chapter-nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; }
-    .chapter-nav a:hover { color: var(--text-dark); }
-    @media (max-width: 768px) { .chapter-hero h1 { font-size: 24px; } .chapter-container { padding: 40px 20px; } }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid var(--border-color); background: rgba(201, 193, 180, 0.15); font-style: italic; text-indent: 0; }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border-color); }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 12px 20px; border: 1px solid #3a4a42; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; }
+    .chapter-nav a:hover { background: #2f3d36; border-color: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 14px; color: var(--text-light); }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: 1; text-align: center; }
+    @media (max-width: 768px) { .chapter-hero h1 { font-size: 28px; } .chapter-container { padding: 40px 20px; } .chapter-content { padding: 40px 24px; } .chapter-nav .next { text-align: left; } }
   </style>
 </head>
 <body>
@@ -36,22 +41,21 @@
       <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-1/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-1/" class="active">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-1/">中文</a></nav>
     </div>
     <nav class="main-nav">
-      <ul><li><a href="/de/">Home</a></li><li><a href="/de/writing/" class="active">Writing</a></li><li><a href="/de/visual-archive/">Visual Archive</a></li><li><a href="/de/films-music/">Films & Music</a></li><li><a href="/de/studio/">Studio</a></li><li><a href="/de/digital-lab/">Digital Lab</a></li><li><a href="/de/about/">About</a></li></ul>
+      <ul><li><a href="/de/">Home</a></li><li><a href="/de/writing/" class="active">Writing</a></li><li><a href="/de/visual-archive/">Visual Archive</a></li><li><a href="/de/videos/">Videos</a></li><li><a href="/de/films-music/">Films & Music</a></li><li><a href="/de/digital-lab/">Digital Lab</a></li><li><a href="/de/about/">About</a></li></ul>
     </nav>
   </header>
 
   <main>
     <section class="chapter-hero">
       <div class="chapter-hero-content">
-        <div class="label">Roman · Mystery</div>
-        <div class="series">Schatten des Zweifels · Kapitel 1</div>
+        <div class="novel-title"><a href="/de/writing/novels/schatten-des-zweifels/">Schatten des Zweifels</a></div>
+        <div class="chapter-num">Kapitel 1</div>
         <h1>Das erste Zahnrad</h1>
-        <div class="meta">7. März 2026 · 4.500 Wörter · Laufend</div>
       </div>
     </section>
 
-    <div class="chapter-container">
-      <article class="chapter-content">
+    <article class="chapter-container">
+      <div class="chapter-content">
         <p>Der Regen fiel auf Ashford wie die Tränen Gottes selbst und wusch nichts rein. Jack Morrison stand am Rand des Tatorts und beobachtete, wie das Wasser das Blut in dünnen, verdünnten Rinnen in den Gully spülte. Es war eine jener Mittleren-Westen-Nächte, die einen an seinen Lebensentscheidungen zweifeln ließ – der Wind, der durch den Mantel schnitt, der Geruch von Rost und Verfall in der Luft, das Wissen, dass irgendwo warme Menschen Leben führten, die nicht darin bestanden, auf tote Körper zu starren.</p>
 
         <p>Aber das war nicht sein Leben. Sein Leben war hier, im Schatten der alten Harrison Steel Mill, wo der amerikanische Traum vor fünfzehn Jahren zusammen mit dreiundzwanzig Nachtschichtarbeitern gestorben war.</p>
@@ -68,7 +72,7 @@
 
         <p>"Halten Sie sie zurück", sagte Jack. "Das ist keine verdammte Pressekonferenz."</p>
 
-        <p>Aber während er sprach, sah er sie – kleine Gestalt in einem schwarzen Regenmantel, Kamera um den Hals, sprach bereits mit einem der jüngeren Beamten, der aussah, als würde er ihr gleich seine Lebensgeschichte erzählen. Sie fing Jacks Blick über die Distanz hinweg auf, und er sah die Herausforderung in ihren Augen. Der unausgesprochene Vorwurf: *Was versteckst du, Morrison?*</p>
+        <p>Aber während er sprach, sah er sie – kleine Gestalt in einem schwarzen Regenmantel, Kamera um den Hals, sprach bereits mit einem der jüngeren Beamten, der aussah, als würde er ihr gleich seine Lebensgeschichte erzählen. Sie fing Jacks Blick über die Distanz hinweg auf, und er sah die Herausforderung in ihren Augen. Der unausgesprochene Vorwurf: <em>Was versteckst du, Morrison?</em></p>
 
         <p>Er wandte sich wieder der Leiche zu.</p>
 
@@ -78,7 +82,7 @@
 
         <p>"Keiner gefunden. Aber seine Bürotür war von innen verschlossen. Das Fenster war offen."</p>
 
-        <p>*Klassische Inszenierung*, dachte Jack. *Aber warum würde ein pensionierter Gerichtsmediziner einen professionellen Hit verdienen?*</p>
+        <blockquote>Der Lohn der Sünde ist der Tod.</blockquote>
 
         <p>Die Antwort kam fünfzehn Minuten später, als die neue Gerichtsmedizinerin – eine junge Frau namens Dr. Patel, frisch vom Büro in Cleveland – neben der Leiche kniete und vorsichtig die verkrampfte rechte Hand des Toten öffnete.</p>
 
@@ -122,55 +126,58 @@
 
         <p>"Ich glaube an Beweise."</p>
 
-        <p>"Dann werden Sie das sehen wollen." Sie hielt ihr Handy hoch. Auf dem Bildschirm war eine E-Mail – vor achtundvierzig Stunden an Dr. Harrison geschickt. Die Betreffzeile lautete: *Der Lohn der Sünde ist der Tod.* Der Text: *Sie haben dreiundzwanzig Totenscheine unterschrieben. Heute Nacht unterschreiben Sie Ihren eigenen. Der Maschinist.*"
+        <p>"Dann werden Sie das sehen wollen." Sie hielt ihr Handy hoch. Auf dem Bildschirm war eine E-Mail – vor achtundvierzig Stunden an Dr. Harrison geschickt. Die Betreffzeile lautete: <em>Der Lohn der Sünde ist der Tod.</em> Der Text: <em>Sie haben dreiundzwanzig Totenscheine unterschrieben. Heute Nacht unterschreiben Sie Ihren eigenen. Der Maschinist.</em></p>
 
-        <p>Jack nahm das Handy. Seine Hände waren ruhig. Sie waren ruhig gewesen seit jener Nacht vor fünfzehn Jahren, als er gelernt hatte, was es bedeutete, zu überleben, während alle anderen starben.
+        <p>Jack nahm das Handy. Seine Hände waren ruhig. Sie waren ruhig gewesen seit jener Nacht vor fünfzehn Jahren, als er gelernt hatte, was es bedeutete, zu überleben, während alle anderen starben.</p>
 
-        <p>"Woher haben Sie das?"
+        <p>"Woher haben Sie das?"</p>
 
-        <p>"Harrison hat es mir weitergeleitet. Er war… ängstlich. Er wollte reden." Ihre Stimme zitterte leicht. "Er wusste etwas über die Explosion. Etwas, das er all die Jahre geheim gehalten hatte."
+        <p>"Harrison hat es mir weitergeleitet. Er war… ängstlich. Er wollte reden." Ihre Stimme zitterte leicht. "Er wusste etwas über die Explosion. Etwas, das er all die Jahre geheim gehalten hatte."</p>
 
-        <p>*Der Maschinist*, dachte Jack. Ein Name aus der industriellen Vergangenheit, als Ashford noch eine Stadt aus Stahl und Kohle war, statt aus Opioiden und Verzweiflung. Jemand, der Maschinen verstand. Jemand, der wusste, wie man Mord wie einen Unfall aussehen ließ.
+        <p><em>Der Maschinist</em>, dachte Jack. Ein Name aus der industriellen Vergangenheit, als Ashford noch eine Stadt aus Stahl und Kohle war, statt aus Opioiden und Verzweiflung. Jemand, der Maschinen verstand. Jemand, der wusste, wie man Mord wie einen Unfall aussehen ließ.</p>
 
-        <p>Jemand, der sich erinnerte.
+        <p>Jemand, der sich erinnerte.</p>
 
-        <p>Jack betrachtete das Zahnrad in der Beweistüte, die Zahl, die in die rostige Oberfläche geritzt war. Er dachte an die zwanzig Toten – gute Männer, Arbeiter, Männer mit Familien und Träumen und Zukunft, bis ein Funke in einer Methan-Tasche alles beendete. Er dachte an die drei Überlebenden: sich selbst; einen Mann namens Earl Thompson, der vor drei Monaten bei einem "Jagdunfall" starb; und eine Frau namens Patricia Kowalski, die vor zwei Wochen ihre Kellertreppe hinunterfiel.
+        <p>Jack betrachtete das Zahnrad in der Beweistüte, die Zahl, die in die rostige Oberfläche geritzt war. Er dachte an die zwanzig Toten – gute Männer, Arbeiter, Männer mit Familien und Träumen und Zukunft, bis ein Funke in einer Methan-Tasche alles beendete. Er dachte an die drei Überlebenden: sich selbst; einen Mann namens Earl Thompson, der vor drei Monaten bei einem "Jagdunfall" starb; und eine Frau namens Patricia Kowalski, die vor zwei Wochen ihre Kellertreppe hinunterfiel.</p>
 
-        <p>Jetzt Dr. Harrison, der die ersten beiden Tode als Unfälle eingestuft hatte.
+        <p>Jetzt Dr. Harrison, der die ersten beiden Tode als Unfälle eingestuft hatte.</p>
 
-        <p>Dreiundzwanzig minus drei Überlebende gleich zwanzig. Plus die drei, die seitdem getötet wurden…
+        <p>Dreiundzwanzig minus drei Überlebende gleich zwanzig. Plus die drei, die seitdem getötet wurden…</p>
 
-        <p>Dreiundzwanzig.
+        <p>Dreiundzwanzig.</p>
 
-        <p>Jemand führte Buch.
+        <p>Jemand führte Buch.</p>
 
-        <p>Jack gab Sarah Chen ihr Handy zurück. "Sie müssen gehen. Sofort."
+        <p>Jack gab Sarah Chen ihr Handy zurück. "Sie müssen gehen. Sofort."</p>
 
-        <p>"Ich gehe nirgendwohin. Mein Vater starb in dieser Fabrik. Wenn jemand endlich die Wahrheit sagt—"
+        <p>"Ich gehe nirgendwohin. Mein Vater starb in dieser Fabrik. Wenn jemand endlich die Wahrheit sagt—"</p>
 
-        <p>"Wenn jeder, der mit jener Nacht in Verbindung steht, getötet wird", unterbrach Jack sie, "dann sind Sie in Gefahr, nur weil Sie hier stehen. Weil Sie mit mir sprechen. Weil Sie wissen, was Sie wissen."
+        <p>"Wenn jeder, der mit jener Nacht in Verbindung steht, getötet wird", unterbrach Jack sie, "dann sind Sie in Gefahr, nur weil Sie hier stehen. Weil Sie mit mir sprechen. Weil Sie wissen, was Sie wissen."</p>
 
-        <p>Er beugte sich nah genug heran, um den Regen auf ihrer Haut zu riechen, den Hauch von Kaffee in ihrem Atem.
+        <p>Er beugte sich nah genug heran, um den Regen auf ihrer Haut zu riechen, den Hauch von Kaffee in ihrem Atem.</p>
 
-        <p>"Der Maschinist ist noch nicht fertig." Er senkte seine Stimme, nur für sie beide. "Drei erledigt, zwanzig übrig. Und wenn Sie nicht vorsichtig sind, Ms. Chen, werden Sie die vierundzwanzigste."
+        <p>"Der Maschinist ist noch nicht fertig." Er senkte seine Stimme, nur für sie beide. "Drei erledigt, zwanzig übrig. Und wenn Sie nicht vorsichtig sind, Ms. Chen, werden Sie die vierundzwanzigste."</p>
 
-        <p>Er ging davon, bevor sie antworten konnte, auf das blinkende Licht der Ambulanz zu, die Dr. Harrisons Leiche zur Gerichtsmedizin bringen würde. Hinter ihm ragte die Harrison Steel Mill gegen den Nachthimmel empor – ein Skelett aus rostigen Trägern und zerbrochenen Fenstern, ein Monument für Habsucht und Trauer.
+        <p>Er ging davon, bevor sie antworten konnte, auf das blinkende Licht der Ambulanz zu, die Dr. Harrisons Leiche zur Gerichtsmedizin bringen würde. Hinter ihm ragte die Harrison Steel Mill gegen den Nachthimmel empor – ein Skelett aus rostigen Trägern und zerbrochenen Fenstern, ein Monument für Habsucht und Trauer.</p>
 
-        <p>Irgendwo in dieser Dunkelheit beobachtete der Maschinist. Wartete.
+        <p>Irgendwo in dieser Dunkelheit beobachtete der Maschinist. Wartete.</p>
 
-        <p>Und Jack Morrison, der Mann, der vor fünfzehn Jahren hätte sterben sollen, verstand endlich, dass die Vergangenheit noch nicht mit ihm fertig war. Bei Weitem nicht.
+        <p>Und Jack Morrison, der Mann, der vor fünfzehn Jahren hätte sterben sollen, verstand endlich, dass die Vergangenheit noch nicht mit ihm fertig war. Bei Weitem nicht.</p>
 
-        <p>Das Spiel, schien es, hatte gerade erst begonnen.
-      </article>
+        <p>Das Spiel, schien es, hatte gerade erst begonnen.</p>
+      </div>
+    </article>
 
-      <nav class="chapter-nav">
-        <a href="/de/writing/novels/">← Zurück zu Romanen</a>
-        <a href="/de/writing/novels/schatten-des-zweifels/chapter-2/">Kapitel 2 →</a>
-      </nav>
-    </div>
+    <nav class="chapter-nav">
+      <a href="/de/writing/novels/schatten-des-zweifels/chapter-2/" class="next">
+        <div class="label">Nächstes Kapitel →</div>
+        <div class="title">Kapitel 2: Der Schatten des Maschinisten</div>
+      </a>
+      <a href="/de/writing/novels/schatten-des-zweifels/" class="toc">Zum Inhaltsverzeichnis</a>
+    </nav>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-site-footer">
     <div class="container">
       <div class="footer-brand">Fading Moments</div>
       <div class="footer-tagline">Ein leises literarisches Archiv</div>
