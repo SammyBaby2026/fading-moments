@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第十四章：猎人与猎物 — 疑云暗影 — Fading Moments</title>
+  <meta name="description" content="猎人变成了猎物，正义与复仇的界限变得模糊。">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    main { flex: 1; position: relative; }
+    .site-footer { margin-top: auto; }
+    .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
+    .watermark::before { content: "SHADOWS OF DOUBT © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
+    .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .chapter-hero .novel-title { font-family: var(--font-display); font-size: 48px; font-weight: 400; color: var(--text-light); margin-bottom: 0.75rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-name { font-family: var(--font-body); font-size: 22px; font-style: italic; color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    .chapter-meta { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #d9d4cc; }
+    .chapter-meta .date { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .chapter-meta .word-count { font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content p:first-of-type { text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
+    .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
+    .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .watermark::before { font-size: 60px; } }
+  </style>
+</head>
+<body>
+  <div class="watermark"></div>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/zh/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-14/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-14/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-14/" class="active">中文</a></nav>
+    </div>
+    <nav class="main-nav"><ul><li><a href="/zh/">首页</a></li><li><a href="/zh/writing/" class="active">文字</a></li><li><a href="/zh/visual-archive/">视觉档案</a></li><li><a href="/zh/about/">关于</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero">
+      <div class="chapter-hero-content">
+        <div class="novel-title"><a href="/zh/writing/novels/shanyu-youlai/">疑云暗影</a></div>
+        <div class="chapter-name">第十四章：猎人与猎物</div>
+      </div>
+    </section>
+
+    <article class="chapter-container">
+      <div class="chapter-meta">
+        <div class="date">2026年3月18日</div>
+        <div class="word-count">3,500字 · 第14章，共20章</div>
+      </div>
+
+      <div class="chapter-content">
+        <p>火是有耐心的。它等你放松警惕，然后带走一切。</p>
+
+        <p>杰克·莫里森小时候就学到了这个教训，看着邻居的房子在阿什福德消防队与冰冻的消防栓和太少的人手搏斗时化为灰烬。他在雪中站了几个小时，被火焰迷住，第一次明白生命可以如此迅速地被化为灰烬。</p>
+
+        <p>当他踢开储藏室的门，烟雾在他周围翻滚，火焰舔舐他的脚跟时，他想起了那个夜晚。火是从前面开始的——里夫斯的人一定在入口处浇了汽油——但他们犯了一个错误。他们以为杰克会被困住，会惊慌，会像笼子里的老鼠一样安静地在角落里死去。</p>
+
+        <p>他们不了解杰克·莫里森。</p>
+
+        <p>他用夹克裹住拳头，砸穿储藏室后面的石膏板，继续砸，直到指关节流血，手臂尖叫，隔壁单元的薄金属向内弯曲。他从缝隙中挤过去，文件紧贴在胸前，出现在另一边黑暗的走廊里，咳嗽着黑烟，眉毛烧焦，肺部灼烧——但活着。</p>
+
+        <p>活着，而且愤怒。</p>
+
+        <p>***</p>
+
+        <p>莎拉在三个街区外找到了他，他靠在一个铁丝网围栏上，看着储藏设施被火焰吞噬。消防队已经到了——被一个看到烟的邻居叫来的——但他们太晚了。到早上，447号单元和里面的一切都会化为灰烬。证据被销毁。又一个松散末端被系紧。</p>
+
+        <p>除了杰克还有文件。</p>
+
+        <p>"你还活着，"莎拉说。这不是一个问题。她看着他——真的看着他——杰克在她眼中看到了他没有预料到的东西。不是同情。不是震惊。而是认出了什么。仿佛她第一次清楚地看到了他。</p>
+
+        <p>"我还活着，"杰克确认道。他的声音嘶哑，被烟熏坏了。"而且我知道是谁想杀我。"</p>
+
+        <p>"里夫斯？"</p>
+
+        <p>"里夫斯。"杰克举起文件夹，奇迹般地完好，里面的纸边缘略有烧焦但可读。"他在那里。他隔着门跟我说话。然后他锁上门放了火。"</p>
+
+        <p>莎拉的脸色变得苍白。"他自己做的？不是雇的枪手？"</p>
+
+        <p>"他想看着。"杰克的笑声苦涩，破碎。"他想听我尖叫。"</p>
+
+        <p>他们沉默地站了一会儿，看着火吞噬杰克的过去。脚柜没了。他父亲的勋章、照片、与过早去世的男人仅有的有形联系。一切，灰烬。</p>
+
+        <p>"文件呢？"莎拉问道。</p>
+
+        <p>"安全。"杰克拍了拍夹克。"里夫斯的笔迹。备忘录上的首字母。证明他下令忽视甲烷探测器的证据。证明他知道爆炸会发生却什么也没做的证据。"</p>
+
+        <p>"这还不够。"莎拉摇了摇头。"笔迹可以被伪造。备忘录可以被伪造。我们需要更多——我们需要证词、银行记录，某种能直接把他和死亡联系起来的东西。"</p>
+
+        <p>"那我们就得到更多。"杰克挺直身子，肋骨疼痛。"我们从里夫斯的财务顾问开始。一个叫哈罗德·万斯的人。他处理里夫斯的所有投资、竞选资金、他的……副业。"</p>
+
+        <p>"你怎么知道万斯的？"</p>
+
+        <p>"丹尼尔告诉我的。"杰克环顾四周，但机械师不见踪影。他在仓库会面后就消失了，只留下一个电话号码和一个承诺。"他说万斯是薄弱环节。一个知道所有尸体埋在哪里的人——而且为了保住自己的皮会出卖任何人。"</p>
+
+        <p>"我们怎么接近他？"</p>
+
+        <p>杰克微笑。那不是个愉快的表情。"我们礼貌地问。"</p>
+
+        <p>***</p>
+
+        <p>哈罗德·万斯住在匹兹堡市中心的一间顶层公寓里，离地面四十层，周围是价值超过大多数阿什福德居民一生收入的艺术品。大楼有安保——门卫、摄像头、门禁卡——但杰克花了十六年时间学习如何绕过安保，而丹尼尔花了成年时间完善隐形艺术。</p>
+
+        <p>他们在凌晨2:00在停车库会面。丹尼尔先到，穿着维修工的制服，脸被帽子和厚厚的胡子遮住，杰克怀疑那是假的。他带了一个可能根本不含任何工具的工具箱。</p>
+
+        <p>"万斯在家，"丹尼尔报告道。"一个人。他妻子在纽约参加画廊开幕，他的情人今晚休息。他在忙什么——他的办公室灯已经亮了三个小时。"</p>
+
+        <p>"在忙什么？"</p>
+
+        <p>"可能是竞选财务。里夫斯昨天正式宣布竞选州长。正式地。"丹尼尔的声音很干。"他打着'法律与秩序'和'清理腐败'的旗号参选。如果不是那么可怕，讽刺会是可笑的。"</p>
+
+        <p>杰克点了点头。"货梯？"</p>
+
+        <p>"二十分钟前把摄像头弄坏了。保安巡视前我们有三十分钟窗口。"丹尼尔看着杰克——真的看着他——有那么一刻，某种类似担忧的东西闪过他的脸。"你看起来糟透了，莫里森。"</p>
+
+        <p>"我感觉糟透了。"</p>
+
+        <p>"很好。利用它。"丹尼尔递给他一张门禁卡。"顶层。B单元Penthouse。我从货车里监控大楼系统。如果有人接近，我会提醒你。"他停顿了一下。"还有杰克？别杀他。我们需要他活着作证。"</p>
+
+        <p>"我没打算杀他。"</p>
+
+        <p>"没有？"丹尼尔的微笑很薄。"那你打算怎么办？"</p>
+
+        <p>杰克没有回答。他接过门禁卡，朝货梯走去，他父亲的文件在夹克口袋里沉甸甸的，他的心沉甸甸地知道他即将成为什么。</p>
+
+        <p>不是警探。不是警察。别的什么。更黑暗的东西。</p>
+
+        <p>***</p>
+
+        <p>哈罗德·万斯是个小个子，手很小，有着一辈子数别人钱的人那种紧张的能量。他坐在一张汽车大小的桌子旁，周围是显示股票行情、民调数据和竞选捐款报告的电脑屏幕。他没听到杰克进来。没听到门轻轻关闭的声音。直到杰克清了清嗓子，他才知道有人在，然后他带着恐惧的尖叫转过身，在其他情况下这会很有趣。</p>
+
+        <p>"你——你是谁？你怎么进来的？"</p>
+
+        <p>"我叫杰克·莫里森。"杰克走进光线，让万斯看到他的脸——烧伤、烟灰、狂怒。"你今晚试图杀我。你和你的老板，爱德华·里夫斯。"</p>
+
+        <p>万斯的脸从恐惧变成了算计。这个人是个幸存者，杰克意识到。一只蟑螂，会朝任何承诺安全的方向乱窜。"我不知道你在说什么。我不认识任何——"</p>
+
+        <p>杰克砰地把手拍在桌上。文件散落——照片、备忘录、银行记录。"十五年前，你设立了掩盖哈里森钢铁安全违规的空壳公司。你向检查员转账。你把一切在纸上看起来合法化。"他凑近，近到能闻到万斯的古龙水和下面恐惧的汗水。"三天前，你授权向一个叫马库斯·圣地亚哥的人支付五万美元。职业纵火犯。退伍军人。目前因阿什福德一个储藏设施的火灾被警方拘留。"</p>
+
+        <p>万斯的嘴像溺水的鱼一样开合。"我……我可以解释……"</p>
+
+        <p>"别解释。"杰克用拳头包着夹克，继续砸，直到指关节流血。"相反，你要告诉我一切。每个账户。每笔付款。每个名字。说完后，你要签一份宣誓声明，指控爱德华·里夫斯共谋、谋杀，以及从现在到日出我能想到的任何其他罪名。"</p>
+
+        <p>"如果我拒绝呢？"</p>
+
+        <p>杰克微笑。"那我就叫我的朋友。那个杀了四个人却没留下任何证据痕迹的人。那个一直在等借口把你加入他收藏的人。"他前倾，声音降到耳语。"你知道他对伤害他家人的人会做什么吗，万斯先生？你知道当专业人士决定让它痛苦时，死需要多长时间吗？"</p>
+
+        <p>万斯现在在发抖。"你在虚张声势。"</p>
+
+        <p>"试试看。"</p>
+
+        <p>他们互相盯着看了很久。然后万斯的肩膀垂了下来，他伸手去拉抽屉。</p>
+
+        <p>"慢点，"杰克警告道。</p>
+
+        <p>"我在拿一个U盘。里面有……一切。"万斯的声音被打败了，空洞。"开曼群岛的账户。特拉华的空壳公司。里夫斯授权每笔付款的记录。包括付给杀你父亲那个人的。"</p>
+
+        <p>杰克感到胃里一阵冰冷。"什么人？"</p>
+
+        <p>"一个医生。安东尼·卡鲁索。他在圣玛丽医院工作。专门研究……无迹可寻的毒药。"万斯用颤抖的手指递过U盘。"里夫斯付了他二十万美元，让你父亲的死看起来像自然原因。肝功能衰竭，验尸官说。但那是蓖麻毒素。六个月里放在他的咖啡里。"</p>
+
+        <p>杰克接过U盘。他的手很稳，但内心有什么东西在破碎。他关于父亲之死的最后幻想， shattered。不是意外。不是自然原因。是谋杀，有计划有报酬，以公司收购的精确度执行。</p>
+
+        <p>"还有别的吗？"他的声音几乎听不见。</p>
+
+        <p>"里夫斯竞选州长是为了掩盖他的踪迹。"万斯的话现在来得更快，急于取悦，绝望求生。"钢铁厂调查上个月重新开启了——联邦调查，调查安全违规。里夫斯需要州长官邸来关闭它。行政特权。赦免权。如果他赢了，他会销毁每份记录，让每个证人沉默。他将不可触碰。"</p>
+
+        <p>"选举什么时候？"</p>
+
+        <p>"七个月。"</p>
+
+        <p>"那我们有七个月来阻止他。"杰克站了起来，把U盘塞进口袋，和他父亲的文件放在一起。"你要帮助我们，万斯先生。你要做我们的内线。而当这一切结束时，如果你非常幸运非常合作，你可能会避免入狱。"</p>
+
+        <p>"如果我不合作呢？"</p>
+
+        <p>"那我的朋友找到你。"杰克走到门口，然后停了下来。"相信我，你不会想要那样的。"</p>
+
+        <p>***</p>
+
+        <p>文章在早上6:00上线，正当早间新闻周期开始时。莎拉通宵工作，写作、事实核查、核实，把杰克的证据和万斯的证词变成一个不容忽视的叙事。</p>
+
+        <p>"州长候选人爱德华·里夫斯与致命的钢铁厂掩盖事件有关，"标题写道。"证据表明州参议员下令忽视安全违规导致23名工人死亡，然后让举报人沉默。"</p>
+
+        <p>正如莎拉的编辑所说，这是"十年一遇的报道"。</p>
+
+        <p>到中午，它已经被宾夕法尼亚州的每个主要新闻机构转载。到下午3:00，里夫斯召开紧急新闻发布会"断然否认这些由一个不光彩的前侦探和一个带有个人恩怨的煽动性记者提出的毫无根据的指控"。到下午6:00，FBI宣布正式调查。</p>
+
+        <p>而到晚上8:00，莎拉·陈知道她被跟踪了。</p>
+
+        <p>***</p>
+
+        <p>她先注意到了那辆车——一辆黑色SUV，有色窗户，停在她公寓楼对面。她上班时不在那里，但当她回来时在那里。三小时后仍然在那里，引擎空转，废气在寒冷的三月空气中卷曲。</p>
+
+        <p>莎拉不是懦夫。她面对过腐败的政客，调查过有组织犯罪，从战区报道。但关于这辆SUV有些东西让她皮肤发毛。可能是它坐在那里的方式，沉默而耐心，像捕食者等待合适的时机出击。也可能是她知道里夫斯今天已经试图杀杰克一次——而且失败了。</p>
+
+        <p>她从卧室给杰克打电话，透过百叶窗看着下面的街道。</p>
+
+        <p>"我想他们来了，"她说，压低声音。</p>
+
+        <p>"谁？"</p>
+
+        <p>"我不知道。黑色SUV。里面两个人，可能更多。他们在那里三个小时了。"</p>
+
+        <p>杰克的声音很紧。"出去。现在。不要收拾任何东西，不要开灯。从防火梯下去到巷子里。我十分钟后在第五街和主街的拐角处见你。"</p>
+
+        <p>"杰克——"</p>
+
+        <p>"走，莎拉。求你了。"</p>
+
+        <p>她走了。她抓起笔记本电脑、手机、钱包——别的什么都没拿。她没有开灯。她溜出窗户，下了防火梯，她的心在胸膛里狂跳，呼吸短促。</p>
+
+        <p>她下到一半时枪声开始了。</p>
+
+        <p>第一颗子弹打碎了她头顶的窗户。玻璃如雨落下，割伤她的脸颊，她的手。莎拉尖叫着从最后八英尺掉到了下面的巷子里，重重地落在脚踝上，疼痛顺着腿射上来。</p>
+
+        <p>"在那里！"一个男人的声音，从上面喊。"她在防火梯上！"</p>
+
+        <p>更多枪声。混凝土碎片在她周围爆炸。莎拉跑——一瘸一拐，流血， terrified——朝巷子口，朝街道，朝任何有目击者和灯光和安全的地方。</p>
+
+        <p>一个人影从前面阴影中走了出来。高大，宽肩，手里拿着什么东西在路灯下闪闪发光。</p>
+
+        <p>莎拉滑停下来，被困在后面的枪手和前面的陌生人之间。</p>
+
+        <p>"趴下！"陌生人喊道。</p>
+
+        <p>她趴下。陌生人的手臂举起，她听到了消音手枪独特的噗噗噗声。上面，在防火梯上，一个人咕哝着掉了下来——撞穿金属格栅，在她身后的巷子里湿哒哒地落地。</p>
+
+        <p>"起来！"陌生人抓住她的手臂，把她拉起来。"跑！"</p>
+
+        <p>他们跑。穿过巷子，穿过街道，进入匹兹堡市中心后街的迷宫。陌生人以捕食者的优雅移动，从不犹豫，从不回头，带她穿过围栏的缺口和穿过空地，带着无误的确定性。</p>
+
+        <p>只有当他们把她的公寓甩在后面三英里时，他才停下来，躲进一家废弃商店的门口，呼吸沉重但不气喘吁吁。</p>
+
+        <p>"你受伤了，"他说。</p>
+
+        <p>莎拉第一次真正看着他。他比她预期的年轻，五官锐利，黑眼睛似乎吸收光线而不是反射它。他一身黑衣，从头到脚，以一个随时准备暴力的人那种盘绕的能量移动。</p>
+
+        <p>"你是机械师，"她说。</p>
+
+        <p>"丹尼尔，"他纠正道。"我的名字是丹尼尔。而你在流血在我的夹克上。"</p>
+
+        <p>莎拉摸了摸脸颊，感到血的温热。"他们要杀我。"</p>
+
+        <p>"他们仍然要杀。"丹尼尔检查了他的武器——一把看起来昂贵而致命的光滑专业的东西。"里夫斯知道你写了那篇文章。他知道你有证据。他不能让你活着作证。"他看着她，表情中有什么软化了。"你做了一件勇敢的事，莎拉。一件愚蠢的事，但勇敢。"</p>
+
+        <p>"需要有人做。"</p>
+
+        <p>"是的。需要。"他把武器收起来。"杰克在等我们。我们需要带你去安全的地方。去里夫斯的人够不到的地方。"</p>
+
+        <p>"然后怎么办？"</p>
+
+        <p>丹尼尔微笑。那是个冰冷的微笑，掠食性的，但不完全是不友好的。"然后我们结束这一切。一起。"</p>
+
+        <p>他伸出手。过了一会儿，她握住了。</p>
+
+        <p>***</p>
+
+        <p>他们在仓库会面——杰克、莎拉和丹尼尔。三个本应是敌人的人，被环境和共同的正义渴望绑在一起。或者复仇。这条线已经模糊到他们谁也说不清哪是哪了。</p>
+
+        <p>"我们正在被追杀，"杰克说。他站在窗边，看着下面的街道寻找任何监视的迹象。"里夫斯有我们无法匹敌的资源。金钱、人脉、职业杀手。如果我们留在城里，我们会被找到。"</p>
+
+        <p>"那我们就离开城市，"丹尼尔说。</p>
+
+        <p>"去哪里？"莎拉问道。她坐在一个旧板条箱上，脚踝用杰克在角落里找到的冰袋包着。肾上腺素正在消退，让她发抖发冷。</p>
+
+        <p>"我有个地方。北部。偏僻。安全。"丹尼尔在地上摊开一张地图。"但走之前，我们需要决定我们要做什么。我们是逃跑？躲起来直到FBI完成他们的调查，希望他们的工作做到位？还是我们战斗？"</p>
+
+        <p>杰克看着莎拉。莎拉看着杰克。他们已经走了这么远，冒了这么多风险。现在走开意味着让里夫斯赢。意味着让杰克的父亲和那二十三个钢铁工人白死。</p>
+
+        <p>"我们战斗，"杰克说。</p>
+
+        <p>"我们战斗，"莎拉同意。</p>
+
+        <p>"那我们就一起战斗。"丹尼尔伸出手，掌心向下。"不再保密。不再有单独的议程。我们分享一切——信息、资源、风险。当这一切结束时，我们都走开。或者我们都不走。"</p>
+
+        <p>杰克把手放在丹尼尔的手上。过了一会儿，莎拉也加进来。</p>
+
+        <p>三只手。三个爱德华·里夫斯的敌人。三个从守法公民变成别的东西的人——亡命之徒， vigilantes，复仇者。标签不再重要了。只有目标重要。</p>
+
+        <p>阻止里夫斯。揭露真相。让他付出代价。</p>
+
+        <p>"我们从哪里开始？"莎拉问道。</p>
+
+        <p>丹尼尔微笑——那冰冷的、掠食性的微笑。"我们从他的钱开始。切断他的资金，他的竞选就崩溃了。切断他的竞选，他就失去了州长官邸的保护。"他拿出一台笔记本电脑打开。"哈罗德·万斯给了我们一切。现在是时候使用它了。"</p>
+
+        <p>他们通宵工作——三个影子围着一个屏幕，计划毁灭一个怪物。外面，城市沉睡，不知道它灵魂的战争已经开始。</p>
+
+        <p>猎人变成了猎物。</p>
+
+        <p>但猎人，杰克正在学习，被逼入绝境时可以出奇地危险。</p>
+      </div>
+    </article>
+
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments. 版权所有。</strong></p>
+        <p>本内容受版权法保护。未经作者事先书面许可，严禁以任何形式复制、分发或传播本作品的任何部分。</p>
+      </div>
+    </div>
+
+    <nav class="chapter-nav">
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-13/" style="text-align: left;">
+        <span class="label">← 上一章</span>
+        <span class="title">第十三章：无路可退</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/chapter-15/" style="text-align: right;">
+        <span class="label">下一章 →</span>
+        <span class="title">第十五章：真相大白</span>
+      </a>
+      <a href="/zh/writing/novels/shanyu-youlai/" style="grid-column: span 2;">← 返回目录</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">一个安静的文学档案</div>
+      <div class="footer-copyright">© 2026 Fading Moments. 版权所有。</div>
+    </div>
+  </footer>
+</body>
+</html>
