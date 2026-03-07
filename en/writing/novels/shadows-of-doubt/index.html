@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadows of Doubt — Fading Moments</title>
+  <meta name="description" content="A mystery novel set in Ashford. Fifteen years after a steel mill explosion killed twenty-three workers, the survivors begin dying one by one.">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    main { flex: 1; }
+    .site-footer { margin-top: auto; }
+    
+    /* Hero Section */
+    .novel-hero { position: relative; height: 420px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .novel-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.7); }
+    .novel-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .novel-hero .label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 0.5rem; }
+    .novel-hero h1 { font-family: var(--font-display); font-size: 52px; font-weight: 400; color: var(--text-light); margin-bottom: 1rem; }
+    .novel-hero .subtitle { font-family: var(--font-body); font-size: 18px; color: rgba(237, 231, 223, 0.85); font-style: italic; max-width: 600px; margin: 0 auto 1.5rem; }
+    .novel-hero .meta { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.6); }
+    
+    /* Content Container */
+    .novel-container { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
+    
+    /* Novel Info Card - Cream Background */
+    .novel-info-card { background: #f3efe6; border: 1px solid #d9d4cc; padding: 40px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); margin-bottom: 48px; }
+    .novel-info-card h2 { font-family: var(--font-display); font-size: 24px; font-weight: 400; color: var(--text-dark); margin-bottom: 1rem; }
+    .novel-info-card p { font-family: var(--font-body); font-size: 16px; line-height: 1.8; color: var(--text-dark); margin-bottom: 1rem; }
+    .novel-info-card .meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #d9d4cc; }
+    .novel-info-card .meta-item { text-align: center; }
+    .novel-info-card .meta-item .label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.25rem; }
+    .novel-info-card .meta-item .value { font-family: var(--font-display); font-size: 18px; color: var(--text-dark); }
+    
+    /* Chapter List */
+    .chapter-list-header { margin-bottom: 24px; }
+    .chapter-list-header h3 { font-family: var(--font-display); font-size: 28px; font-weight: 400; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .chapter-list-header p { font-family: var(--font-body); font-size: 15px; color: var(--text-muted); }
+    
+    .chapter-grid { display: flex; flex-direction: column; gap: 16px; }
+    
+    /* Chapter Card - Cream Background */
+    .chapter-card { display: flex; align-items: center; background: #f3efe6; border: 1px solid #d9d4cc; padding: 20px 28px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); transition: all 0.3s ease; text-decoration: none; color: inherit; }
+    .chapter-card:hover { transform: translateX(6px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); }
+    .chapter-card .chapter-num { font-family: var(--font-display); font-size: 32px; font-weight: 400; color: #c9c1b4; min-width: 60px; }
+    .chapter-card .chapter-info { flex: 1; }
+    .chapter-card .chapter-info h4 { font-family: var(--font-display); font-size: 18px; font-weight: 400; color: var(--text-dark); margin-bottom: 0.25rem; }
+    .chapter-card .chapter-info .meta { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); }
+    .chapter-card .read-btn { font-family: var(--font-ui); font-size: 13px; padding: 10px 24px; background: #3a4a42; color: var(--text-light); border: none; transition: all 0.3s ease; }
+    .chapter-card:hover .read-btn { background: #2f3d36; }
+    
+    /* Future Chapter Placeholder */
+    .chapter-card.future { opacity: 0.6; }
+    .chapter-card.future:hover { transform: none; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); }
+    .chapter-card.future .read-btn { background: #c9c1b4; color: #666; }
+    
+    @media (max-width: 768px) { 
+      .novel-hero h1 { font-size: 36px; } 
+      .novel-info-card .meta-grid { grid-template-columns: 1fr; }
+      .chapter-card { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/en/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/" class="active">EN</a><a href="/de/writing/novels/schatten-des-zweifels/">DE</a><a href="/zh/writing/novels/shanyu-youlai/">中文</a></nav>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/en/">Home</a></li>
+        <li><a href="/en/writing/" class="active">Writing</a></li>
+        <li><a href="/en/visual-archive/">Visual Archive</a></li>
+        <li><a href="/en/videos/">Videos</a></li>
+        <li><a href="/en/films-music/">Films & Music</a></li>
+        <li><a href="/en/about/">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="novel-hero">
+      <div class="novel-hero-content">
+        <div class="label">Novel · Mystery · Ongoing</div>
+        <h1>Shadows of Doubt</h1>
+        <div class="subtitle">Fifteen years after a steel mill explosion killed twenty-three workers, the survivors begin dying one by one. Detective Jack Morrison must confront his own past while hunting a killer who remembers everything.</div>
+        <div class="meta">Updated to Chapter 2 · 9,300 words · Est. 20 chapters, 70,000 words</div>
+      </div>
+    </section>
+
+    <div class="novel-container">
+      <!-- Novel Info Card -->
+      <div class="novel-info-card">
+        <h2>About This Novel</h2>
+        <p><strong>Ashford</strong>, a dying industrial city in America's Rust Belt. Fifteen years ago, the <strong>Harrison Steel Mill</strong> exploded, killing twenty-three night-shift workers. The official ruling: tragic accident. The truth: far more sinister.</p>
+        <p>Now, the survivors are dying—one by one—in "accidents" that bear the signature of a meticulous killer. Each victim is found with a rusted gear in their hand, marked with the number <strong>15</strong>.</p>
+        <p>Detective <strong>Jack Morrison</strong>, the only survivor who walked away from that night, must unravel a conspiracy that reaches into the highest levels of Ashford's power structure. But the deeper he digs, the more he realizes that the killer—known only as <strong>The Machinist</strong>—knows secrets about Jack's own past that could destroy him.</p>
+        
+        <div class="meta-grid">
+          <div class="meta-item">
+            <div class="label">Genre</div>
+            <div class="value">Mystery / Noir</div>
+          </div>
+          <div class="meta-item">
+            <div class="label">Status</div>
+            <div class="value">Ongoing</div>
+          </div>
+          <div class="meta-item">
+            <div class="label">Update Schedule</div>
+            <div class="value">Daily at 9:00 AM</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter List -->
+      <div class="chapter-list-header">
+        <h3>Chapters</h3>
+        <p>Read from the beginning or jump to the latest chapter.</p>
+      </div>
+
+      <div class="chapter-grid">
+        <!-- Chapter 1 -->
+        <a href="/en/writing/novels/shadows-of-doubt/chapter-1/" class="chapter-card">
+          <div class="chapter-num">01</div>
+          <div class="chapter-info">
+            <h4>The First Gear</h4>
+            <div class="meta">March 7, 2026 · 4,500 words</div>
+          </div>
+          <span class="read-btn">Read</span>
+        </a>
+
+        <!-- Chapter 2 -->
+        <a href="/en/writing/novels/shadows-of-doubt/chapter-2/" class="chapter-card">
+          <div class="chapter-num">02</div>
+          <div class="chapter-info">
+            <h4>The Ghost in the Machine</h4>
+            <div class="meta">March 8, 2026 · 4,800 words</div>
+          </div>
+          <span class="read-btn">Read</span>
+        </a>
+
+        <!-- Future Chapters (Placeholders) -->
+        <div class="chapter-card future">
+          <div class="chapter-num">03</div>
+          <div class="chapter-info">
+            <h4>Chapter 3</h4>
+            <div class="meta">Coming soon...</div>
+          </div>
+          <span class="read-btn">Soon</span>
+        </div>
+
+        <div class="chapter-card future">
+          <div class="chapter-num">04</div>
+          <div class="chapter-info">
+            <h4>Chapter 4</h4>
+            <div class="meta">Coming soon...</div>
+          </div>
+          <span class="read-btn">Soon</span>
+        </div>
+
+        <div class="chapter-card future">
+          <div class="chapter-num">05</div>
+          <div class="chapter-info">
+            <h4>Chapter 5</h4>
+            <div class="meta">Coming soon...</div>
+          </div>
+          <span class="read-btn">Soon</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; padding: 24px; background: #f3efe6; border: 1px solid #d9d4cc; text-align: center;">
+        <p style="font-family: var(--font-body); font-size: 15px; color: var(--text-muted); margin: 0;">
+          📖 This novel is updated daily at 9:00 AM (Beijing Time). <br>
+          Estimated completion: 20 chapters, approximately 70,000 words.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">A Quiet Literary Archive</div>
+      <div class="footer-copyright">© 2026 Fading Moments. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

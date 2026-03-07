@@ -10,22 +10,45 @@
     body { display: flex; flex-direction: column; min-height: 100vh; }
     main { flex: 1; }
     .site-footer { margin-top: auto; }
-    .chapter-hero { position: relative; height: 380px; background-image: url('/images/novel-station-hero.png'); background-size: cover; background-position: center 40%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    
+    /* Hero with novel-specific image */
+    .chapter-hero { position: relative; height: 380px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
     .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.65); }
     .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
-    .chapter-hero .label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 0.5rem; }
-    .chapter-hero .series { font-family: var(--font-body); font-size: 14px; color: rgba(237, 231, 223, 0.7); font-style: italic; margin-bottom: 1rem; }
-    .chapter-hero h1 { font-family: var(--font-display); font-size: 32px; font-weight: 400; color: var(--text-light); margin-bottom: 0.5rem; }
+    .chapter-hero .novel-title { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.2em; color: rgba(237, 231, 223, 0.6); text-transform: uppercase; margin-bottom: 0.5rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-num { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    .chapter-hero h1 { font-family: var(--font-display); font-size: 40px; font-weight: 400; color: var(--text-light); margin-bottom: 0.5rem; }
     .chapter-hero .meta { font-family: var(--font-ui); font-size: 13px; color: rgba(237, 231, 223, 0.5); }
+    
+    /* Content Container */
     .chapter-container { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
-    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); }
+    
+    /* Chapter Content - Cream Card Background */
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
     .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
     .chapter-content p:first-of-type { text-indent: 0; }
-    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5em; float: left; line-height: 0.8; margin-right: 0.1em; color: var(--text-dark); }
-    .chapter-nav { padding: 30px 0 40px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-    .chapter-nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; }
-    .chapter-nav a:hover { color: var(--text-dark); }
-    @media (max-width: 768px) { .chapter-hero h1 { font-size: 24px; } .chapter-container { padding: 40px 20px; } }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
+    
+    /* Navigation */
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; border: 1px solid #3a4a42; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
+    .chapter-nav a:hover { background: #2f3d36; border-color: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: span 2; }
+    
+    @media (max-width: 768px) { 
+      .chapter-hero h1 { font-size: 28px; } 
+      .chapter-container { padding: 40px 20px; } 
+      .chapter-content { padding: 40px 24px; } 
+      .chapter-nav { grid-template-columns: 1fr; }
+      .chapter-nav .prev, .chapter-nav .next { text-align: center; }
+      .chapter-nav .toc { grid-column: span 1; }
+    }
   </style>
 </head>
 <body>
@@ -33,25 +56,32 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="/en/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
-      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-2/" class="active">EN</a></nav>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-2/" class="active">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-2/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-2/">中文</a></nav>
     </div>
     <nav class="main-nav">
-      <ul><li><a href="/en/">Home</a></li><li><a href="/en/writing/" class="active">Writing</a></li><li><a href="/en/visual-archive/">Visual Archive</a></li><li><a href="/en/films-music/">Films & Music</a></li><li><a href="/en/studio/">Studio</a></li><li><a href="/en/digital-lab/">Digital Lab</a></li><li><a href="/en/about/">About</a></li></ul>
+      <ul>
+        <li><a href="/en/">Home</a></li>
+        <li><a href="/en/writing/" class="active">Writing</a></li>
+        <li><a href="/en/visual-archive/">Visual Archive</a></li>
+        <li><a href="/en/videos/">Videos</a></li>
+        <li><a href="/en/films-music/">Films & Music</a></li>
+        <li><a href="/en/about/">About</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
     <section class="chapter-hero">
       <div class="chapter-hero-content">
-        <div class="label">Novel · Mystery</div>
-        <div class="series">Shadows of Doubt · #2</div>
-        <h1>Chapter 2: The Ghost in the Machine</h1>
+        <div class="novel-title"><a href="/en/writing/novels/shadows-of-doubt/">Shadows of Doubt</a></div>
+        <div class="chapter-num">Chapter 2</div>
+        <h1>The Ghost in the Machine</h1>
         <div class="meta">March 8, 2026 · 4,800 words · Ongoing</div>
       </div>
     </section>
 
-    <div class="chapter-container">
-      <article class="chapter-content">
+    <article class="chapter-container">
+      <div class="chapter-content">
         <p>The city never sleeps, but it does stumble home drunk at 3 AM, smelling of cheap bourbon and broken promises. Jack Morrison sat in his parked Chevy Caprice three blocks from the Harrison Building, watching the steam rise from manhole covers like the ghosts of Ashford's industrial past. The rain had stopped, leaving the streets gleaming with a false cleanliness, as if the night had washed away more than just dirt.</p>
 
         <p>It hadn't. Jack knew better. The city kept its secrets buried deep, locked in rusted filing cabinets and the memories of people who'd learned that remembering was dangerous.</p>
@@ -112,11 +142,9 @@
 
         <p>Jack took the paper. It was a photocopy of a document—an internal memo from Harrison Steel, dated three weeks before the explosion. The letterhead was faded but legible, the signature at the bottom unmistakable: William Harrison Sr., the old man's father, the man who'd built an empire on steel and the bones of working men.</p>
 
-        <p>The memo was brief, businesslike:</p>
+        <p>The memo was brief, businesslike: "Regarding the methane detection system repairs: Defer maintenance pending quarterly review. Current operational parameters within acceptable risk thresholds. Cost-saving measures take priority until board approval of Phase II expansion."</p>
 
-        <p><em>"Regarding the methane detection system repairs: Defer maintenance pending quarterly review. Current operational parameters within acceptable risk thresholds. Cost-saving measures take priority until board approval of Phase II expansion."</em></p>
-
-        <p>In the margin, in Harrison's familiar handwriting: <em>"He knew. God help him, he knew."</em></p>
+        <blockquote>He knew. God help him, he knew.</blockquote>
 
         <p>Jack read it twice, then a third time. Acceptable risk thresholds. Twenty-three men had died because a methane detector hadn't been repaired. Because profits mattered more than lives.</p>
 
@@ -168,7 +196,7 @@
 
         <p>Jack's phone buzzed as he reached his car. A text from an unknown number:</p>
 
-        <p><em>"You should have stayed away, Detective. The past is a locked room. Those who try to open it only trap themselves inside. —M"</em></p>
+        <blockquote>You should have stayed away, Detective. The past is a locked room. Those who try to open it only trap themselves inside. —M</blockquote>
 
         <p>Jack stared at the message, his blood running cold. The Machinist knew. Knew he was at the building, knew he was investigating, possibly knew about Sarah.</p>
 
@@ -176,7 +204,7 @@
 
         <p>His phone buzzed again. Another message:</p>
 
-        <p><em>"Your father was a good man. He tried to warn them. Remember that when you learn the truth about who you really are."</em></p>
+        <blockquote>Your father was a good man. He tried to warn them. Remember that when you learn the truth about who you really are.</blockquote>
 
         <p>Jack's hand was shaking now, the phone slippery in his grip. His father had died ten years ago—cirrhosis, the occupational hazard of working men who drank to forget. But he'd never worked at the mill. He'd been a mechanic at a garage across town, fixing cars for people who could barely afford to keep them running.</p>
 
@@ -184,7 +212,7 @@
 
         <p>The third message came as Jack was getting in his car, hands still trembling:</p>
 
-        <p><em>"Three down. Twenty to go. The clock is ticking, Jack. Tick. Tock."</em></p>
+        <blockquote>Three down. Twenty to go. The clock is ticking, Jack. Tick. Tock.</blockquote>
 
         <p>Jack threw the phone onto the passenger seat and gripped the steering wheel until his knuckles turned white. The Machinist was playing with him, taunting him, turning the investigation into some kind of perverse game.</p>
 
@@ -197,13 +225,20 @@
         <p>The game was escalating. And Jack Morrison was no longer just a detective investigating a murder.</p>
 
         <p>He was a player now, whether he wanted to be or not.</p>
-      </article>
+      </div>
+    </article>
 
-      <nav class="chapter-nav">
-        <a href="/en/writing/novels/shadows-of-doubt/chapter-1/">← Chapter 1</a>
-        <a href="/en/writing/novels/shadows-of-doubt/chapter-3/">Chapter 3 →</a>
-      </nav>
-    </div>
+    <nav class="chapter-nav">
+      <a href="/en/writing/novels/shadows-of-doubt/chapter-1/" class="prev">
+        <span class="label">← Previous Chapter</span>
+        <span class="title">Chapter 1: The First Gear</span>
+      </a>
+      <a href="/en/writing/novels/shadows-of-doubt/chapter-3/" class="next">
+        <span class="label">Next Chapter →</span>
+        <span class="title">Chapter 3: Coming Soon</span>
+      </a>
+      <a href="/en/writing/novels/shadows-of-doubt/" class="toc">← Table of Contents</a>
+    </nav>
   </main>
 
   <footer class="site-footer">
