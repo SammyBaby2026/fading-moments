@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 18: Der Staub legt sich — Schatten des Zweifels — Fading Moments</title>
+  <meta name="description" content="Jedes Ende ist ein Anfang. Jede Stille birgt das Echo dessen, was kommen wird.">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    main { flex: 1; position: relative; }
+    .site-footer { margin-top: auto; }
+    .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
+    .watermark::before { content: "SHADOWS OF DOUBT © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
+    .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+    .chapter-hero .novel-title { font-family: var(--font-display); font-size: 48px; font-weight: 400; color: var(--text-light); margin-bottom: 0.75rem; }
+    .chapter-hero .novel-title a { color: inherit; text-decoration: none; }
+    .chapter-hero .chapter-name { font-family: var(--font-body); font-size: 22px; font-style: italic; color: rgba(237, 231, 223, 0.7); letter-spacing: 0.05em; }
+    .chapter-container { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; }
+    .chapter-meta { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #d9d4cc; }
+    .chapter-meta .date { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .chapter-meta .word-count { font-family: var(--font-ui); font-size: 11px; color: #999; margin-top: 4px; }
+    .chapter-content { font-family: var(--font-body); font-size: 17px; line-height: 1.9; color: var(--text-dark); background: #f3efe6; border: 1px solid #d9d4cc; padding: 60px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+    .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
+    .chapter-content p:first-of-type { text-indent: 0; }
+    .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
+    .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
+    .chapter-nav a:hover { background: #2f3d36; }
+    .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+    .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
+    .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
+    .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .watermark::before { font-size: 60px; } }
+  </style>
+</head>
+<body>
+  <div class="watermark"></div>
+  <div class="botanical"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/de/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-18/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-18/" class="active">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-18/">中文</a></nav>
+    </div>
+    <nav class="main-nav"><ul><li><a href="/de/">Startseite</a></li><li><a href="/de/writing/" class="active">Schriften</a></li><li><a href="/de/visual-archive/">Visuelles Archiv</a></li><li><a href="/de/about/">Über</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="chapter-hero">
+      <div class="chapter-hero-content">
+        <div class="novel-title"><a href="/de/writing/novels/schatten-des-zweifels/">Schatten des Zweifels</a></div>
+        <div class="chapter-name">Kapitel 18: Der Staub legt sich</div>
+      </div>
+    </section>
+
+    <article class="chapter-container">
+      <div class="chapter-meta">
+        <div class="date">22. März 2026</div>
+        <div class="word-count">3.500 Wörter · Kapitel 18 von 20</div>
+      </div>
+
+      <div class="chapter-content">
+        <p>Der Körper lag dort, wo er gefallen war, eine dunkle Gestalt auf dem verrosteten Metallboden der Harrison-Stahlhütte. Jack stand lange über Lucas Chen, das Echo des Schusses noch in seinen Ohren hallend, und fühlte, wie sich das Gewicht der Tragödie wie eine physische Bürde auf seine Schultern legte.</p>
+
+        <p>"Er hätte das nicht tun müssen", flüsterte Sarah. Sie kniete neben dem Körper ihres Bruders, ihre Hand schwebte über seiner narbenübersäten Brust, berührte ihn nicht ganz. "Wir hätten ihm helfen können. Wir hätten—"</p>
+
+        <p>"Er hat seine Wahl getroffen", sagte Jack sanft. "Am Ende, als es am meisten zählte, hat er sich für Gnade entschieden. Er hätte uns beide töten können, aber er tat es nicht."</p>
+
+        <p>Sarah sah auf, ihr Gesicht von Tränen durchzogen. "Er hat sich stattdessen entschieden, uns zu verlassen. Mich zu verlassen."</p>
+
+        <p>"Er war zerbrochen, Sarah. Zerstörter, als ihn jemand reparieren konnte." Jack kniete neben ihr, zuckte zusammen bei dem Schmerz in seinen Rippen, wo Lucas ihn getreten hatte. "Auf seine Weise hat er dich geliebt. Er konnte sich nicht überwinden, dir wehzutun, also tat er sich selbst weh."</p>
+
+        <p>Sarah schloss ihre Augen, ein Schluchzen entwich ihrer Kehle. "Ich wusste bis vor wenigen Tagen nicht einmal, dass es ihn gab. Und jetzt ist er fort, genau wie Daniel. Ich bin wieder allein."</p>
+
+        <p>"Du bist nicht allein." Jack legte eine Hand auf ihre Schulter. "Du hast mich. Und wir werden das zusammen zu Ende bringen."</p>
+
+        <p>***</p>
+
+        <p>Die Untersuchung, die folgte, war schnell und brutal. Das FBI, bereits in den Harrison-Steel-Fall verwickelt, übernahm die Szenerie innerhalb von Stunden. Jack und Sarah verbrachten zwei volle Tage mit Vernehmungen, ihre Aussagen wurden aufgezeichnet, jede ihrer Bewegungen unter die Lupe genommen. Aber am Ende war der Schluss klar: Lucas Chen war der Maschinist gewesen, ein Serienmörder, der für mehrere Morde im letzten Monat verantwortlich war. Sein Tod, obwohl tragisch, schloss den Fall ab.</p>
+
+        <p>Aber es schloss nicht die Tür zu den größeren Fragen.</p>
+
+        <p>"Das Korruptionsnetzwerk ist noch immer offen", sagte Special Agent Williams während des letzten Briefings. Er war ein großer Mann mit einem wettergegerbten Gesicht und Augen, die zu viel gesehen hatten. "Reeves hat angefangen zu reden, nennt Namen. Es geht höher, als wir dachten—Bundesebene, vielleicht sogar international."</p>
+
+        <p>"Wie hoch?" fragte Jack.</p>
+
+        <p>Williams zögerte. "Hoch genug, dass ich nicht autorisiert bin, es dir zu sagen. Noch nicht." Er beugte sich vor, senkte seine Stimme. "Aber unter uns? Diese Sache berührt Leute in Washington. Leute mit echter Macht. Die Art von Leuten, die keine losen Enden mögen."</p>
+
+        <p>Jack verstand die Warnung. "Wir werden vorsichtig sein."</p>
+
+        <p>"Das solltet ihr besser." Williams stand auf, reichte ihm die Hand. "Für das, was es wert ist, Morrison, ich denke, du hast eine schlechte Behandlung erfahren, als du von der Force geworfen wurdest. Das Bureau könnte Männer wie dich gebrauchen."</p>
+
+        <p>"Danke, aber ich bin mir nicht sicher, ob ich Bureau-Material bin."</p>
+
+        <p>"Denk darüber nach." Williams lächelte dünn. "Das Angebot steht."</p>
+
+        <p>***</p>
+
+        <p>Jack stand lange vor der Ashford Police Department, bevor er eintrat. Das Gebäude sah jetzt anders aus—irgendwie kleiner, weniger imposant. Oder vielleicht sah er es nur anders. Er war kein Detective mehr. War sich nicht sicher, was er war.</p>
+
+        <p>Captain Miller traf ihn in der Lobby. Der alte Mann sah müde aus, das Gewicht des Falls in jede Linie seines Gesichts geätzt.</p>
+
+        <p>"Morrison."</p>
+
+        <p>"Captain."</p>
+
+        <p>"Du hast gute Arbeit geleistet. Hast den Bastard gefasst, der diese Leute getötet hat."</p>
+
+        <p>"Ich habe ihn nicht gefasst. Er hat sich selbst gefasst."</p>
+
+        <p>Miller zuckte mit den Schultern. "Das Ergebnis ist das gleiche. Der Maschinist ist tot. Die Morde hören auf."</p>
+
+        <p>"Was mein Abzeichen betrifft", sagte Jack. "Meinen Job."</p>
+
+        <p>Miller schwieg einen Moment. "Die Suspendierung war Quatsch, Jack. Du weißt es und ich weiß es. Politischer Druck von Leuten, die wollten, dass dieser Fall verschwindet." Er griff in seine Tasche und zog ein Abzeichen heraus—Jacks Abzeichen. "Du bist wieder eingestellt. Voller Rang, voller Lohn, rückwirkend zum Suspendierungsdatum."</p>
+
+        <p>Jack nahm das Abzeichen, fühlte sein Gewicht in seiner Handfläche. Es war das, was er gewollt hatte, wofür er gekämpft hatte. Warum fühlte es sich dann so hohl an?</p>
+
+        <p>"Ich brauche etwas Zeit", sagte er.</p>
+
+        <p>"Wie viel?"</p>
+
+        <p>"Ich weiß nicht. Einen Monat. Vielleicht mehr."</p>
+
+        <p>Miller nickte langsam. "Nimm, was immer du brauchst. Aber Jack? Nimm nicht zu lange. Diese Stadt braucht immer noch gute Cops."</p>
+
+        <p>***</p>
+
+        <p>Emily wartete auf ihn, als er nach Hause kam. Seine Tochter stand in der Tür seiner Wohnung, die Arme verschränkt, versuchte wütend auszusehen, aber schaffte es meist, besorgt auszusehen.</p>
+
+        <p>"Du hast unseren Lunch-Termin verpasst."</p>
+
+        <p>"Ich weiß. Es tut mir leid. Die Dinge wurden... kompliziert."</p>
+
+        <p>"Kompliziert?" Emmys Stimme erhob sich. "Dad, du warst in einer Schießerei mit einem Serienmörder. Ich habe es in den Nachrichten gesehen!"</p>
+
+        <p>"Es war keine Schießerei. Nicht genau."</p>
+
+        <p>"Lüg mich nicht an." Ihre Augen funkelten mit unvergossenen Tränen. "Ich hatte solche Angst. Ich dachte... ich dachte, ich würde dich auch verlieren. Wie ich Mom verloren habe."</p>
+
+        <p>Jacks Herz brach ein wenig dabei. Er trat vor, zog seine Tochter in eine Umarmung. Sie widersetzte sich zuerst, dann schmolz sie in seinen Armen, schluchzte gegen seine Brust.</p>
+
+        <p>"Es tut mir leid", flüsterte er. "Es tut mir so leid, Em. Ich wollte dich nicht erschrecken."</p>
+
+        <p>"Das meinst du nie. Aber du tust es trotzdem." Sie wich zurück, wischte sich die Augen. "Warum musst du der Held sein, Dad? Warum kannst du nicht einfach mein Vater sein?"</p>
+
+        <p>"Ich bin dein Vater. Das ändert sich nie."</p>
+
+        <p>"Dann benehme dich auch so." Emmys Stimme war heftig. "Sei hier. Sei anwesend. Hör auf, Monster zu jagen, und fang an, ein Vater zu sein."</p>
+
+        <p>Jack sah seine Tochter an—sah sie wirklich an. Sie war jetzt sechzehn, kurz davor, eine Frau zu werden. So sehr wie ihre Mutter, aber mit seiner Sturheit, seinem Bedürfnis, für das Richtige zu kämpfen.</p>
+
+        <p>"Du hast recht", sagte er. "Ich war so fokussiert auf den Job, auf den Fall, auf alles andere... Ich habe vergessen, was wirklich zählt."</p>
+
+        <p>"Und was ist das?"</p>
+
+        <p>"Du." Jack nahm ihr Gesicht in seine Hände. "Du bist es, was zählt, Emily. Du und dafür zu sorgen, dass du eine Zukunft hast. Eine gute."</p>
+
+        <p>Emily lächelte durch ihre Tränen. "Bedeutet das, dass du aufhörst, Detective zu sein?"</p>
+
+        <p>"Es bedeutet, dass ich vorsichtiger sein werde." Jack küsste ihre Stirn. "Und es bedeutet, dass ich dich heute Abend zum Essen ausführe. Wohin immer du willst."</p>
+
+        <p>"Wohin immer?"</p>
+
+        <p>"Wohin immer."</p>
+
+        <p>"Sogar in dieses teure italienische Restaurant in der Innenstadt?"</p>
+
+        <p>Jack lachte. "Sogar dort."</p>
+
+        <p>***</p>
+
+        <p>Das Harrison-Vermögen war dreiundvierzig Millionen Dollar wert, angesammelt über drei Generationen von Stahlgewinnen und zweifelhaften Investitionen. Mit Dr. Harrison tot, mit Daniel und Lucas fort, ohne andere legitime Erben—es gehörte alles Sarah.</p>
+
+        <p>"Es ist Blutgeld", sagte sie Jack eine Woche später, als sie sich zum Kaffee trafen. "Jeder Dollar kam von Ausbeutung. Von Korruption. Von demselben System, das meine Brüder getötet hat, bevor sie überhaupt eine Chance hatten zu leben."</p>
+
+        <p>"Also was wirst du damit tun?"</p>
+
+        <p>Sarah lächelte, aber es erreichte nicht ihre Augen. "Ich werde es benutzen, um das System zu zerstören, das es geschaffen hat."</p>
+
+        <p>Sie hatte bereits begonnen. Die Sarah Chen Investigative Foundation wurde mit zwanzig Millionen Dollar Harrison-Geld gegründet, gewidmet der Aufdeckung von Unternehmenskorruption und Regierungsfehlverhalten. Sie hatte ein Team von Anwälten, Buchhaltern und forensischen Ermittlern eingestellt—Leute, die wussten, wie man Geldspuren folgt, wie man Geheimnisse aufdeckt, wie man die Mächtigen zur Rechenschaft zieht.</p>
+
+        <p>"Reeves hat uns Namen gegeben", sagte sie. "Namen, die nach Washington führen, nach Wall Street, zu Orten, wo die wirklichen Entscheidungen getroffen werden. Der Maschinist hat die Soldaten getötet, Jack. Ich gehe nach den Generälen."</p>
+
+        <p>"Es ist gefährlich."</p>
+
+        <p>"Ich weiß." Sarah griff über den Tisch, nahm seine Hand. "Deshalb brauche ich einen Partner. Jemanden, der Gerechtigkeit versteht. Jemanden, dem ich vertrauen kann."</p>
+
+        <p>Jack sah auf ihre verbundenen Hände. "Ich bin mir nicht sicher, ob ich noch dieser Mann bin. Ich war mein ganzes Leben lang Cop. Ich weiß nicht, wie ich sonst etwas sein soll."</p>
+
+        <p>"Dann lerne." Sarah drückte seine Finger. "Wir müssen beide lernen, wer wir sind ohne die Fälle, ohne die Jagd. Vielleicht können wir zusammen lernen."</p>
+
+        <p>***</p>
+
+        <p>Drei Wochen später stand Jack auf dem Friedhof, wo sein Vater begraben war. Das Grab des alten Mannes war einfach—kein großes Denkmal, nur ein Stein mit einem Namen und Daten. Jack war nie zuvor dagewesen. Zu beschäftigt, zu wütend, zu sehr in seinen eigenen Groll verwickelt.</p>
+
+        <p>"Ich verstehe jetzt", sagte er zur Stille. "Warum du getan hast, was du getan hast. Warum du über die Explosion geschwiegen hast. Du hattest Angst. Du hattest eine Familie zu schützen."</p>
+
+        <p>Er legte eine Hand auf den kalten Stein.</p>
+
+        <p>"Ich vergebe dir nicht. Noch nicht. Vielleicht nie. Aber ich verstehe. Und es tut mir leid, dass ich so viele Jahre damit verbracht habe, dich dafür zu hassen."</p>
+
+        <p>Der Wind raschelte in den Blättern über ihm. Irgendwo sang ein Vogel.</p>
+
+        <p>"Ich werde es besser machen", versprach Jack. "Mit Emily. Mit meinem Leben. Ich werde der Mann sein, der du wolltest, dass ich bin."</p>
+
+        <p>Er stand dort noch eine Stunde, einfach nur mit der Erinnerung an seinen Vater zu sein. Als er schließlich ging, fühlte er sich leichter als seit Jahren.</p>
+
+        <p>***</p>
+
+        <p>Der Brief kam an einem Dienstag, geliefert von einem Kurier, der seinen Namen verweigerte. Jack öffnete ihn in seiner Küche, Emily plapperte hinter ihm am Tisch über die Schule.</p>
+
+        <p>Der Umschlag war schwer, teures Papier. Drinnen war ein einzelnes Blatt, handschriftlich in präziser, eleganter Schrift.</p>
+
+        <p>"Der Maschinist ist tot. Es lebe der Maschinist. Das Spiel geht weiter, aber die Regeln haben sich geändert. Wenn du bereit bist, wieder zu spielen, suche nach den Zahnrädern in den Schatten. —M"</p>
+
+        <p>Unter den Worten war ein Foto. Es zeigte ein Lagerhaus—eines, das Jack von einem Fall vor drei Jahren kannte, einem Waffenschmuggelring, den er geholfen hatte, aufzubrechen. In der Ecke des Bildes, kaum sichtbar, war ein einzelnes Metallzahnrad.</p>
+
+        <p>"Dad?" Emily sah von ihrer Hausaufgabe auf. "Alles okay?"</p>
+
+        <p>Jack faltete den Brief sorgfältig, steckte ihn in seine Tasche. "Ja, Em. Mir geht's gut."</p>
+
+        <p>Aber ihm ging es nicht gut. Denn der Brief bedeutete, was er gefürchtet hatte—der Maschinist war nicht nur Lucas oder Daniel. Es war eine Idee. Eine Bewegung. Ein Netzwerk von Leuten, die glaubten, dass Gerechtigkeit nur durch Blut erreicht werden konnte.</p>
+
+        <p>Und jetzt rekrutierten sie.</p>
+
+        <p>***</p>
+
+        <p>In dieser Nacht rief Jack Sarah an.</p>
+
+        <p>"Ich habe einen Brief bekommen."</p>
+
+        <p>Eine Pause am anderen Ende. "Ich auch."</p>
+
+        <p>"Was hat deiner gesagt?"</p>
+
+        <p>"Er sagte, das Erbe kommt mit Bedingungen. Dass ich das Geld benutzen kann, um Korruption zu bekämpfen, oder ich kann es benutzen, um der nächsten Phase des Spiels beizutreten." Sarahs Stimme war stabil, aber Jack konnte die Spannung darunter hören. "Es gibt eine Telefonnummer. Eine Frist. Zwei Wochen, um zu entscheiden."</p>
+
+        <p>"Wir müssen dem FBI sagen."</p>
+
+        <p>"Das habe ich schon. Sie verfolgen die Nummer, aber..." Sie seufzte. "Jack, ich glaube nicht, dass das etwas ist, das das FBI aufhalten kann. Das geht tiefer als Lucas oder Daniel. Das ist etwas, das seit Jahren gewachsen ist. Vielleicht Jahrzehnten."</p>
+
+        <p>"Also was machen wir?"</p>
+
+        <p>"Wir kämpfen weiter. Wir decken die Korruption auf, wir helfen den Opfern, wir tun, was wir uns vorgenommen haben." Eine Pause. "Und wir achten auf unsere Rücken. Denn wer auch immer dahinter steckt, sie sind noch nicht fertig mit uns."</p>
+
+        <p>Jack sah aus seinem Fenster in den Nachthimmel. Irgendwo da draußen, in den Schatten von Macht und Privileg, erhob sich ein neuer Maschinist. Neue Zahnräder drehten sich.</p>
+
+        <p>"Partner?" fragte er.</p>
+
+        <p>"Partner", bestätigte Sarah. "Bis zum Ende."</p>
+
+        <p>***</p>
+
+        <p>Die Sonne ging am nächsten Morgen über Ashford auf, malte die verrosteten Türme der alten Stahlhütte in Gold- und Purpurtöne. Es war auf seine Weise schön—ein Denkmal für Industrie und Ehrgeiz, für die Träume, die Amerika gebaut hatten, und die Gier, die sie korrumpiert hatte.</p>
+
+        <p>Jack stand auf seinem Balkon mit einer Tasse Kaffee, sah zu, wie das Licht sich über die Stadt ausbreitete. Emily schlief noch. Die Stadt wachte auf, die Leute gingen ihren Geschäften nach, nicht wissend von den Schatten, die sich unter der Oberfläche bewegten.</p>
+
+        <p>Er dachte über die Entscheidungen nach, die vor ihm lagen. Er konnte zur Force zurückkehren, wieder Detective sein, ein normales Leben führen. Oder er konnte sich Sarahs Kreuzzug anschließen, etwas anderes werden—ein Vigilant, ein Wahrheitssucher, ein Jäger der Korrupten.</p>
+
+        <p>Er wusste nicht, welchen Weg er wählen würde. Aber er wusste eines: Die Geschichte war nicht vorbei. Der Staub hatte sich auf dieses Kapitel gelegt, aber das Buch blieb offen. Neue Seiten warteten darauf, geschrieben zu werden.</p>
+
+        <p>In seiner Tasche fühlte sich der Brief schwer an. Ein Versprechen von Dingen, die kommen würden.</p>
+
+        <p>Jack trank seinen Kaffee aus und ging hinein, um seine Tochter zu wecken. Was auch immer als Nächstes kam, welche Schatten auch immer in der Zukunft warteten, er würde sich ihnen stellen.</p>
+
+        <p>Aber nicht heute. Heute war für Frühstück, Lachen und Vater sein.</p>
+
+        <p>Morgen würde die Jagd wieder beginnen.</p>
+      </div>
+    </article>
+
+    <div class="copyright-section">
+      <div class="copyright-box">
+        <p><strong>© 2026 Fading Moments. Alle Rechte vorbehalten.</strong></p>
+        <p>Dieser Inhalt ist urheberrechtlich geschützt. Die unbefugte Vervielfältigung, Verbreitung oder Übertragung eines Teils dieses Werkes in jeglicher Form ist ohne vorherige schriftliche Genehmigung des Autors strengstens untersagt.</p>
+      </div>
+    </div>
+
+    <nav class="chapter-nav">
+      <a href="/de/writing/novels/schatten-des-zweifels/chapter-17/" style="text-align: left;">
+        <span class="label">← Vorheriges Kapitel</span>
+        <span class="title">Kapitel 17: Bruder gegen Bruder</span>
+      </a>
+      <a href="/de/writing/novels/schatten-des-zweifels/" style="text-align: right;">
+        <span class="label">Inhaltsverzeichnis →</span>
+        <span class="title">Zurück zum Roman-Index</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Fading Moments</div>
+      <div class="footer-tagline">Ein ruhiges literarisches Archiv</div>
+      <div class="footer-copyright">© 2026 Fading Moments. Alle Rechte vorbehalten.</div>
+    </div>
+  </footer>
+</body>
+</html>
