@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kapitel 16: Das letzte Zahnrad — Schatten des Zweifels — Fading Moments</title>
-  <meta name="description" content="Jede Maschine hat ein letztes Zahnrad. Jede Geschichte hat ein Ende.">
+  <title>Chapter 16: The Final Gear — Shadows of Doubt — Fading Moments</title>
+  <meta name="description" content="Every machine has a final gear. Every story has an ending.">
   <link rel="stylesheet" href="/assets/css/style.css?v=2">
   <style>
     body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
     main { flex: 1; position: relative; }
     .site-footer { margin-top: auto; }
     .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
-    .watermark::before { content: "SCHATTEN DES ZWEIFELS © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .watermark::before { content: "SHADOWS OF DOUBT © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
     .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
     .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
     .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
@@ -26,21 +26,15 @@
     .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
     .chapter-content p:first-of-type { text-indent: 0; }
     .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
-    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
     .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
     .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
     .chapter-nav a:hover { background: #2f3d36; }
     .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
     .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
-    .chapter-nav .prev { text-align: left; }
-    .chapter-nav .next { text-align: right; }
-    .chapter-nav .toc { grid-column: span 2; }
     .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
     .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
     .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
-    .copyright-box p:last-child { margin-bottom: 0; }
-    .copyright-box strong { color: var(--text-dark); }
-    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .chapter-nav .prev, .chapter-nav .next { text-align: center; } .chapter-nav .toc { grid-column: span 1; } .watermark::before { font-size: 60px; } }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .watermark::before { font-size: 60px; } }
   </style>
 </head>
 <body>
@@ -48,258 +42,262 @@
   <div class="botanical"></div>
   <header class="site-header">
     <div class="header-inner">
-      <a href="/de/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
-      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-16/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-16/" class="active">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-16/">中文</a></nav>
+      <a href="/en/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-16/" class="active">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-16/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-16/">中文</a></nav>
     </div>
-        <nav class="main-nav"><ul><li><a href="/de/">Startseite</a></li><li><a href="/de/writing/" class="active">Schriften</a></li><li><a href="/de/visual-archive/">Visuelles Archiv</a></li><li><a href="/de/films-music/">Filme & Musik</a></li><li><a href="/de/about/">Über</a></li></ul></nav>
+        <nav class="main-nav"><ul><li><a href="/en/">Home</a></li><li><a href="/en/writing/" class="active">Writing</a></li><li><a href="/en/visual-archive/">Visual Archive</a></li><li><a href="/en/films-music/">Films & Music</a></li><li><a href="/en/about/">About</a></li></ul></nav>
   </header>
 
   <main>
     <section class="chapter-hero">
       <div class="chapter-hero-content">
-        <div class="novel-title"><a href="/de/writing/novels/schatten-des-zweifels/">Schatten des Zweifels</a></div>
-        <div class="chapter-name">Kapitel 16: Das letzte Zahnrad</div>
+        <div class="novel-title"><a href="/en/writing/novels/shadows-of-doubt/">Shadows of Doubt</a></div>
+        <div class="chapter-name">Chapter 16: The Final Gear</div>
       </div>
     </section>
 
     <article class="chapter-container">
       <div class="chapter-meta">
-        <div class="date">20. März 2026</div>
-        <div class="word-count">4.500 Wörter · Kapitel 16 von 20</div>
+        <div class="date">[0-9]. März 2026</div>
+        <div class="word-count">4,500 words · Chapter 16 of 20</div>
       </div>
 
       <div class="chapter-content">
-        <p>Das sichere Haus schien sich um sie zu schließen, Wände drückten ein, Luft wurde dünn. Sarah starrte auf das Foto – auf das junge Gesicht ihrer Mutter, auf die beiden Säuglinge, eingewickelt in identische blaue Decken – und fühlte den Boden unter ihren Füßen kippen.</p>
+        <p>The safe house seemed to shrink around them, walls pressing in, air growing thin. Sarah stared at the photograph—at her mother's young face, at the two infants wrapped in identical blue blankets—and felt the floor tilt beneath her feet.</p>
 
-        <p>"Das ist nicht möglich", flüsterte sie wieder, aber die Worte fühlten sich hohl an, unwahr. Denn jetzt, wo sie Daniel ansah, konnte sie es sehen – die Form seiner Augen, der Winkel seines Kiefers, Züge, die ihre eigenen auf spiegelbildliche Weise widerspiegelten. Wie hatte sie es nicht gesehen?</p>
+        <p>"That's not possible," she whispered again, but the words felt hollow, untrue. Because looking at Daniel now, she could see it—the shape of his eyes, the angle of his jaw, features that mirrored her own in ways she'd never noticed before. How had she not seen it?</p>
 
-        <p>"Eure Mutter war dreiundzwanzig, als sie uns bekam", sagte Daniel. Seine Stimme war sanft, fast zart – so anders als die kalte Präzision, die er normalerweise anwandte. "Sie war nicht verheiratet. War nicht einmal ernsthaft mit jemandem zusammen, laut der Familie. Nur eine junge Frau, die als Sekretärin bei Harrison Steel arbeitete, versuchte, ein Leben aufzubauen."</p>
+        <p>"Your mother was twenty-three when she had us," Daniel said. His voice was soft, almost gentle—so different from the cold precision he usually employed. "She wasn't married. Wasn't even dating anyone seriously, according to the family. Just a young woman working as a secretary at Harrison Steel, trying to build a life."</p>
 
-        <p>"Harrison Steel", wiederholte Jack. Er stand jetzt, positionierte sich zwischen Sarah und Daniel, seine Körpersprache strahlte Anspannung aus. "Eure Mutter arbeitete für Harrison Steel."</p>
+        <p>"Harrison Steel," Jack repeated. He was standing now, positioning himself between Sarah and Daniel, his body language radiating tension. "Your mother worked for Harrison Steel."</p>
 
-        <p>"Sie arbeitete für William Harrison Sr.", korrigierte Daniel. "Direkt. Als seine persönliche Sekretärin." Er zog ein weiteres Foto heraus – älter, stärker verblasst. Ein Gruppenfoto, Firmenpicknick, Sommer 1987. Eine junge Frau mit dunklem Haar, die neben einem älteren Mann in einem teuren Anzug stand. William Harrison Sr. Seine Hand besitzergreifend auf ihrem unteren Rücken ruhend. "Drei Jahre lang. Direkt bis zu dem Zeitpunkt, als sie... als wir geboren wurden."</p>
+        <p>"She worked for William Harrison Sr.," Daniel corrected. "Directly. As his personal secretary." He pulled out another photograph—older, more faded. A group photo, company picnic, summer of 1987. A young woman with dark hair standing beside an older man in an expensive suit. William Harrison Sr. His hand resting possessively on the small of her back. "For three years. Right up until she... until we were born."</p>
 
-        <p>Sarahs Hand ging zu ihrem Mund. "Nein."</p>
+        <p>Sarah's hand went to her mouth. "No."</p>
 
-        <p>"Ja." Daniels Lächeln war bitter. "William Harrison Sr. war unser Vater, Sarah. Nicht der Mann, der dich großzog – das war ein guter Mann namens David Chen, der unsere Mutter sechs Monate nach unserer Geburt heiratete und dir seinen Namen gab. Aber biologisch, genetisch, sind wir Harrisons Kinder. Seine Bastarde. Die Produkte einer Affäre, die niemals hätte passieren sollen."</p>
+        <p>"Yes." Daniel's smile was bitter. "William Harrison Sr. was our father, Sarah. Not the man who raised you—that was a kind man named David Chen, who married our mother six months after we were born and gave you his name. But biologically, genetically, we are Harrison's children. His bastards. The products of an affair that should have never happened."</p>
 
-        <p>Jack starrte Daniel an, Verständnis dämmerte in seinen Augen. "Deshalb haben Sie Dr. Harrison getötet. Nicht weil er geholfen hat, die Explosion zu vertuschen – sondern weil er Konkurrenz war."</p>
+        <p>Jack was staring at Daniel, understanding dawning in his eyes. "That's why you killed Dr. Harrison. Not because he helped cover up the explosion—because he was competition."</p>
 
-        <p>"Dr. William Harrison war unser Halbbruder", bestätigte Daniel. "Der legitime Sohn von William Harrison Sr. und seiner Frau. Das goldene Kind. Der Erbe." Seine Stimme verhärtete sich. "Während wir weggegeben wurden. Getrennt. Ich wurde zu einer Pflegefamilie nach Detroit geschickt, während Sarah bei Mutter und ihrem neuen Ehemann blieb. Ein Kind behalten, ein Kind weggeworfen. Allein basierend darauf, welches leichter zu verstecken war."</p>
+        <p>"Dr. William Harrison was our half-brother," Daniel confirmed. "The legitimate son of William Harrison Sr. and his wife. The golden child. The heir." His voice hardened. "While we were given away. Separated. I was sent to a foster family in Detroit, while Sarah stayed with Mother and her new husband. One child kept, one child discarded. Based solely on which would be easier to hide."</p>
 
-        <p>Sarah fühlte Tränen über ihr Gesicht strömen, heiß und demütigend. Ihr ganzes Leben lang hatte sie geglaubt, Einzelkind zu sein. Ihre Mutter hatte nie von einem anderen Baby gesprochen, nie auf einen verlorenen Zwilling angespielt. Und ihr Vater – David Chen, der gute Mann, der ihr das Fahrradfahren beigebracht und ihr Gutenachtgeschichten vorgelesen hatte – er hatte gewusst. Er muss gewusst haben. Die ganze Familie hatte sich verschworen, Daniel aus der Existenz zu löschen.</p>
+        <p>Sarah felt tears streaming down her face, hot and humiliating. All her life, she'd believed she was an only child. Her mother had never spoken of another baby, never hinted at a lost twin. And her father—David Chen, the kind man who'd taught her to ride a bike and read her bedtime stories—he'd known. He must have known. The entire family had conspired to erase Daniel from existence.</p>
 
-        <p>"Warum?", schaffte sie. "Warum uns trennen?"</p>
+        <p>"Why?" she managed. "Why separate us?"</p>
 
-        <p>"Weil Zwillinge schwer zu erklären sind. Schwer zu verstecken. Und Harrison Sr. machte es klar – wenn unsere Mutter seine finanzielle Unterstützung wollte, ihren Job behalten wollte, leben wollte – würde sie das Problem verschwinden lassen." Daniels Augen funkelten vor etwas Dunklem und Altem. "Ich war das Problem, Sarah. Das zusätzliche Kind. Dasjenige, das wie unerwünschtes Gepäck weggeschickt wurde, während du im warmen Haus mit den liebenden Eltern bleiben durftest."</p>
+        <p>"Because twins are hard to explain. Hard to hide. And Harrison Sr. made it clear—if our mother wanted his financial support, wanted to keep her job, wanted to live—she would make the problem disappear." Daniel's eyes glittered with something dark and old. "I was the problem, Sarah. The extra child. The one who got shipped off like unwanted luggage while you got to stay in the warm house with the loving parents."</p>
 
-        <p>"Das ist nicht meine Schuld", sagte Sarah. "Ich war ein Baby. Ich habe nicht gewählt—"</p>
+        <p>"That's not my fault," Sarah said. "I was a baby. I didn't choose—"</p>
 
-        <p>"Nein." Daniel schnitt ihr das Wort ab. "Es war nicht deine Schuld. Aber es war auch nicht meine. Und trotzdem war ich es, der in Pflegeheimen aufwuchs. Ich war es, der von 'Betreuern' geschlagen wurde, die nur die staatlichen Schecks wollten. Ich war es, der lernte zu überleben, indem er... dies wurde."</p>
+        <p>"No." Daniel cut her off. "It wasn't your fault. But it wasn't mine either. And yet I'm the one who grew up in foster homes. I'm the one who was beaten by 'caregivers' who only wanted the state checks. I'm the one who learned to survive by becoming... this."</p>
 
-        <p>Er gestikulierte an sich selbst – die Waffen, die taktische Ausrüstung, die kalte Effizienz, die ihm den Namen "Mechaniker" eingebracht hatte.</p>
+        <p>He gestured at himself—the weapons, the tactical gear, the cold efficiency that had earned him the name "The Machinist."</p>
 
-        <p>"Und Dr. Harrison?", fragte Jack leise. "Wo passte er rein?"</p>
+        <p>"And Dr. Harrison?" Jack asked quietly. "How did he fit in?"</p>
 
-        <p>"Dr. Harrison wusste von uns." Daniels Stimme sank zu einem Flüstern. "Er fand die Adoptionsunterlagen vor fünfzehn Jahren. Benutzte sie, um Harrison Sr. zu erpressen – verlangte einen Teil des Erbes, drohte, den Skandal aufzudecken. Harrison Sr. weigerte sich. Sagte ihm, dass Bastarde nichts verdienten." Daniel lachte, rau und humorlos. "Also beschloss Dr. Harrison, sich auf andere Weise zu rächen. Er fing an, die Stahlfabrik zu untersuchen. Nach Druckmitteln suchte. Und er fand sie – die Sicherheitsverstöße, die Vertuschungen, alles."</p>
+        <p>"Dr. Harrison knew about us." Daniel's voice dropped to a whisper. "He found the adoption records fifteen years ago. Used them to blackmail Harrison Sr.—demanded a share of the inheritance, threatened to expose the scandal. Harrison Sr. refused. Told him that bastards didn't deserve anything." Daniel laughed, harsh and humorless. "So Dr. Harrison decided to get revenge another way. He started investigating the steel mill. Looking for leverage. And he found it—the safety violations, the cover-ups, everything."</p>
 
-        <p>"Aber Sie haben ihn getötet", sagte Sarah. "Bevor er irgendetwas aufdecken konnte."</p>
+        <p>"But you killed him," Sarah said. "Before he could expose anything."</p>
 
-        <p>"Ich habe ihn getötet, weil er die Informationen verkaufen wollte." Daniels Augen loderten. "Es ging ihm nicht um Gerechtigkeit. Es ging ihm nicht um die dreiundzwanzig toten Arbeiter. Er wollte nur Geld. Macht. Dieselben Dinge, die Harrison Sr. wollte. Dieselben Dinge, die unsere Leben zerstört hatten, bevor sie überhaupt begonnen hatten." Er trat näher, seine Stimme erhob sich. "Ich konnte nicht zulassen, dass er von unserem Schmerz profitierte, Sarah. Ich konnte nicht zulassen, dass ein weiterer Harrison reich weglief, während wir litten."</p>
+        <p>"I killed him because he was going to sell the information." Daniel's eyes blazed. "He didn't care about justice. Didn't care about the twenty-three dead workers. He just wanted money. Power. The same things Harrison Sr. wanted. The same things that destroyed our lives before they even began." He stepped closer, his voice rising. "I couldn't let him profit from our pain, Sarah. I couldn't let another Harrison walk away rich while we suffered."</p>
 
-        <p>"Also wurden Sie stattdessen ein Mörder." Jacks Stimme war flach.</p>
+        <p>"So you became a murderer instead." Jack's voice was flat.</p>
 
-        <p>"Ich wurde ein Rächer." Daniel wirbelte zu ihm herum. "Ich habe die Männer getötet, die für die Stahlfabrik-Explosion verantwortlich waren. Ich habe die Menschen getötet, die sie vertuscht haben. Ich habe Dr. Harrison getötet, der versucht hat, von der Tragödie zu profitieren. Und ich würde alles wieder tun."</p>
+        <p>"I became an avenger." Daniel whirled to face him. "I killed the men responsible for the steel mill explosion. I killed the people who covered it up. I killed Dr. Harrison, who tried to profit from tragedy. And I would do it all again."</p>
 
-        <p>"Aber nicht Reeves", sagte Jack. "Sie haben Reeves nicht getötet. Obwohl Sie es könnten. Obwohl Sie die Fähigkeiten, den Zugang, die Gelegenheit hatten."</p>
+        <p>"But not Reeves," Jack said. "You didn't kill Reeves. Even though you could have. Even though you had the skills, the access, the opportunity."</p>
 
-        <p>Daniels Ausdruck flackerte. "Reeves war... anders. Er war verbunden. Geschützt. Wenn ich ihn getötet hätte, wäre das ganze Netzwerk über mich hergefallen. Ich brauchte ihn bloßgestellt, entehrt, zerstört – nicht vermärtyrt."</p>
+        <p>Daniel's expression flickered. "Reeves was... different. He was connected. Protected. If I'd killed him, the whole network would have come down on me. I needed him exposed, disgraced, destroyed—not martyred."</p>
 
-        <p>"Oder vielleicht", sagte Jack langsam, "brauchten Sie ihn am Leben, weil er nützlich war. Weil er Sie zu der wahren Macht hinter dem Thron führen konnte. Zu demjenigen, der das Geld kontrolliert."</p>
+        <p>"Or maybe," Jack said slowly, "you needed him alive because he was useful. Because he could lead you to the real power behind the throne. To whoever controls the money."</p>
 
-        <p>Stille.</p>
+        <p>Silence.</p>
 
-        <p>Daniels Lächeln kehrte zurück, aber es war jetzt anders. Kälter. Berechnender. "Sie sind klüger, als Sie aussehen, Detective."</p>
+        <p>Daniel's smile returned, but it was different now. Colder. More calculating. "You're smarter than you look, Detective."</p>
 
-        <p>"Ich bin kein Detective mehr."</p>
+        <p>"I'm not a detective anymore."</p>
 
-        <p>"Nein. Das sind Sie nicht." Daniel griff in seine Jacke und zog eine Waffe – nicht die elegante professionelle Waffe, die er vorher benutzt hatte, sondern etwas Älteres, Persönlicheres. Ein Revolver, vernickelt, mit Perlmutt-Griffen. Er richtete sie auf Sarah.</p>
+        <p>"No. You're not." Daniel reached into his jacket and pulled out a gun—not the sleek professional weapon he'd used before, but something older, more personal. A revolver, nickel-plated, with mother-of-pearl grips. He pointed it at Sarah.</p>
 
-        <p>"Was tun Sie?" Jack trat vor, Hände erhoben. "Daniel, legen Sie die Waffe hin."</p>
+        <p>"What are you doing?" Jack stepped forward, hands raised. "Daniel, put the gun down."</p>
 
-        <p>"Ich kann nicht." Daniels Stimme war fast bedauernd. "Ich wollte nicht, dass es so endet, Sarah. Wirklich nicht. Als ich mich Ihnen zum ersten Mal näherte, als ich anfing, Hinweise für Sie zu hinterlassen – es war, weil ich Sie kennenlernen wollte. Meine Schwester. Meinen Zwilling. Die einzige Familie, die ich noch hatte."</p>
+        <p>"I can't." Daniel's voice was almost regretful. "I didn't want it to end this way, Sarah. I really didn't. When I first approached you, when I started leaving clues for you to follow—it was because I wanted to know you. My sister. My twin. The only family I had left."</p>
 
-        <p>"Dann warum—" Sarahs Stimme brach.</p>
+        <p>"Then why—" Sarah's voice broke.</p>
 
-        <p>"Weil Sie schwach sind." Die Worte kamen hart, bitter heraus. "Sie hatten alles, was ich nicht hatte – Eltern, Sicherheit, ein normales Leben – und Sie haben es verschwendet. Sie wurden Journalistin, schrieben Geschichten, die niemand liest, deckten Korruption auf, die niemanden interessiert. Sie hatten die Macht der Presse, die Plattform, um die Welt zu verändern, und Sie benutzten sie, um geistlose Stücke und menschliche Interessengeschichten zu schreiben." Daniels Hand verstärkte ihren Griff um die Waffe. "Während ich hier draußen war, tatsächlich etwas tat. Tatsächlich die Schuldigen zahlen ließ."</p>
+        <p>"Because you're weak." The words came out harsh, bitter. "You had everything I didn't—parents, security, a normal life—and you wasted it. You became a journalist, writing stories that no one reads, exposing corruption that no one cares about. You had the power of the press, the platform to change the world, and you used it to write fluff pieces and human interest stories." Daniel's hand tightened on the gun. "While I was out here, actually doing something. Actually making the guilty pay."</p>
 
-        <p>"Ich habe versucht, die Stahlfabrik-Vertuschung seit Jahren aufzudecken", sagte Sarah. "Ich habe mein Leben riskiert—"</p>
+        <p>"I've been trying to expose the steel mill cover-up for years," Sarah said. "I've risked my life—"</p>
 
-        <p>"Worte." Daniel spuckte das Wort wie einen Fluch aus. "Nur Worte. Die Leute, die unseren Vater getötet haben – unseren biologischen Vater, William Harrison Sr. – die kümmern sich nicht um Worte. Es geht ihnen um Macht. Um Geld. Um Angst." Er gestikulierte mit der Waffe. "Ich habe versucht, es Ihnen beizubringen. Versucht zu zeigen, dass der einzige Weg, Männer wie Reeves zu stoppen, darin besteht, etwas Schlimmeres als sie zu werden. Aber Sie haben nicht gelernt. Sie denken immer noch, dass das System funktionieren kann. Dass Gerechtigkeit durch Gerichte und Zeitungen und 'den demokratischen Prozess' erreicht werden kann."</p>
+        <p>"Words." Daniel spat the word like a curse. "Just words. The people who killed our father—our biological father, William Harrison Sr.—they don't care about words. They care about power. About money. About fear." He gestured with the gun. "I tried to teach you. Tried to show you that the only way to stop men like Reeves is to become something worse than them. But you didn't learn. You still think the system can work. Still think justice can be achieved through courts and newspapers and 'the democratic process.'"</p>
 
-        <p>"Weil es wahr ist", sagte Sarah. "Was Sie getan haben – Menschen töten, Menschen terrorisieren – das ist keine Gerechtigkeit. Das ist nur mehr Gewalt. Mehr Schmerz. Sie sind nicht besser als die Leute, die Sie jagen, Daniel. Sie sind genau dieselben."</p>
+        <p>"Because it's true," Sarah said. "What you've done—killing people, terrorizing people—that's not justice. That's just more violence. More pain. You're not better than the people you hunt, Daniel. You're exactly the same."</p>
 
-        <p>Daniels Gesicht verzerrte sich. Für einen Moment flackerte etwas wie Schmerz über seine Züge – echter Schmerz, die Qual eines Kindes, das niemals gewollt worden war, eines Mannes, der niemals geliebt worden war.</p>
+        <p>Daniel's face twisted. For a moment, something like pain flashed across his features—real pain, the anguish of a child who'd never been wanted, a man who'd never been loved.</p>
 
-        <p>"Vielleicht haben Sie recht", sagte er leise. "Vielleicht bin ich ein Monster. Aber ich bin ein Monster mit einem Zweck. Und mein Zweck ist noch nicht erfüllt."</p>
+        <p>"Maybe you're right," he said softly. "Maybe I am a monster. But I'm a monster with a purpose. And my purpose isn't finished yet."</p>
 
-        <p>Er spannte den Hahn des Revolvers.</p>
+        <p>He pulled the hammer back on the revolver.</p>
 
-        <p>"Das Erbe", sagte Jack plötzlich.</p>
+        <p>"The inheritance," Jack said suddenly.</p>
 
-        <p>Daniel hielt inne.</p>
+        <p>Daniel paused.</p>
 
-        <p>"Harrison Srs. Nachlass. Er ist immer noch da draußen, nicht wahr? Millionen von Dollar. Immobilien. Investitionen. Und mit Dr. Harrison tot, ohne andere legitime Erben – es geht an die nächsten Verwandten." Jacks Augen waren auf Daniels Gesicht fixiert. "An seine unehelichen Kinder. An Sie und Sarah."</p>
+        <p>"Harrison Sr.'s estate. It's still out there, isn't it? Millions of dollars. Properties. Investments. And with Dr. Harrison dead, with no other legitimate heirs—it goes to the next of kin." Jack's eyes were fixed on Daniel's face. "To his bastard children. To you and Sarah."</p>
 
-        <p>Ein langsames Lächeln breitete sich über Daniels Gesicht aus. "Sie sind wirklich schlau."</p>
+        <p>A slow smile spread across Daniel's face. "You really are smart."</p>
 
-        <p>"Aber nur wenn Sarah tot ist." Jack trat näher, ignorierte die Waffe, die jetzt auf ihn gerichtet war. "Wenn es zwei Erben gibt, wird der Nachlass vor Gericht verwickelt. Angefochten. Untersucht. Aber wenn es nur einen gibt – wenn Sarah stirbt und Sie behaupten, das einzige überlebende Kind zu sein—"</p>
+        <p>"But only if Sarah is dead." Jack took a step closer, ignoring the gun now pointing at him. "If there are two heirs, the estate gets tied up in court. Contested. Investigated. But if there's only one—if Sarah dies and you claim to be the sole surviving child—"</p>
 
-        <p>"Erbe ich alles." Daniel beendete es. "Das Geld, die Immobilien, die Macht. Alles, was Harrison Sr. aufgebaut hat. Alles, was er mir verweigert hat." Er sah Sarah an, und für einen Moment kreuzte sich etwas wie Bedauern über sein Gesicht. "Es tut mir leid, Schwester. Wirklich. In einem anderen Leben hätten wir vielleicht... etwas anderes sein können. Familie. Verbündete. Aber in diesem Leben gibt es nur Platz für einen von uns. Und ich habe zu hart gearbeitet, zu viel geopfert, um jetzt mit leeren Händen wegzugehen."</p>
+        <p>"I inherit everything." Daniel finished. "The money, the properties, the power. Everything Harrison Sr. built. Everything he denied me." He looked at Sarah, and for a moment, something like sorrow crossed his face. "I'm sorry, sister. I really am. In another life, maybe we could have been... something else. Family. Allies. But in this life, there's only room for one of us. And I've worked too hard, sacrificed too much, to walk away empty-handed now."</p>
 
-        <p>Er hob die Waffe.</p>
+        <p>He raised the gun.</p>
 
-        <p>Jack bewegte sich.</p>
+        <p>Jack moved.</p>
 
-        <p>Er war während ihres Gesprächs näher gekommen, positionierte sich, wartete auf seinen Moment. Als Daniels Aufmerksamkeit sich auf Sarah konzentrierte, als die Waffe anfing zu steigen – Jack stürzte sich vorwärts.</p>
+        <p>He'd been edging closer as they talked, positioning himself, waiting for his moment. When Daniel's attention focused on Sarah, when the gun started to rise—Jack lunged.</p>
 
-        <p>Er traf Daniel tief, packte ihn um die Taille, trieb ihn rückwärts gegen die Wand. Die Waffe ging los – einmal, zweimal – Kugeln schlugen Löcher in die Decke. Sie rangen, zwei Männer, die vor Augenblicken noch Partner gewesen waren, kämpften jetzt um ihr Leben.</p>
+        <p>He hit Daniel low, tackling him around the waist, driving him backward into the wall. The gun went off—once, twice—bullets punching holes in the ceiling. They grappled, two men who'd been partners moments before, now fighting for their lives.</p>
 
-        <p>Daniel war stärker, als er aussah, schneller, besser trainiert. Er knie Jack in den Magen, befreite sich, brachte die Waffe herum. Jack fing sein Handgelenk, zwang es nach oben, verdrehte es. Der Revolver klapperte auf den Boden.</p>
+        <p>Daniel was stronger than he looked, faster, better trained. He kneed Jack in the stomach, broke free, brought the gun around. Jack caught his wrist, forced it upward, twisted. The revolver clattered to the floor.</p>
 
-        <p>Sie trennten sich, kreisten einander wie Wölfe.</p>
+        <p>They separated, circling each other like wolves.</p>
 
-        <p>"Sie müssen das nicht tun", keuchte Jack. Seine Rippen schmerzten dort, wo Daniel ihn getroffen hatte. "Wir können die Korruption immer noch stoppen. Immer noch das Netzwerk aufdecken. Zusammen."</p>
+        <p>"You don't have to do this," Jack gasped. His ribs ached where Daniel had hit him. "We can still stop the corruption. Still expose the network. Together."</p>
 
-        <p>"Nein." Daniel schüttelte den Kopf. "Wir können nicht. Denn Sie verstehen immer noch nicht, Jack. Die Korruption ist nicht da draußen." Er tippte auf seine Brust. "Sie ist hier drin. In jedem. In der Gier, die Männer wie Harrison Sr. dazu bringt, Arbeiter für Profit zu opfern. In der Feigheit, die Männer wie Ihren Vater dazu bringt, zu schweigen, wenn sie die Wahrheit kennen. In der Schwäche, die Menschen wie Sarah dazu bringt, zu schreiben statt zu handeln." Er breitete die Hände aus. "Der einzige Weg, es zu stoppen, ist, alles niederzubrennen. Frisch anzufangen. Keine Erben, keine Erbschaften, keine Machtsysteme, die von Generation zu Generation weitergegeben werden. Nur... Reinigung."</p>
+        <p>"No." Daniel shook his head. "We can't. Because you still don't understand, Jack. The corruption isn't out there." He tapped his chest. "It's in here. In everyone. In the greed that makes men like Harrison Sr. sacrifice workers for profit. In the cowardice that makes men like your father stay silent when they know the truth. In the weakness that makes people like Sarah write instead of act." He spread his hands. "The only way to stop it is to burn it all down. Start fresh. No heirs, no inheritances, no systems of power passed from generation to generation. Just... purification."</p>
 
-        <p>"Sie sind verrückt", flüsterte Sarah.</p>
+        <p>"You're insane," Sarah whispered.</p>
 
-        <p>"Ich bin evolutioniert." Daniel griff hinter seinen Rücken, zog eine zweite Waffe – diesmal ein Messer, lang und gebogen und bösartig. "Und ich bin fertig mit Reden."</p>
+        <p>"I'm evolved." Daniel reached behind his back, pulled out a second weapon—a knife this time, long and curved and vicious. "And I'm done talking."</p>
 
-        <p>Er stürzte sich auf Sarah.</p>
+        <p>He lunged at Sarah.</p>
 
-        <p>Jack fing ihn ab, nahm das Messer in seine Schulter statt in Sarahs Brust. Schmerz explodierte durch ihn, weißheiß und blendend. Er stolperte, fiel, spürte, wie Blut sein Hemd durchnässte.</p>
+        <p>Jack intercepted him, taking the knife in his shoulder instead of Sarah's chest. Pain exploded through him, white-hot and blinding. He stumbled, fell, felt blood soaking his shirt.</p>
 
-        <p>"Jack!" Sarah schrie.</p>
+        <p>"Jack!" Sarah screamed.</p>
 
-        <p>Daniel stand über ihm, das Messer erhoben für den letzten Schlag. "Sie hätten da rausbleiben sollen, Detective. Hätten das Geld nehmen sollen, als ich es Ihnen angeboten habe. Jetzt sterben Sie für nichts."</p>
+        <p>Daniel stood over him, knife raised for the final blow. "You should have stayed out of this, Detective. Should have taken the money when I offered it. Now you die for nothing."</p>
 
-        <p>Der Schuss kam von hinter ihm.</p>
+        <p>The shot came from behind him.</p>
 
-        <p>Daniel taumelte, eine rote Blume blühte auf seinem Rücken. Er drehte sich langsam um, Unglaube stand in seinem Gesicht geschrieben.</p>
+        <p>Daniel staggered, a red flower blooming on his back. He turned, slowly, disbelief written across his face.</p>
 
-        <p>Sarah stand drei Meter entfernt, hielt den Revolver, den Jack Daniel hatte entwinden können. Rauch kräuselte sich vom Lauf. Ihre Hände waren ruhig, ihre Augen trocken.</p>
+        <p>Sarah stood ten feet away, holding the revolver Jack had knocked from Daniel's hand. Smoke curled from the barrel. Her hands were steady, her eyes dry.</p>
 
-        <p>"Ich schreibe keine geistlosen Stücke", sagte sie.</p>
+        <p>"I don't write fluff pieces," she said.</p>
 
-        <p>Sie feuerte erneut.</p>
+        <p>She fired again.</p>
 
-        <p>Daniel fiel.</p>
+        <p>Daniel fell.</p>
 
-        <p>Die Stille, die folgte, war absolut. Sarah ließ die Waffe fallen und rannte zu Jack, presste ihre Hände gegen seine Wunde, versuchte, die Blutung zu stoppen.</p>
+        <p>***</p>
 
-        <p>"Es ist okay", murmelte Jack. "Es ist okay. Mir geht es gut."</p>
+        <p>The silence that followed was absolute. Sarah dropped the gun and ran to Jack, pressing her hands against his wound, trying to stanch the bleeding.</p>
 
-        <p>"Es geht Ihnen nicht gut. Sie bluten." Ihre Stimme zitterte, aber ihre Hände waren ruhig. "Wir müssen Sie ins Krankenhaus bringen."</p>
+        <p>"It's okay," Jack murmured. "It's okay. I'm okay."</p>
 
-        <p>"In einer Minute." Jack fing ihr Handgelenk, sanft aber fest. "Sarah. Sehen Sie mich an."</p>
+        <p>"You're not okay. You're bleeding." Her voice was shaking, but her hands were steady. "We need to get you to a hospital."</p>
 
-        <p>Sie sah. Ihre Augen waren trocken, aber sie hielten eine Trauer, die keine Tränen ausdrücken könnten.</p>
+        <p>"In a minute." Jack caught her wrist, gentle but firm. "Sarah. Look at me."</p>
 
-        <p>"Ich habe gerade meinen Bruder getötet", sagte sie.</p>
+        <p>She looked. Her eyes were dry, but they held a grief that no tears could express.</p>
 
-        <p>"Sie haben mein Leben gerettet."</p>
+        <p>"I just killed my brother," she said.</p>
 
-        <p>"Er war mein Zwilling." Sie sah auf Daniels Leiche, reglos auf dem Boden. "Ich wusste nicht einmal, dass er existierte, und jetzt... jetzt bin ich die Einzige, die übrig ist."</p>
+        <p>"You saved my life."</p>
 
-        <p>Jack zog sie nah, ignorierte den Schmerz in seiner Schulter. "Sie sind nicht allein. Sie haben mich. Sie haben... Leute, die sich um Sie kümmern."</p>
+        <p>"He was my twin." She looked over at Daniel's body, motionless on the floor. "I didn't even know he existed, and now... now I'm the only one left."</p>
 
-        <p>"Habe ich das?" Sie zog sich zurück, suchte sein Gesicht ab. "Nach allem, was ich getan habe? Nachdem, wer mein Vater war? Wer mein Bruder war?"</p>
+        <p>Jack pulled her close, ignoring the pain in his shoulder. "You're not alone. You have me. You have... people who care about you."</p>
 
-        <p>"Sie sind nicht Ihr Vater. Sie sind nicht Ihr Bruder." Jacks Stimme war heftig. "Sie sind Sarah Chen. Sie sind die Frau, die alles riskiert hat, um die Wahrheit aufzudecken. Die mein Leben heute Nacht gerettet hat. Die mir helfen wird, zu beenden, was wir angefangen haben."</p>
+        <p>"Do I?" She pulled back, searching his face. "After everything I've done? After who my father was? Who my brother was?"</p>
 
-        <p>"Was wir angefangen haben", wiederholte Sarah. Sie sah auf Daniel, dann zurück zu Jack. "Das Netzwerk. Die Korruption. Es ist immer noch da draußen."</p>
+        <p>"You are not your father. You are not your brother." Jack's voice was fierce. "You are Sarah Chen. You're the woman who risked everything to expose the truth. Who saved my life tonight. Who's going to help me finish what we started."</p>
 
-        <p>"Ja."</p>
+        <p>"What we started," Sarah repeated. She looked at Daniel again, then back at Jack. "The network. The corruption. It's still out there."</p>
 
-        <p>"Und wir wissen nicht, wer es kontrolliert. Wer wirklich die Befehle gibt."</p>
+        <p>"Yes."</p>
 
-        <p>"Nein."</p>
+        <p>"And we don't know who controls it. Who really gives the orders."</p>
 
-        <p>"Aber wir werden es herausfinden." Es war keine Frage.</p>
+        <p>"No."</p>
 
-        <p>Jack lächelte, trotz des Schmerzes. "Ja. Das werden wir."</p>
+        <p>"But we're going to find out." It wasn't a question.</p>
 
-        <p>Eine Stunde später verließen sie das sichere Haus, Jacks Schulter bandagiert, Polizei und FBI benachrichtigt. Daniels Leiche würde eingesammelt, bearbeitet, der Liste der Opfer in einem Krieg hinzugefügt werden, der kein Ende zu haben schien.</p>
+        <p>Jack smiled, despite the pain. "Yes. We are."</p>
 
-        <p>Sarah fuhr. Jack saß auf dem Beifahrersitz, beobachtete die vorbeiziehende Nacht, dachte über alles nach, was sie gelernt hatten. Über Harrison Sr. und sein Erbe der Korruption. Über Daniel und sein Erbe der Rache. Über das Erbe, das jetzt Sarah allein gehörte – Millionen von Dollar, gebaut auf Blut und Leid.</p>
+        <p>***</p>
 
-        <p>"Was werden Sie damit machen?", fragte er leise. "Das Geld."</p>
+        <p>They left the safe house an hour later, Jack's shoulder bandaged, the police and FBI notified. Daniel's body would be collected, processed, added to the list of casualties in a war that seemed to have no end.</p>
 
-        <p>Sarah antwortete nicht sofort. Sie fuhren mehrere Meilen in Schweigen, bevor sie sprach.</p>
+        <p>Sarah drove. Jack sat in the passenger seat, watching the night roll by, thinking about everything they'd learned. About Harrison Sr. and his legacy of corruption. About Daniel and his legacy of vengeance. About the inheritance that was now Sarah's alone—millions of dollars built on blood and suffering.</p>
 
-        <p>"Ich werde es benutzen", sagte sie. "Alles davon. Um den Rest des Netzwerks zu finden. Um jeden korrupten Beamten, jede schmutzige Transaktion, jedes schmutzige Geheimnis aufzudecken." Sie warf einen Blick auf ihn. "Ich werde beenden, was mein Bruder angefangen hat. Aber ich werde es auf meine Weise tun. Mit Worten und Beweisen und dem Gesetz. Nicht mit Kugeln."</p>
+        <p>"What are you going to do with it?" he asked quietly. "The money."</p>
 
-        <p>"Es könnte nicht genug sein."</p>
+        <p>Sarah didn't answer immediately. They drove in silence for several miles before she spoke.</p>
 
-        <p>"Dann werde ich mehr finden." Ihre Stimme verhärtete sich. "Ich bin eine Harrison, Jack. Ob es mir gefällt oder nicht, das ist mein Blut. Mein Erbe. Und ich werde es benutzen, um alles zu zerstören, was Harrison gebaut hat."</p>
+        <p>"I'm going to use it," she said. "All of it. To find the rest of the network. To expose every corrupt official, every crooked deal, every dirty secret." She glanced at him. "I'm going to finish what my brother started. But I'm going to do it my way. With words and evidence and the law. Not with bullets."</p>
 
-        <p>Jack streckte die Hand aus, nahm ihre Hand. Sie drückte fest zurück.</p>
+        <p>"It might not be enough."</p>
 
-        <p>"Partner?", fragte er.</p>
+        <p>"Then I'll find more." Her voice hardened. "I'm a Harrison, Jack. Like it or not, that's my blood. My inheritance. And I'm going to use it to destroy everything Harrison built."</p>
 
-        <p>"Partner." Sie lächelte, obwohl es nicht ihre Augen erreichte. "Bis zum Ende."</p>
+        <p>Jack reached out, took her hand. She squeezed back, hard.</p>
 
-        <p>Die Sonne ging auf, als sie die Grenze von Pennsylvania überschritten, ostwärts fahrend Richtung Washington. Richtung Herz der Korruption. Richtung was auch immer auf sie wartete in den Schatten der Macht.</p>
+        <p>"Partners?" he asked.</p>
 
-        <p>Auf dem Rücksitz summte Jacks Telefon. Eine Textnachricht von einer unbekannten Nummer.</p>
+        <p>"Partners." She smiled, though it didn't reach her eyes. "Until the end."</p>
 
-        <p>Er las sie, spürte, wie das Blut aus seinem Gesicht wich.</p>
+        <p>***</p>
 
-        <p>"Was ist?", fragte Sarah.</p>
+        <p>The sun was rising as they crossed the Pennsylvania state line, heading east toward Washington. Toward the heart of the corruption. Toward whatever waited for them in the shadows of power.</p>
 
-        <p>Jack drehte das Telefon, damit sie es sehen konnte.</p>
+        <p>In the back seat, Jack's phone buzzed. A text message from an unknown number.</p>
 
-        <p>Ein Satz. Zwölf Wörter, die alles veränderten.</p>
+        <p>He read it, felt the blood drain from his face.</p>
 
-        <blockquote>
-        "Der Mechaniker ist tot. Es lebe der Mechaniker. Das Spiel geht weiter. —M"
-        </blockquote>
+        <p>"What is it?" Sarah asked.</p>
 
-        <p>Darunter ein Foto. Eine Gestalt in Schwarz, auf einem Dach stehend, beobachtete sie davonfahren.</p>
+        <p>Jack turned the phone so she could see.</p>
 
-        <p>Ein neuer Mechaniker. Ein neuer Spieler im Spiel.</p>
+        <p>One sentence. Twelve words that changed everything.</p>
 
-        <p>Und irgendwo in der Dunkelheit, die sie hinter sich gelassen hatten, begann ein letztes Zahnrad sich zu drehen.</p>
+        <p><em>"The Machinist is dead. Long live The Machinist. The game continues. —M"</em></p>
+
+        <p>Below it, a photograph. A figure in black, standing on a rooftop, watching them drive away.</p>
+
+        <p>A new Machinist. A new player in the game.</p>
+
+        <p>And somewhere, in the darkness they'd left behind, a final gear began to turn.</p>
       </div>
     </article>
 
     <div class="copyright-section">
       <div class="copyright-box">
-        <p><strong>© 2026 Fading Moments. Alle Rechte vorbehalten.</strong></p>
-        <p>Dieser Inhalt ist urheberrechtlich geschützt. Die unbefugte Vervielfältigung, Verbreitung oder Übertragung eines Teils dieses Werkes in jeglicher Form ist ohne vorherige schriftliche Genehmigung des Autors strengstens untersagt.</p>
+        <p><strong>© 2026 Fading Moments. All Rights Reserved.</strong></p>
+        <p>This content is protected by copyright law. Unauthorized reproduction, distribution, or transmission of any part of this work in any form is strictly prohibited without prior written permission from the author.</p>
       </div>
     </div>
 
     <nav class="chapter-nav">
-      <a href="/de/writing/novels/schatten-des-zweifels/chapter-15/" class="prev">
+      <a href="/en/writing/novels/shadows-of-doubt/chapter-15/" style="text-align: left;">
         <span class="label">← Vorheriges Kapitel</span>
-        <span class="title">Kapitel 15: Die Wahrheit enthüllt</span>
+        <span class="title">Chapter 15: The Truth Revealed</span>
       </a>
-      <a href="/de/writing/novels/schatten-des-zweifels/" class="next">
-        <span class="label">Inhaltsverzeichnis →</span>
-        <span class="title">Zurück zum Roman-Index</span>
+      <a href="/en/writing/novels/shadows-of-doubt/" style="text-align: right;">
+        <span class="label">Zurück zum Inhaltsverzeichnis →</span>
+        <span class="title">Back to Novel Index</span>
       </a>
-      <a href="/de/writing/novels/schatten-des-zweifels/" class="toc">← Zurück zum Inhaltsverzeichnis</a>
+      <a href="/en/writing/novels/shadows-of-doubt/" style="grid-column: span 2;">← Zurück zum Inhaltsverzeichnis</a>
     </nav>
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-brand">Fading Moments</div>
-      <div class="footer-tagline">Ein ruhiges literarisches Archiv</div>
-      <div class="footer-copyright">© 2026 Fading Moments</div>
+      <div class="footer-tagline">A Quiet Literary Archive</div>
+      <div class="footer-copyright">© 2026 Fading Moments. All rights reserved.</div>
     </div>
   </footer>
 </body>
