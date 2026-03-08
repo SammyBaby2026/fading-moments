@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>第十四章：猎人与猎物 — Shadows of Doubt — Fading Moments</title>
-  <meta name="description" content="The hunter becomes the hunted, and the line between justice and vengeance blurs.">
+  <title>Kapitel 14: Jäger und Gejagte — Schatten des Zweifels — Fading Moments</title>
+  <meta name="description" content="Der Jäger wird zum Gejagten, und die Grenze zwischen Gerechtigkeit und Rache verschwimmt.">
   <link rel="stylesheet" href="/assets/css/style.css?v=2">
   <style>
     body { display: flex; flex-direction: column; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
     main { flex: 1; position: relative; }
     .site-footer { margin-top: auto; }
     .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(0,0,0,0.1) 200px, rgba(0,0,0,0.1) 201px); }
-    .watermark::before { content: "SHADOWS OF DOUBT © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
+    .watermark::before { content: "SCHATTEN DES ZWEIFELS © 2026"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-family: var(--font-display); font-size: 120px; color: #000; white-space: nowrap; }
     .chapter-hero { position: relative; height: 320px; background-image: url('/images/shadows-of-doubt-hero.png'); background-size: cover; background-position: center 30%; display: flex; align-items: center; justify-content: center; text-align: center; }
     .chapter-hero::before { content: ""; position: absolute; inset: 0; background: rgba(47, 61, 54, 0.75); }
     .chapter-hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
@@ -26,15 +26,21 @@
     .chapter-content p { margin-bottom: 1.5em; text-indent: 2em; }
     .chapter-content p:first-of-type { text-indent: 0; }
     .chapter-content p:first-of-type::first-letter { font-family: var(--font-display); font-size: 3.5rem; float: left; line-height: 1; padding-right: 12px; color: var(--text-dark); }
+    .chapter-content blockquote { margin: 2rem 0; padding: 1.5rem; border-left: 3px solid #c9c1b4; background: rgba(201, 193, 180, 0.2); font-style: italic; text-indent: 0; }
     .chapter-nav { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #d9d4cc; }
     .chapter-nav a { text-decoration: none; color: var(--text-light); padding: 14px 24px; background: #3a4a42; transition: all 0.3s ease; font-size: 13px; text-align: center; }
     .chapter-nav a:hover { background: #2f3d36; }
     .chapter-nav .label { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(237, 231, 223, 0.7); text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
     .chapter-nav .title { font-family: var(--font-display); font-size: 15px; color: var(--text-light); display: block; }
+    .chapter-nav .prev { text-align: left; }
+    .chapter-nav .next { text-align: right; }
+    .chapter-nav .toc { grid-column: span 2; }
     .copyright-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
     .copyright-box { background: #f3efe6; border: 1px solid #d9d4cc; padding: 24px; }
     .copyright-box p { font-family: var(--font-body); font-size: 12px; line-height: 1.7; color: var(--text-muted); margin: 0 0 0.75rem; }
-    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .watermark::before { font-size: 60px; } }
+    .copyright-box p:last-child { margin-bottom: 0; }
+    .copyright-box strong { color: var(--text-dark); }
+    @media (max-width: 768px) { .chapter-hero .novel-title { font-size: 32px; } .chapter-hero .chapter-name { font-size: 18px; } .chapter-container { padding: 30px 20px 40px; } .chapter-content { padding: 40px 24px; } .chapter-nav { grid-template-columns: 1fr; } .chapter-nav .prev, .chapter-nav .next { text-align: center; } .chapter-nav .toc { grid-column: span 1; } .watermark::before { font-size: 60px; } }
   </style>
 </head>
 <body>
@@ -42,8 +48,8 @@
   <div class="botanical"></div>
   <header class="site-header">
     <div class="header-inner">
-      <a href="/en/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
-      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-14/" class="active">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-14/">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-14/">中文</a></nav>
+      <a href="/de/" class="site-logo"><span class="logo-mark">Fm</span><span class="site-title">Fading Moments</span></a>
+      <nav class="lang-switch"><a href="/en/writing/novels/shadows-of-doubt/chapter-14/">EN</a><a href="/de/writing/novels/schatten-des-zweifels/chapter-14/" class="active">DE</a><a href="/zh/writing/novels/shanyu-youlai/chapter-14/">中文</a></nav>
     </div>
         <nav class="main-nav"><ul><li><a href="/de/">Startseite</a></li><li><a href="/de/writing/" class="active">Schriften</a></li><li><a href="/de/visual-archive/">Visuelles Archiv</a></li><li><a href="/de/films-music/">Filme & Musik</a></li><li><a href="/de/about/">Über</a></li></ul></nav>
   </header>
@@ -51,285 +57,273 @@
   <main>
     <section class="chapter-hero">
       <div class="chapter-hero-content">
-        <div class="novel-title"><a href="/en/writing/novels/shadows-of-doubt/">Shadows of Doubt</a></div>
-        <div class="chapter-name">第十四章：猎人与猎物</div>
+        <div class="novel-title"><a href="/de/writing/novels/schatten-des-zweifels/">Schatten des Zweifels</a></div>
+        <div class="chapter-name">Kapitel 14: Jäger und Gejagte</div>
       </div>
     </section>
 
     <article class="chapter-container">
       <div class="chapter-meta">
-        <div class="date">2026年3月18日</div>
-        <div class="word-count">4,500 words · 第14章，共20章</div>
+        <div class="date">18. März 2026</div>
+        <div class="word-count">4.500 Wörter · Kapitel 14 von 20</div>
       </div>
 
       <div class="chapter-content">
-        <p>Fire is patient. It waits until you're not looking, then it takes everything.</p>
+        <p>Feuer ist geduldig. Es wartet, bis du nicht hinsiehst, dann nimmt es alles.</p>
 
-        <p>Jack Morrison had learned that lesson as a boy, watching his neighbor's house burn to the ground while the Ashford Fire Department struggled with frozen hydrants and too few men. He'd stood in the snow for hours, mesmerized by the flames, understanding for the first time how quickly a life could be reduced to ash.</p>
+        <p>Jack Morrison hatte diese Lektion als Junge gelernt, als er beobachtete, wie das Haus seines Nachbarn bis auf die Grundmauern brannte, während die Ashford Feuerwehr mit gefrorenen Hydranten und zu wenig Männern kämpfte. Er war stundenlang im Schnee gestanden, fasziniert von den Flammen, verstand zum ersten Mal, wie schnell ein Leben zu Asche reduziert werden konnte.</p>
 
-        <p>He remembered that night as he kicked open the storage unit door, smoke billowing around him, flames licking at his heels. The fire had started at the front—Reeves's men must have doused the entrance with gasoline—but they'd made a mistake. They'd assumed Jack would be trapped, would panic, would die quietly in the corner like a rat in a cage.</p>
+        <p>Er erinnerte sich an diese Nacht, als er die Lagereinheit-Tür einschlug, Rauch um ihn herum wogend, Flammen seine Fersen leckend. Das Feuer hatte vorne angefangen – Reeves' Männer mussten den Eingang mit Benzin übergossen haben – aber sie hatten einen Fehler gemacht. Sie hatten angenommen, Jack würde gefangen sein, würde in Panik geraten, würde leise in der Ecke sterben wie eine Ratte in einem Käfig.</p>
 
-        <p>They didn't know Jack Morrison.</p>
+        <p>Sie kannten Jack Morrison nicht.</p>
 
-        <p>He wrapped his jacket around his fist, punched through the drywall at the back of the unit, and kept punching until his knuckles bled and his arm screamed and the thin metal of the adjacent unit buckled inward. He squeezed through the gap, documents clutched to his chest, and emerged into the dark corridor beyond, coughing black smoke, his eyebrows singed, his lungs burning—but alive.</p>
+        <p>Er wickelte seine Jacke um die Faust, schlug durch die Trockenbauwand am Ende der Einheit, und schlug weiter, bis seine Knöchel bluteten und sein Arm schrie und das dünne Metall der angrenzenden Einheit nach innen gedrückt wurde. Er zwängte sich durch die Lücke, Dokumente an seine Brust geklammert, und tauchte auf in den dunklen Korridor dahinter, hustete schwarzen Rauch, seine Augenbrauen versengt, seine Lungen brennend – aber lebendig.</p>
 
-        <p>Alive and angry.</p>
+        <p>Lebendig und wütend.</p>
 
-        <p>***</p>
+        <p>Sarah fand ihn drei Blocks entfernt, lehnte an einem Maschendrahtzaun, starrte auf die Lagereinrichtung, während Flammen sie verzehrten. Die Feuerwehr war angekommen – von einem Nachbarn gerufen, der den Rauch gesehen hatte – aber sie waren zu spät. Einheit 447 und alles darin würde bis zum Morgen Asche sein. Beweise zerstört. Ein weiterer lockerer Faden abgeschnitten.</p>
 
-        <p>Sarah found him three blocks away, leaning against a chain-link fence, staring at the storage facility as flames consumed it. The fire department had arrived—called by a neighbor who'd seen the smoke—but they were too late. Unit 447 and everything in it would be ash by morning. Evidence destroyed. Another loose end tied up.</p>
+        <p>Außer Jack hatte immer noch die Dokumente.</p>
 
-        <p>Except Jack still had the documents.</p>
+        <p>"Sie leben", sagte Sarah. Es war keine Frage. Sie sah ihn an – wirklich sah ihn an –, und Jack sah etwas in ihren Augen, das er nicht erwartet hatte. Nicht Mitleid. Nicht Schock. Erkennen. Als ob sie ihn zum ersten Mal klar sehen würde.</p>
 
-        <p>"You're alive," Sarah said. It wasn't a question. She looked at him—really looked at him—and Jack saw something in her eyes he hadn't expected. Not pity. Not shock. Recognition. As if she was seeing him clearly for the first time.</p>
-
-        <p>"I'm alive," Jack confirmed. His voice was hoarse, ruined by smoke. "And I know who tried to kill me."</p>
+        <p>"Ich lebe", bestätigte Jack. Seine Stimme war heiser, vom Rauch ruiniert. "Und ich weiß, wer versucht hat, mich zu töten."</p>
 
         <p>"Reeves?"</p>
 
-        <p>"Reeves." Jack held up the folder, miraculously intact, the papers inside slightly singed at the edges but readable. "He was there. He spoke to me through the door. Then he locked it and set the fire."</p>
+        <p>"Reeves." Jack hielt den Ordner hoch, wundersamerweise intakt, die Papiere darin leicht an den Rändern versengt, aber lesbar. "Er war da. Er sprach mit mir durch die Tür. Dann schloss er sie und zündete das Feuer an."</p>
 
-        <p>Sarah's face went pale. "He did it himself? Not a hired gun?"</p>
+        <p>Sarahs Gesicht wurde blass. "Er hat es selbst getan? Keine bezahlte Waffe?"</p>
 
-        <p>"He wanted to watch." Jack's laugh was bitter, broken. "He wanted to hear me scream."</p>
+        <p>"Er wollte zusehen." Jacks Lachen war bitter, gebrochen. "Er wollte mich schreien hören."</p>
 
-        <p>They stood in silence for a moment, watching the fire consume Jack's past. The footlocker was gone. His father's medals, his photographs, the few tangible connections to a man who'd died too young. All of it, ash.</p>
+        <p>Sie standen einen Moment schweigend, beobachteten, wie das Feuer Jacks Vergangenheit verzehrte. Die Kiste war weg. Die Medaillen seines Vaters, seine Fotografien, die wenigen greifbaren Verbindungen zu einem Mann, der zu jung gestorben war. All das, Asche.</p>
 
-        <p>"The documents?" Sarah asked.</p>
+        <p>"Die Dokumente?", fragte Sarah.</p>
 
-        <p>"Safe." Jack patted his jacket. "Reeves's handwriting. His initials on the memos. Proof that he ordered the methane detectors ignored. Proof that he knew the explosion was coming and did nothing."</p>
+        <p>"Sicher." Jack klopfte auf seine Jacke. "Reeves' Handschrift. Seine Initialen auf den Memos. Beweise, dass er angeordnet hat, dass die Methan-Detektoren ignoriert werden. Beweise, dass er wusste, dass die Explosion kommen würde, und nichts unternommen hat."</p>
 
-        <p>"It's not enough." Sarah shook her head. "Handwriting can be forged. Memos can be faked. We need more—we need testimony, bank records, something that connects him directly to the deaths."</p>
+        <p>"Es reicht nicht." Sarah schüttelte den Kopf. "Handschrift kann gefälscht werden. Memos können gefälscht werden. Wir brauchen mehr – wir brauchen Zeugenaussagen, Bankunterlagen, etwas, das ihn direkt mit den Todesfällen verbindet."</p>
 
-        <p>"Then we get more." Jack straightened, wincing at the pain in his ribs. "We start with Reeves's financial advisor. A man named Harold Vance. He handles all of Reeves's investments, his campaign finances, his... extracurricular activities."</p>
+        <p>"Dann holen wir mehr." Jack richtete sich auf, zuckte bei dem Schmerz in seinen Rippen zusammen. "Wir beginnen mit Reeves' Finanzberater. Ein Mann namens Harold Vance. Er kümmert sich um alle Reeves' Investitionen, seine Kampagnenfinanzen, seine... außergerichtlichen Aktivitäten."</p>
 
-        <p>"How do you know about Vance?"</p>
+        <p>"Woher wissen Sie von Vance?"</p>
 
-        <p>"Daniel told me." Jack looked around, but The Machinist was nowhere to be seen. He'd disappeared after their meeting at the warehouse, leaving only a phone number and a promise. "He said Vance is the weak link. A man who knows where all the bodies are buried—and who'll sell anyone out to save his own skin."</p>
+        <p>"Daniel hat es mir erzählt." Jack sah sich um, aber der Mechaniker war nirgends zu sehen. Er war nach ihrer Besprechung im Lagerhaus verschwunden, hatte nur eine Telefonnummer und ein Versprechen hinterlassen. "Er sagte, Vance ist die Schwachstelle. Ein Mann, der weiß, wo alle Leichen vergraben sind – und der jeden verraten würde, um seine eigene Haut zu retten."</p>
 
-        <p>"And how do we get to him?"</p>
+        <p>"Und wie kommen wir zu ihm?"</p>
 
-        <p>Jack smiled. It wasn't a pleasant expression. "We ask nicely."</p>
+        <p>Jack lächelte. Es war kein angenehmer Ausdruck. "Wir fragen nett."</p>
 
-        <p>***</p>
+        <p>Harold Vance lebte in einer Penthouse-Wohnung in der Innenstadt von Pittsburgh, vierzig Stockwerke über der Stadt, umgeben von Kunst, die mehr kostete als die meisten Ashford-Bewohner in ihrem ganzen Leben verdienten. Das Gebäude hatte Sicherheit – Portiers, Kameras, Schlüsselkartenzugang – aber Jack hatte sechzehn Jahre damit verbracht, zu lernen, wie man Sicherheit umgeht, und Daniel hatte sein Erwachsenenleben damit verbracht, die Kunst der Unsichtbarkeit zu vervollkommnen.</p>
 
-        <p>Harold Vance lived in a penthouse apartment in downtown Pittsburgh, forty floors above the city, surrounded by art that cost more than most Ashford residents made in a lifetime. The building had security—doormen, cameras, keycard access—but Jack had spent sixteen years learning how to bypass security, and Daniel had spent his adult life perfecting the art of invisibility.</p>
+        <p>Sie trafen sich in der Tiefgarage um 2:00 Uhr morgens. Daniel kam zuerst, gekleidet als Wartungsarbeiter, sein Gesicht verdeckt von einer Kappe und einem dichten Bart, von dem Jack vermutete, dass er falsch war. Er trug eine Werkzeugkiste, die wahrscheinlich keine echten Werkzeuge enthielt.</p>
 
-        <p>They met in the parking garage at 2:00 AM. Daniel arrived first, dressed as a maintenance worker, his face obscured by a cap and a thick beard that Jack suspected was fake. He carried a toolbox that probably contained no actual tools.</p>
+        <p>"Vance ist zu Hause", berichtete Daniel. "Allein. Seine Frau ist in New York für eine Galerieeröffnung, und seine Geliebte hat frei. Er arbeitet an etwas – sein Bürolicht brennt seit drei Stunden."</p>
 
-        <p>"Vance is home," Daniel reported. "Alone. His wife is in New York for a gallery opening, and his mistress has the night off. He's working on something—his office light has been on for three hours."</p>
+        <p>"An was arbeitet er?"</p>
 
-        <p>"Working on what?"</p>
+        <p>"Kampagnenfinanzen, höchstwahrscheinlich. Reeves hat gestern offiziell seine Gouverneurskandidatur bekanntgegeben." Daniels Stimme war trocken. "Er kandidiert auf einem Plattform von 'Recht und Ordnung' und 'Aufräumen mit Korruption'. Die Ironie wäre köstlich, wäre sie nicht so entsetzlich."</p>
 
-        <p>"Campaign finances, most likely. Reeves announced his gubernatorial bid yesterday. Officially." Daniel's voice was dry. "He's running on a platform of 'law and order' and 'cleaning up corruption.' The irony would be delicious if it weren't so horrifying."</p>
+        <p>Jack nickte. "Der Service-Aufzug?"</p>
 
-        <p>Jack nodded. "The service elevator?"</p>
+        <p>"Kamera vor zwanzig Minuten deaktiviert. Wir haben ein Dreißig-Minuten-Fenster, bevor der Sicherheitsdienst seine Runden macht." Daniel sah Jack an – wirklich sah ihn an –, und für einen Moment kreuzte sich etwas, das wie Besorgnis aussah, über sein Gesicht. "Sie sehen aus wie die Hölle, Morrison."</p>
 
-        <p>"Disabled the camera twenty minutes ago. We have a thirty-minute window before the security guard does his rounds." Daniel looked at Jack—really looked at him—and for a moment, something like concern crossed his face. "You look like hell, Morrison."</p>
+        <p>"Ich fühle mich wie die Hölle."</p>
 
-        <p>"I feel like hell."</p>
+        <p>"Gut. Nutzen Sie es." Daniel reichte ihm eine Schlüsselkarte. "Oberste Etage. Penthouse B. Ich überwache die Gebäudesysteme aus dem Van. Wenn jemand nähert, alarmiere ich Sie." Er pausierte. "Und Jack? Töten Sie ihn nicht. Wir brauchen ihn am Leben, um auszusagen."</p>
 
-        <p>"Good. Use it." Daniel handed him a keycard. "Top floor. Penthouse B. I'll monitor the building's systems from the van. If anyone approaches, I'll alert you." He paused. "And Jack? Don't kill him. We need him alive to testify."</p>
+        <p>"Ich habe nicht vor, ihn zu töten."</p>
 
-        <p>"I wasn't planning to kill him."</p>
+        <p>"Nein?" Daniels Lächeln war dünn. "Was haben Sie dann vor?"</p>
 
-        <p>"No?" Daniel's smile was thin. "Then what were you planning?"</p>
+        <p>Jack antwortete nicht. Er nahm die Schlüsselkarte und ging auf den Service-Aufzug zu, die Dokumente seines Vaters schwer in seiner Jackentasche, sein Herz schwer von dem Wissen, was er zu werden im Begriff war.</p>
 
-        <p>Jack didn't answer. He took the keycard and walked toward the service elevator, his father's documents heavy in his jacket pocket, his heart heavy with the knowledge of what he was about to become.</p>
+        <p>Nicht mehr ein Detective. Nicht mehr ein Cop. Etwas anderes. Etwas Dunkleres.</p>
 
-        <p>Not a detective. Not a cop. Something else. Something darker.</p>
+        <p>Harold Vance war ein kleiner Mann mit kleinen Händen und der nervösen Energie eines Mannes, der sein Leben damit verbracht hatte, das Geld anderer Leute zu zählen. Er saß an einem Schreibtisch in der Größe eines Autos, umgeben von Computerbildschirmen, die Aktienticker und Umfragewerte und Kampagnenspendenberichte anzeigten. Er hörte Jack nicht eintreten. Hörte nicht das leise Klicken der sich schließenden Tür. Wusste nicht, dass jemand da war, bis Jack sich räusperte, und dann wirbelte er mit einem Angstschrei herum, der unter anderen Umständen komisch gewesen wäre.</p>
 
-        <p>***</p>
+        <p>"Wer – wer sind Sie? Wie sind Sie hier reingekommen?"</p>
 
-        <p>Harold Vance was a small man with small hands and the nervous energy of someone who'd spent his life counting other people's money. He sat at a desk the size of a car, surrounded by computer screens displaying stock tickers and polling data and campaign contribution reports. He didn't hear Jack enter. Didn't hear the soft click of the door closing. Didn't know anyone was there until Jack cleared his throat, and then he spun around with a squeak of terror that would have been comical under other circumstances.</p>
+        <p>"Mein Name ist Jack Morrison." Jack trat ins Licht, ließ Vance sein Gesicht sehen – die Verbrennungen, der Ruß, die Wut. "Sie haben versucht, mich heute Nacht umbringen zu lassen. Sie und Ihr Boss, Edward Reeves."</p>
 
-        <p>"Who—who are you? How did you get in here?"</p>
+        <p>Vances Gesicht ging von Angst zu Berechnung in einem Herzschlag. Der Mann war ein Überlebender, erkannte Jack. Ein Kakerlak, der in jede Richtung scur würde, die Sicherheit versprach. "Ich weiß nicht, wovon Sie sprechen. Ich kenne keinen—"</p>
 
-        <p>"My name is Jack Morrison." Jack stepped into the light, letting Vance see his face—the burns, the soot, the fury. "You tried to have me killed tonight. You and your boss, Edward Reeves."</p>
+        <p>Jack schlug mit der Hand auf den Schreibtisch. Die Dokumente verstreuten – Fotos, Memos, Bankunterlagen. "Vor fünfzehn Jahren haben Sie die Briefkastenfirmen eingerichtet, die die Sicherheitsverstöße von Harrison Steel verbargen. Sie überwiesen die Bestechungsgelder an die Inspektoren. Sie machten alles auf dem Papier legal aussehen." Er beugte sich näher, nah genug, um Vances Köln und den Angstschweiß darunter zu riechen. "Und vor drei Tagen autorisierten Sie eine Zahlung von fünfzigtausend Dollar an einen Mann namens Marcus Santiago. Professioneller Brandstifter. Ex-Militär. Derzeit in Polizeigewahrsam für einen Brand in einer Lagereinrichtung in Ashford."</p>
 
-        <p>Vance's face went from fear to calculation in a heartbeat. The man was a survivor, Jack realized. A cockroach who'd scurry in any direction that promised safety. "I don't know what you're talking about. I don't know any—"</p>
+        <p>Vances Mund öffnete und schloss sich wie ein erstickender Fisch. "Ich... ich kann das erklären..."</p>
 
-        <p>Jack slammed his hand on the desk. The documents scattered—photographs, memos, bank records. "Fifteen years ago, you set up the shell companies that hid Harrison Steel's safety violations. You transferred the bribes to the inspectors. You made it all look legal on paper." He leaned in close, close enough to smell Vance's cologne and the sweat of fear beneath it. "And three days ago, you authorized a payment of fifty thousand dollars to a man named Marcus Santiago. Professional arsonist. Ex-military. Currently in police custody for a fire at a storage facility in Ashford."</p>
+        <p>"Nicht." Jack zog einen Stuhl heran, machte es sich bequem. "Stattdessen werden Sie mir alles erzählen. Jedes Konto. Jede Zahlung. Jeden Namen. Und wenn Sie fertig sind, werden Sie eine eidesstattliche Erklärung unterschreiben, die Edward Reeves in Verschwörung, Mord und was auch immer ich mir zwischen jetzt und Sonnenaufgang einfallen lasse, verwickelt."</p>
 
-        <p>Vance's mouth opened and closed like a fish drowning in air. "I... I can explain..."</p>
+        <p>"Und wenn ich ablehne?"</p>
 
-        <p>"Don't." Jack pulled out a chair and sat down, making himself comfortable. "Instead, you're going to tell me everything. Every account. Every payment. Every name. And when you're done, you're going to sign a sworn statement implicating Edward Reeves in conspiracy, murder, and whatever else I can think of between now and sunrise."</p>
+        <p>Jack lächelte. "Dann rufe ich meinen Freund an. Denjenigen, der vier Leute getötet hat, ohne eine Spur von Beweisen zu hinterlassen. Derjenige, der darauf wartet, eine Ausrede zu finden, Sie zu seiner Sammlung hinzuzufügen." Er beugte sich vor, seine Stimme zu einem Flüstern senkend. "Wissen Sie, was er mit Leuten macht, die seine Familie verletzen, Mr. Vance? Wissen Sie, wie lange es dauert zu sterben, wenn ein Profi entscheidet, dass es schmerzhaft sein soll?"</p>
 
-        <p>"And if I refuse?"</p>
+        <p>Vance zitterte jetzt. "Sie bluffen."</p>
 
-        <p>Jack smiled. "Then I call my friend. The one who killed four people without leaving a trace of evidence. The one who's been waiting for an excuse to add you to his collection." He leaned forward, his voice dropping to a whisper. "Do you know what he does to people who hurt his family, Mr. Vance? Do you know how long it takes to die when a professional decides to make it painful?"</p>
+        <p>"Versuchen Sie es."</p>
 
-        <p>Vance was shaking now. "You're bluffing."</p>
+        <p>Sie starrten sich einen langen Moment an. Dann sackten Vances Schultern zusammen, und er griff nach einer Schublade.</p>
 
-        <p>"Try me."</p>
+        <p>"Langsam", warnte Jack.</p>
 
-        <p>They stared at each other for a long moment. Then Vance's shoulders slumped, and he reached for a drawer.</p>
+        <p>"Ich hole ein USB-Laufwerk. Es hat... alles." Vances Stimme war besiegt, hohl. "Konten auf den Cayman-Inseln. Briefkastenfirmen in Delaware. Aufzeichnungen jeder Zahlung, die Reeves je autorisiert hat. Einschließlich derjenigen an den Mann, der Ihren Vater getötet hat."</p>
 
-        <p>"Slowly," Jack warned.</p>
+        <p>Jack spürte, wie etwas Kaltes sich in seinem Magen legte. "Welchen Mann?"</p>
 
-        <p>"I'm getting a USB drive. It has... everything." Vance's voice was defeated, hollow. "Accounts in the Caymans. Shell companies in Delaware. Records of every payment Reeves ever authorized. Including the ones to the man who killed your father."</p>
+        <p>"Ein Arzt. Anthony Caruso. Er arbeitete im St. Mary's Hospital. Spezialisiert auf... unauffindbare Gifte." Vance reichte das USB-Laufwerk mit zitternden Fingern. "Reeves zahlte ihm zweihunderttausend Dollar, um den Tod Ihres Vaters wie natürliche Ursachen aussehen zu lassen. Leberversagen, sagte der Gerichtsmediziner. Aber es war Rizin. Über sechs Monate in seinem Kaffee verabreicht."</p>
 
-        <p>Jack felt something cold settle in his stomach. "What man?"</p>
+        <p>Jack nahm das Laufwerk. Seine Hand war ruhig, aber innen zerbrach etwas. Die letzten Illusionen, die er über den Tod seines Vaters gehegt hatte, zerschmettert. Es war kein Unfall gewesen. Keine natürlichen Ursachen. Es war Mord gewesen, geplant und bezahlt, ausgeführt mit der Präzision einer Unternehmensübernahme.</p>
 
-        <p>"A doctor. Anthony Caruso. He worked at St. Mary's Hospital. Specialized in... untraceable poisons." Vance handed over the USB drive with trembling fingers. "Reeves paid him two hundred thousand dollars to make your father's death look like natural causes. Liver failure, the coroner said. But it was ricin. Administered over six months in his coffee."</p>
+        <p>"Noch etwas?" Seine Stimme war kaum ein Flüstern.</p>
 
-        <p>Jack took the drive. His hand was steady, but inside, something was breaking. The last illusions he'd held about his father's death, shattered. It hadn't been an accident. Hadn't been natural causes. Had been murder, planned and paid for, executed with the precision of a corporate takeover.</p>
+        <p>"Reeves kandidiert für das Gouverneursamt, um seine Spuren zu verwischen." Vances Worte kamen jetzt schneller, eifrig zu gefallen, verzweifelt zu überleben. "Die Stahlfabrik-Untersuchung wurde letzten Monat wiedereröffnet – Bundessuche, untersucht die Sicherheitsverstöße. Reeves braucht das Gouverneursmansion, um sie zu stoppen. Exekutivprivileg. Begnadigungsgewalt. Wenn er gewinnt, wird er jede Akte vernichten, jeden Zeugen zum Schweigen bringen. Er wird unantastbar sein."</p>
 
-        <p>"Anything else?" His voice was barely a whisper.</p>
+        <p>"Wann ist die Wahl?"</p>
 
-        <p>"Reeves is running for Governor to cover his tracks." Vance's words came faster now, eager to please, desperate to survive. "The steel mill investigation was reopened last month—federal probe, looking into the safety violations. Reeves needs the governor's mansion to shut it down. Executive privilege. Pardon power. If he wins, he'll destroy every record, silence every witness. He'll be untouchable."</p>
+        <p>"In sieben Monaten."</p>
 
-        <p>"When is the election?"</p>
+        <p>"Dann haben wir sieben Monate, um ihn zu stoppen." Jack stand auf, steckte das USB-Laufwerk zusammen mit den Dokumenten seines Vaters in die Tasche. "Sie werden uns helfen, Mr. Vance. Sie werden unser Mann im Inneren werden. Und wenn das vorbei ist, wenn Sie sehr glücklich und sehr kooperativ sind, können Sie vielleicht Gefängnis vermeiden."</p>
 
-        <p>"Seven months."</p>
+        <p>"Und wenn ich nicht kooperativ bin?"</p>
 
-        <p>"Then we have seven months to stop him." Jack stood, tucking the USB drive into his pocket alongside his father's documents. "You're going to help us, Mr. Vance. You're going to be our inside man. And when this is over, if you're very lucky and very cooperative, you might avoid prison."</p>
+        <p>"Dann findet mein Freund Sie." Jack ging zur Tür, pausierte. "Und glauben Sie mir, das wollen Sie nicht."</p>
 
-        <p>"And if I'm not cooperative?"</p>
+        <p>Der Artikel ging um 6:00 Uhr morgens online, genau als der Morgennachrichtenzyklus begann. Sarah hatte die ganze Nacht durchgearbeitet, geschrieben und Fakten geprüft und bestätigt, verwandelte Jacks Beweise und Vances Zeugenaussage in eine Erzählung, die nicht ignoriert werden konnte.</p>
 
-        <p>"Then my friend finds you." Jack walked to the door, then paused. "And trust me, you don't want that."</p>
+        <p>"Gouverneurskandidat Edward Reeves in Verbindung mit tödlicher Stahlfabrik-Vertuschung gebracht", lautete die Überschrift. "Beweise legen nahe, dass Staatssenator Sicherheitsverstöße angeordnet hat, die 23 Arbeiter töteten, dann Zeugen zum Schweigen bringen ließ."</p>
 
-        <p>***</p>
+        <p>Es war, wie Sarahs Redakteur es ausdrückte, "die Story des Jahrzehnts."</p>
 
-        <p>The article hit the internet at 6:00 AM, just as the morning news cycle was beginning. Sarah had worked through the night, writing and fact-checking and corroborating, turning Jack's evidence and Vance's testimony into a narrative that couldn't be ignored.</p>
+        <p>Bis Mittag hatte sie jede große Nachrichtenredaktion in Pennsylvania aufgegriffen. Bis 15:00 Uhr hatte Reeves eine Notfall-Pressekonferenz einberufen, um "diese haltlosen Anschuldigungen eines in Ungnade gefallenen ehemaligen Detectives und einer sensationslüsternen Journalistin mit persönlicher Agenda kategorisch zu dementieren". Bis 18:00 Uhr hatte das FBI eine formelle Untersuchung angekündigt.</p>
 
-        <p>"Gubernatorial Candidate Edward Reeves Linked to Fatal Steel Mill Cover-Up," the headline read. "Evidence Suggests State Senator Ordered Safety Violations That Killed 23 Workers, Then Had Whistleblowers Silenced."</p>
+        <p>Und bis 20:00 Uhr wusste Sarah Chen, dass sie verfolgt wurde.</p>
 
-        <p>It was, as Sarah's editor put it, "the story of the decade."</p>
+        <p>Sie bemerkte zuerst den Wagen – einen schwarzen SUV mit getönten Fenstern, geparkt gegenüber ihrem Wohngebäude. Er war nicht da, als sie zur Arbeit ging, aber er war da, als sie zurückkehrte. Und er war immer noch da drei Stunden später, Motor laufend, Auspuff kräuselnd in der kalten Märzluft.</p>
 
-        <p>By noon, it had been picked up by every major news outlet in Pennsylvania. By 3:00 PM, Reeves had called an emergency press conference to "categorically deny these baseless allegations made by a disgraced former detective and a sensationalist journalist with a personal vendetta." By 6:00 PM, the FBI had announced a formal investigation.</p>
+        <p>Sarah war keine Feigling. Sie hatte korrupte Politiker konfrontiert, organisiertes Verbrechen untersucht, aus Kriegsgebieten berichtet. Aber etwas an diesem SUV ließ ihre Haut krabbeln. Vielleicht war es die Art, wie er dort saß, still und geduldig, wie ein Raubtier, das auf den richtigen Moment wartete, um zuzuschlagen. Vielleicht war es das Wissen, dass Reeves bereits heute versucht hatte, Jack zu töten – und gescheitert war.</p>
 
-        <p>And by 8:00 PM, Sarah Chen knew she was being followed.</p>
+        <p>Sie rief Jack von ihrem Schlafzimmer an, spähte durch die Jalousien auf die Straße darunter.</p>
 
-        <p>***</p>
+        <p>"Ich glaube, sie sind hier", sagte sie, hielt ihre Stimme niedrig.</p>
 
-        <p>She noticed the car first—a black SUV with tinted windows, parked across from her apartment building. It wasn't there when she left for work, but it was there when she returned. And it was still there three hours later, engine idling, exhaust curling in the cold March air.</p>
+        <p>"Wer?"</p>
 
-        <p>Sarah wasn't a coward. She'd faced down corrupt politicians, investigated organized crime, reported from war zones. But something about this SUV made her skin crawl. Maybe it was the way it sat there, silent and patient, like a predator waiting for the right moment to strike. Maybe it was the knowledge that Reeves had already tried to kill Jack once today—and failed.</p>
+        <p>"Ich weiß nicht. Schwarzer SUV. Zwei Männer drin, vielleicht mehr. Sie sind seit drei Stunden da."</p>
 
-        <p>She called Jack from her bedroom, peering through the blinds at the street below.</p>
-
-        <p>"I think they're here," she said, keeping her voice low.</p>
-
-        <p>"Who?"</p>
-
-        <p>"I don't know. Black SUV. Two men inside, maybe more. They've been there for three hours."</p>
-
-        <p>Jack's voice was tight. "Get out. Now. Don't pack anything, don't turn on any lights. Take the fire escape down to the alley. I'll meet you at the corner of Fifth and Main in ten minutes."</p>
+        <p>Jacks Stimme war angespannt. "Raus da. Sofort. Packen Sie nichts, machen Sie kein Licht an. Nehmen Sie die Feuerleiter runter in die Gasse. Ich treffe Sie in zehn Minuten an der Ecke Fifth und Main."</p>
 
         <p>"Jack—"</p>
 
-        <p>"Move, Sarah. Please."</p>
+        <p>"Bewegen Sie sich, Sarah. Bitte."</p>
 
-        <p>She moved. She grabbed her laptop, her phone, her wallet—nothing else. She didn't turn on the lights. She slipped out the window and down the fire escape, her heart hammering in her chest, her breath coming in short gasps.</p>
+        <p>Sie bewegte sich. Sie schnappte ihren Laptop, ihr Telefon, ihr Portemonnaie – nichts sonst. Sie machte kein Licht an. Sie schlüpfte aus dem Fenster und die Feuerleiter hinunter, ihr Herz hämmerte in ihrer Brust, ihr Atem kam in kurzen Stößen.</p>
 
-        <p>She was halfway down when the shooting started.</p>
+        <p>Sie war halb unten, als das Schießen begann.</p>
 
-        <p>The first bullet shattered the window above her head. Glass rained down, cutting her cheek, her hands. Sarah screamed and dropped the last eight feet to the alley below, landing hard on her ankle, pain shooting up her leg.</p>
+        <p>Die erste Kugel zerschmetterte das Fenster über ihrem Kopf. Glas regnete herab, schnitt ihre Wange, ihre Hände. Sarah schrie und fiel die letzten zweieinhalb Meter in die Gasse hinunter, landete hart auf ihrem Knöchel, Schmerz schoss ihr das Bein hinauf.</p>
 
-        <p>"There!" A man's voice, shouting from above. "She's on the fire escape!"</p>
+        <p>"Dort!" Eine Männerstimme, schrie von oben. "Sie ist an der Feuerleiter!"</p>
 
-        <p>More shots. Concrete chips exploded around her. Sarah ran—limping, bleeding, terrified—toward the mouth of the alley, toward the street, toward anyplace with witnesses and lights and safety.</p>
+        <p>Mehr Schüsse. Beton splitterte um sie herum. Sarah rannte – hinkend, blutend, verängstigt – in Richtung Gassenmund, Richtung Straße, Richtung irgendwo mit Zeugen und Lichtern und Sicherheit.</p>
 
-        <p>A figure stepped out of the shadows ahead of her. Tall, broad-shouldered, holding something in his hand that glinted in the streetlight.</p>
+        <p>Eine Gestalt trat aus den Schatten vor ihr. Groß, breitschultrig, hielt etwas in der Hand, das im Straßenlicht glitzerte.</p>
 
-        <p>Sarah skidded to a stop, trapped between the gunman behind and the stranger ahead.</p>
+        <p>Sarah blieb mit einem Ruck stehen, gefangen zwischen dem Schützen hinter ihr und dem Fremden vor ihr.</p>
 
-        <p>"Get down!" the stranger shouted.</p>
+        <p>"Runter!", schrie der Fremde.</p>
 
-        <p>She dropped. The stranger's arm came up, and she heard the distinctive phut-phut-phut of a suppressed pistol. Above her, on the fire escape, a man grunted and fell—crashing through the metal grating, landing with a wet thud in the alley behind her.</p>
+        <p>Sie fiel hin. Der Arm des Fremden kam hoch, und sie hörte das charakteristische Phut-Phut-Phut einer schallgedämpften Pistole. Über ihr, auf der Feuerleiter, stöhnte ein Mann und fiel – krachend durch das Metallgitter, landete mit einem feuchten Aufprall in der Gasse hinter ihr.</p>
 
-        <p>"Up!" The stranger grabbed her arm, hauling her to her feet. "Run!"</p>
+        <p>"Hoch!" Der Fremde packte ihren Arm, zog sie auf die Füße. "Rennen!"</p>
 
-        <p>They ran. Through the alley, across the street, into the maze of downtown Pittsburgh's backstreets. The stranger moved with the grace of a predator, never hesitating, never looking back, guiding her through gaps in fences and across empty lots with unerring certainty.</p>
+        <p>Sie rannten. Durch die Gasse, über die Straße, in das Labyrinth der Hintergassen der Innenstadt von Pittsburgh. Der Fremde bewegte sich mit der Anmut eines Raubtiers, nie zögernd, nie zurückblickend, führte sie durch Lücken in Zäunen und über leere Grundstücke mit unfehlbarer Sicherheit.</p>
 
-        <p>Only when they'd put three miles between themselves and her apartment did he stop, ducking into the doorway of an abandoned store, breathing hard but not winded.</p>
+        <p>Erst als sie drei Meilen zwischen sich und ihre Wohnung gebracht hatten, blieb er stehen, tauchte in den Eingang eines verlassenen Ladens ein, atmete hart, aber nicht außer Atem.</p>
 
-        <p>"You're hurt," he said.</p>
+        <p>"Sie sind verletzt", sagte er.</p>
 
-        <p>Sarah looked at him—really looked at him—for the first time. He was younger than she'd expected, with sharp features and dark eyes that seemed to absorb the light rather than reflect it. He wore black, head to toe, and moved with the coiled energy of a man who was always ready for violence.</p>
+        <p>Sarah sah ihn an – wirklich sah ihn an – zum ersten Mal. Er war jünger, als sie erwartet hatte, mit scharfen Zügen und dunklen Augen, die das Licht zu absorbieren schienen, statt es zu reflektieren. Er trug Schwarz von Kopf bis Fuß und bewegte sich mit der gespannten Energie eines Mannes, der immer bereit für Gewalt war.</p>
 
-        <p>"You're The Machinist," she said.</p>
+        <p>"Sie sind der Mechaniker", sagte sie.</p>
 
-        <p>"Daniel," he corrected. "My name is Daniel. And you're bleeding on my jacket."</p>
+        <p>"Daniel", korrigierte er. "Mein Name ist Daniel. Und Sie bluten auf meine Jacke."</p>
 
-        <p>Sarah touched her cheek, felt the wet warmth of blood. "They were going to kill me."</p>
+        <p>Sarah berührte ihre Wange, spürte die feuchte Wärme von Blut. "Sie wollten mich töten."</p>
 
-        <p>"They still are." Daniel checked his weapon—a sleek, professional thing that looked expensive and deadly. "Reeves knows you wrote the article. He knows you have evidence. He can't afford to let you live to testify." He looked at her, and something softened in his expression. "You did a brave thing, Sarah. A stupid thing, but brave."</p>
+        <p>"Sie wollen es immer noch." Daniel prüfte seine Waffe – ein elegantes, professionelles Ding, das teuer und tödlich aussah. "Reeves weiß, dass Sie den Artikel geschrieben haben. Er weiß, dass Sie Beweise haben. Er kann es sich nicht leisten, Sie leben zu lassen, um auszusagen." Er sah sie an, und etwas weichte in seinem Ausdruck auf. "Sie haben eine tapfene Sache getan, Sarah. Eine dumme Sache, aber tapfer."</p>
 
-        <p>"It needed to be done."</p>
+        <p>"Es musste getan werden."</p>
 
-        <p>"Yes. It did." He holstered the weapon. "Jack is waiting for us. We need to get you somewhere safe. Somewhere Reeves's people can't reach."</p>
+        <p>"Ja. Das musste es." Er steckte die Waffe weg. "Jack wartet auf uns. Wir müssen Sie irgendwohin bringen, wo es sicher ist. Irgendwohin, wo Reeves' Leute Sie nicht erreichen können."</p>
 
-        <p>"And then what?"</p>
+        <p>"Und dann was?"</p>
 
-        <p>Daniel smiled. It was a cold smile, predatory, but not entirely unfriendly. "And then we finish this. Together."</p>
+        <p>Daniel lächelte. Es war ein kaltes Lächeln, räuberisch, aber nicht ganz unfreundlich. "Und dann beenden wir das. Zusammen."</p>
 
-        <p>He offered her his hand. After a moment, she took it.</p>
+        <p>Er bot ihr seine Hand an. Nach einem Moment nahm sie sie.</p>
 
-        <p>***</p>
+        <p>Sie trafen sich im Lagerhaus – Jack, Sarah und Daniel. Drei Menschen, die Feinde hätten sein sollen, durch Umstände und einen gemeinsamen Hunger nach Gerechtigkeit zusammengebunden. Oder Rache. Die Linie war so verschwommen, dass keiner von ihnen mehr sagen konnte, welche welche war.</p>
 
-        <p>They met at the warehouse—Jack, Sarah, and Daniel. Three people who should have been enemies, bound together by circumstance and a shared hunger for justice. Or vengeance. The line had blurred so completely that none of them could say anymore which was which.</p>
+        <p>"Wir werden gejagt", sagte Jack. Er stand am Fenster, beobachtete die Straße darunter nach Anzeichen von Überwachung. "Reeves hat Ressourcen, die wir nicht haben können. Geld, Verbindungen, Profikiller. Wenn wir in der Stadt bleiben, werden wir gefunden."</p>
 
-        <p>"We're being hunted," Jack said. He stood by the window, watching the street below for any sign of surveillance. "Reeves has resources we can't match. Money, connections, professional killers. If we stay in the city, we'll be found."</p>
+        <p>"Dann verlassen wir die Stadt", sagte Daniel.</p>
 
-        <p>"Then we leave the city," Daniel said.</p>
+        <p>"Und gehen wohin?", fragte Sarah. Sie saß auf einer alten Kiste, ihr Knöchel in einem Eisbeutel gewickelt, den Jack in einer Ecke gefunden hatte. Das Adrenalin verblasste jetzt, ließ sie zitternd und kalt zurück.</p>
 
-        <p>"And go where?" Sarah asked. She sat on an old crate, her ankle wrapped in an ice pack Jack had found in a corner. The adrenaline was fading now, leaving her shaky and cold.</p>
+        <p>"Ich habe einen Ort. Im Norden des Staates. Abgelegen. Sicher." Daniel zog eine Karte heraus und breitete sie auf dem Boden zwischen ihnen aus. "Aber bevor wir gehen, müssen wir entscheiden, was wir tun. Laufen wir? Verstecken wir uns, bis das FBI seine Untersuchung beendet hat und hoffen, dass sie tatsächlich ihren Job machen? Oder kämpfen wir?"</p>
 
-        <p>"I have a place. Upstate. Isolated. Secure." Daniel pulled out a map and spread it on the floor between them. "But before we go, we need to decide what we're doing. Are we running? Hiding until the FBI finishes their investigation and hope they actually do their job? Or are we fighting?"</p>
+        <p>Jack sah Sarah an. Sarah sah Jack an. Sie waren so weit gekommen, hatten so viel riskiert. Jetzt wegzugehen würde bedeuten, Reeves gewinnen zu lassen. Würde bedeuten, Jacks Vater und die dreiundzwanzig Stahlarbeiter umsonst sterben zu lassen.</p>
 
-        <p>Jack looked at Sarah. Sarah looked at Jack. They'd come so far, risked so much. Walking away now would mean letting Reeves win. Would mean letting Jack's father and the twenty-three steel workers die for nothing.</p>
+        <p>"Wir kämpfen", sagte Jack.</p>
 
-        <p>"We fight," Jack said.</p>
+        <p>"Wir kämpfen", stimmte Sarah zu.</p>
 
-        <p>"We fight," Sarah agreed.</p>
+        <p>"Dann kämpfen wir zusammen." Daniel streckte seine Hand aus, Handfläche nach unten. "Keine Geheimnisse mehr. Keine getrennten Ziele mehr. Wir teilen alles – Informationen, Ressourcen, Risiken. Und wenn das vorbei ist, gehen wir alle weg. Oder keiner von uns."</p>
 
-        <p>"Then we fight together." Daniel extended his hand, palm down. "No more secrets. No more separate agendas. We share everything—information, resources, risks. And when this is over, we all walk away. Or none of us do."</p>
+        <p>Jack legte seine Hand auf Daniels. Nach einem Moment fügte Sarah ihre hinzu.</p>
 
-        <p>Jack placed his hand on top of Daniel's. After a moment, Sarah added hers.</p>
+        <p>Drei Hände. Drei Feinde von Edward Reeves. Drei Menschen, die die Linie von gesetzestreuen Bürgern zu etwas anderem überschritten hatten – Gesetzlosen, Selbstjustizlern, Rächern. Die Etiketten zählten nicht mehr. Nur das Ziel zählte.</p>
 
-        <p>Three hands. Three enemies of Edward Reeves. Three people who'd crossed the line from law-abiding citizens to something else—outlaws, vigilantes, avengers. The labels didn't matter anymore. Only the goal mattered.</p>
+        <p>Stoppt Reeves. Enthüllt die Wahrheit. Lass ihn zahlen.</p>
 
-        <p>Stop Reeves. Expose the truth. Make him pay.</p>
+        <p>"Wo fangen wir an?", fragte Sarah.</p>
 
-        <p>"Where do we start?" Sarah asked.</p>
+        <p>Daniel lächelte – dieses kalte, räuberische Lächeln. "Wir fangen mit seinem Geld an. Schneiden wir seine Finanzierung ab, und seine Kampagne bricht zusammen. Schneiden wir seine Kampagne ab, und er verliert den Schutz des Gouverneursmansion." Er zog einen Laptop heraus und öffnete ihn. "Harold Vance hat uns alles gegeben. Jetzt ist es Zeit, es zu nutzen."</p>
 
-        <p>Daniel smiled—that cold, predatory smile. "We start with his money. Cut off his funding, and his campaign collapses. Cut off his campaign, and he loses the protection of the governor's mansion." He pulled out a laptop and opened it. "Harold Vance gave us everything. Now it's time to use it."</p>
+        <p>Sie arbeiteten die ganze Nacht hindurch – drei Schatten, zusammengedrängt um einen Bildschirm, planten die Zerstörung eines Monsters. Draußen schlief die Stadt, unwissend, dass der Krieg um ihre Seele begonnen hatte.</p>
 
-        <p>They worked through the night—three shadows huddled around a screen, planning the destruction of a monster. Outside, the city slept, unaware that the war for its soul had begun.</p>
+        <p>Der Jäger war zum Gejagten geworden.</p>
 
-        <p>The hunter had become the hunted.</p>
-
-        <p>But hunters, Jack was learning, could be surprisingly dangerous when cornered.</p>
+        <p>Aber Jäger, lernte Jack, konnten überraschend gefährlich sein, wenn sie in die Enge getrieben wurden.</p>
       </div>
     </article>
 
     <div class="copyright-section">
       <div class="copyright-box">
-        <p><strong>© 2026 Fading Moments. All Rights Reserved.</strong></p>
-        <p>This content is protected by copyright law. Unauthorized reproduction, distribution, or transmission of any part of this work in any form is strictly prohibited without prior written permission from the author.</p>
+        <p><strong>© 2026 Fading Moments. Alle Rechte vorbehalten.</strong></p>
+        <p>Dieser Inhalt ist urheberrechtlich geschützt. Die unbefugte Vervielfältigung, Verbreitung oder Übertragung eines Teils dieses Werkes in jeglicher Form ist ohne vorherige schriftliche Genehmigung des Autors strengstens untersagt.</p>
       </div>
     </div>
 
     <nav class="chapter-nav">
-      <a href="/en/writing/novels/shadows-of-doubt/chapter-13/" style="text-align: left;">
-        <span class="label">← 上一章</span>
-        <span class="title">第十三章：无路可退</span>
+      <a href="/de/writing/novels/schatten-des-zweifels/chapter-13/" class="prev">
+        <span class="label">← Vorheriges Kapitel</span>
+        <span class="title">Kapitel 13: Der Punkt ohne Wiederkehr</span>
       </a>
-      <a href="/en/writing/novels/shadows-of-doubt/chapter-15/" style="text-align: right;">
-        <span class="label">下一章 →</span>
-        <span class="title">第十五章：真相大白</span>
+      <a href="/de/writing/novels/schatten-des-zweifels/chapter-15/" class="next">
+        <span class="label">Nächstes Kapitel →</span>
+        <span class="title">Kapitel 15: Die Wahrheit enthüllt</span>
       </a>
-      <a href="/en/writing/novels/shadows-of-doubt/" style="grid-column: span 2;">← 返回目录</a>
+      <a href="/de/writing/novels/schatten-des-zweifels/" class="toc">← Zurück zum Inhaltsverzeichnis</a>
     </nav>
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-brand">Fading Moments</div>
-      <div class="footer-tagline">A Quiet Literary Archive</div>
-      <div class="footer-copyright">© 2026 Fading Moments. All rights reserved.</div>
+      <div class="footer-tagline">Ein ruhiges literarisches Archiv</div>
+      <div class="footer-copyright">© 2026 Fading Moments</div>
     </div>
   </footer>
 </body>
