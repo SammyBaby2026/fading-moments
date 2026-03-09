@@ -54,33 +54,38 @@ A mystery noir novel set in Ashford, Pennsylvania. Fifteen years after a steel m
   - Photo of warehouse with gear symbol
   - Two weeks to decide whether to join or fight
 
-## Current Status (End of Chapter 18)
+## Current Status — BOOK ONE COMPLETE ✓
+
+**2026-03-09: 第一部完结**
+
+疑云暗影 / Shadows of Doubt / Schatten des Zweifels 第一部正式完结于第18章《尘埃落定》。
+
+### 结局状态
 - Lucas Chen: Deceased (suicide)
 - Daniel Harrison: Deceased (killed by Sarah)
 - Corruption network: Partially exposed, goes to federal level
 - Harrison estate: Sarah inherits $43 million
 - Jack: On leave from force, rebuilding relationship with daughter
 - Sarah: Leading foundation to expose corruption
-- New threat: "M" recruiting for new Machinist movement
+- New threat: "M" recruiting for new Machinist movement — **开放式结局**
 
-## Open Threads for Future (Chapters 19-20)
-- Identity of "M" (the new mastermind)
-- Federal-level corruption network
-- Jack's decision: Return to force or join Sarah's crusade?
-- Potential return of Machinist concept (new recruit)
-- Harrison estate conditions from mysterious letter
+### 第一部故事线总结
+- **Act I (Chapters 1-12)**: 调查钢铁厂爆炸案，揭开连环谋杀真相
+- **Act II (Chapters 13-16)**: 惊天转折 — The Machinist 是 Sarah 的双胞胎兄弟
+- **Act III (Chapters 17-18)**: 兄弟对决与尘埃落定，但新威胁"M"浮现
+
+### 留下给第二部的伏笔
+- 神秘人物 "M" 的身份
+- 联邦层级的腐败网络
+- Jack 是否回归警队还是加入 Sarah 的斗争
+- Machinist 概念的传承（新接班人）
+- Harrison 庄园的遗产条件
 
 ## Language Versions
-- English: `/en/writing/novels/shadows-of-doubt/`
-- Chinese: `/zh/writing/novels/shanyu-youlai/`
-- German: `/de/writing/novels/schatten-des-zweifels/`
+- English: `/en/writing/novels/shadows-of-doubt/` (18 chapters, ~81,000 words)
+- Chinese: `/zh/writing/novels/shanyu-youlai/` (18 chapters, ~63,000 characters)
+- German: `/de/writing/novels/schatten-des-zweifels/` (18 chapters, ~63,000 words)
 
-## Chapter Count
-- Total: 20 planned chapters
-- Published: 18 chapters (as of March 22, 2026)
-- Remaining: 2 chapters (19-20)
-
-## Word Count
-- English: ~81,000 words (Chapter 18)
-- Chinese: ~63,000 characters (Chapter 18)
-- German: ~63,000 words (Chapter 18)
+## Status
+- **Book One**: ✓ Complete (Chapters 1-18)
+- **Book Two**: Planned (if continued)
